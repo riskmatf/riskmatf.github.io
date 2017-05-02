@@ -5,10 +5,10 @@
         <a class="navbar-brand" href="/">risk><span>_</span></a>
       </div>
       <ul class="nav navbar-nav">
-        <li><a href="/">Pocetna</a></li>
-        <li><a href="/projekti.html">Projekti</a></li>
-        <li><a href="/tekstovi.html">Tekstovi</a></li>
-        <li><a href="/predavanja.html">Predavanja</a></li>
+        <li class="{% if page.url='/index.html'%} active{% endif %}"><a href="/index.html" >Pocetna</a></li>
+        <li class="{% if page.url='/projekti.html' %} active{% endif %}"><a href="/projekti.html" >Projekti</a></li>
+        <li class="{% if page.url='/tekstovi.html' %} active{% endif %}"><a href="/tekstovi.html" >Tekstovi</a></li>
+        <li class="{% if page.url='/predavanja.html'%} active{% endif %}"><a href="/predavanja.html" >Predavanja</a></li>
       </ul>
     </div>
   </nav>

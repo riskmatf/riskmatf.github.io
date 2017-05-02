@@ -1,4 +1,10 @@
 ---
-layout: default
+layout: post
 title: /risk/predavanja
 ---
+
+{% for p in site.categories.predavanja%}
+  <li>
+    {{ p.title}}
+  </li>
+{% endfor %}
