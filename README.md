@@ -5,6 +5,7 @@ Koriste se sledece tehnolgije:
 - [bootstrap](http://getbootstrap.com/), css framework
 - [darkly](https://bootswatch.com/darkly/) bootstrap tema
 - [markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) za pisanje postova
+- [typed.js](https://github.com/mattboldt/typed.js/) za animaciju kucanja
 
 # Instalacija jekyll-a
 Za generisanje satja koristi se [jekyll](http://jekyllrb.com) tako da pre ikakvog rada morate njega instalirati.
