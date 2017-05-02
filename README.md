@@ -4,6 +4,7 @@ Koriste se sledece tehnolgije:
 - [jekyll](http://jekyllrb.com) za generisanje i odrzavanje sajta
 - [bootstrap](http://getbootstrap.com/), css framework
 - [darkly](https://bootswatch.com/darkly/) bootstrap tema
+- [markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) za pisanje postova
 
 # Instalacija jekyll-a
 Za generisanje satja koristi se [jekyll](http://jekyllrb.com) tako da pre ikakvog rada morate njega instalirati.
