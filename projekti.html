@@ -2,3 +2,12 @@
 layout: default
 title: /risk/projekti
 ---
+<ul class="clear-list">
+  {% for p in site.categories.projekti %}
+    <li>
+      <a href="{{ p.url }}"><h3>{{ p.title }}</h3></a>
+      <p>{{p.description}}</p>
+      <a href="{{ p.github }}" class="btn btn-success btn-xs">Github</a>
+    </li>
+  {% endfor %}
+</ul>

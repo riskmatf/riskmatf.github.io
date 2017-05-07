@@ -1,10 +1,16 @@
 ---
-layout: post
+layout: default
 title: /risk/predavanja
 ---
-
-{% for p in site.categories.predavanja%}
-  <li>
-    {{ p.title}}
-  </li>
-{% endfor %}
+<ul>
+  {% for p in site.categories.predavanja%}
+    <li>
+      <h3 class="text-success">{{p.title}}</h3>
+      <h5><span class="text-success">Autor:</span> {{p.author}}</h5>
+      <p>{{p.description}}</p>
+      {% if p.video != 'none' %}<a href="{{p.video}}" class="btn btn-primary btn-xs">Video</a> {% endif %}
+      {% if p.slides != 'none' %}<a href="{{p.slides}}" class="btn btn-primary btn-xs">Slajdovi</a> {% endif %}
+      {% if p.code != 'none' %}<a href="{{p.code}}" class="btn btn-primary btn-xs">Kod</a> {% endif %}
+    </li>
+  {% endfor %}
+</ul>
