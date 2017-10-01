@@ -7,7 +7,7 @@ title: /risk/projekti
     <li>
       <a href="{{ p.url }}"><h3>{{ p.title }}</h3></a>
       <p>{{p.description}}</p>
-      <a href="{{ p.github }}" class="btn btn-success btn-xs">Github</a>
+      {% if p.github != 'none' %}<a href="{{ p.github }}" class="btn btn-success btn-xs">Github</a>{% endif %}
     </li>
   {% endfor %}
 </ul>
