@@ -5,6 +5,7 @@
 	<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="/assets/css/darkly.min.css">
 	<link rel="stylesheet" href="/assets/css/custom.css">
+	<link rel="stylesheet" href="/assets/css/sintaksa.css">
 
 	<script type="text/javascript" src="/assets/js/lib/jquery.min.js"></script>
 	<script type="text/javascript" src="/assets/js/lib/bootstrap.min.js"></script>
@@ -115,8 +116,7 @@ Svaki od 3 načina se sastoji iz 3 koraka.</p>
 
 <h3 id="primeri-u-kodu">Primeri u kodu</h3>
 <p><strong>BST.h</strong></p>
-
-<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="k">typedef</span> <span class="k">struct</span> <span class="n">node</span> <span class="n">Node</span><span class="p">;</span>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">typedef</span> <span class="k">struct</span> <span class="n">node</span> <span class="n">Node</span><span class="p">;</span>
 
 <span class="k">struct</span> <span class="n">node</span><span class="p">{</span>
 	<span class="kt">int</span> <span class="n">val</span><span class="p">;</span>
@@ -140,8 +140,8 @@ Svaki od 3 načina se sastoji iz 3 koraka.</p>
  */</span>
 <span class="kt">void</span> <span class="n">inorder_custom_function</span><span class="p">(</span><span class="n">Node</span><span class="o">*</span> <span class="n">root</span><span class="p">,</span> <span class="kt">void</span> <span class="p">(</span><span class="o">*</span><span class="n">do_stuff</span><span class="p">)(</span><span class="n">Node</span><span class="o">*</span> <span class="n">curr</span><span class="p">));</span>
 <span class="kt">void</span> <span class="n">square</span><span class="p">(</span><span class="n">Node</span><span class="o">*</span> <span class="n">curr</span><span class="p">);</span>
-<span class="kt">int</span> <span class="n">height</span><span class="p">(</span><span class="n">Node</span><span class="o">*</span> <span class="n">root</span><span class="p">);</span></code></pre></figure>
-
+<span class="kt">int</span> <span class="n">height</span><span class="p">(</span><span class="n">Node</span><span class="o">*</span> <span class="n">root</span><span class="p">);</span>
+</code></pre></div></div>
 <p><strong>BST.c</strong></p>
 
 <figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="cp">#include &lt;stdio.h&gt;
