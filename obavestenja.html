@@ -1,0 +1,13 @@
+---
+layout: default
+title: /risk/obavestenja
+---
+
+
+{% for o in site.data.obavestenja%}
+	<h3>{{o.naziv}}, {{o.predavac}}</h3>
+	<h5>{{o.datum}}</h5>
+	<p>
+		{{o.opis}}
+	</p>
+{% endfor %}
