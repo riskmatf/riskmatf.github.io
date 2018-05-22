@@ -20,7 +20,7 @@
   <nav class="navbar navbar-default">
     <div class="container-fluid">
       <div class="navbar-header">
-        <a class="navbar-brand" href="/">risk><span>_</span></a>
+        <a class="navbar-brand" href="/"><img src="/assets//img/logo.png"></img></a>
       </div>
       <ul class="nav navbar-nav navbar-left">
         <li class=""><a href="/index.html" >Pocetna</a></li>
@@ -177,11 +177,11 @@ T2   T3                           T3   T4 ### Dodavanje elementa Dodavanje se za
 		<span class="n">root</span><span class="o">-&gt;</span><span class="n">right</span> <span class="o">=</span> <span class="n">insert</span><span class="p">(</span><span class="n">root</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">,</span> <span class="n">value</span><span class="p">);</span>
 	<span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">root</span><span class="o">-&gt;</span><span class="n">value</span> <span class="o">&gt;</span> <span class="n">value</span><span class="p">)</span>
 		<span class="n">root</span><span class="o">-&gt;</span><span class="n">left</span> <span class="o">=</span> <span class="n">insert</span><span class="p">(</span><span class="n">root</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">,</span> <span class="n">value</span><span class="p">);</span>
-	<span class="c1">//BST does not allow insertions of values that are already in tree
-</span>	<span class="k">else</span>
+	<span class="c1">//BST does not allow insertions of values that are already in tree</span>
+	<span class="k">else</span>
 		<span class="k">return</span> <span class="n">root</span><span class="p">;</span>
-	<span class="c1">//calculate balance factor of current node
-</span>	<span class="kt">int</span> <span class="n">balance</span> <span class="o">=</span> <span class="n">calculate_balance_factor</span><span class="p">(</span><span class="n">root</span><span class="p">);</span>
+	<span class="c1">//calculate balance factor of current node</span>
+	<span class="kt">int</span> <span class="n">balance</span> <span class="o">=</span> <span class="n">calculate_balance_factor</span><span class="p">(</span><span class="n">root</span><span class="p">);</span>
 	<span class="cm">/*
 	 We have 4 cases:
 	 left left = the critical node is in left subtree of left successor
@@ -191,26 +191,26 @@ T2   T3                           T3   T4 ### Dodavanje elementa Dodavanje se za
 	  */</span>
 
 
-	<span class="c1">//left left
-</span>	<span class="k">if</span><span class="p">(</span><span class="n">balance</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="n">value</span> <span class="o">&lt;</span> <span class="n">root</span><span class="o">-&gt;</span><span class="n">left</span><span class="o">-&gt;</span><span class="n">value</span><span class="p">){</span>
+	<span class="c1">//left left</span>
+	<span class="k">if</span><span class="p">(</span><span class="n">balance</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="n">value</span> <span class="o">&lt;</span> <span class="n">root</span><span class="o">-&gt;</span><span class="n">left</span><span class="o">-&gt;</span><span class="n">value</span><span class="p">){</span>
 		<span class="n">print_debug</span><span class="p">(</span><span class="s">"</span><span class="se">\x1b</span><span class="s">[31mright rotate in %d</span><span class="se">\x1b</span><span class="s">[0m</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">root</span><span class="o">-&gt;</span><span class="n">value</span><span class="p">);</span>
-<span class="c1">//		printf("\x1b[31mright rotate in %d\x1b[0m\n", root-&gt;value);
-</span>		<span class="k">return</span> <span class="n">right_rotation</span><span class="p">(</span><span class="n">root</span><span class="p">);</span>
+<span class="c1">//		printf("\x1b[31mright rotate in %d\x1b[0m\n", root-&gt;value);</span>
+		<span class="k">return</span> <span class="n">right_rotation</span><span class="p">(</span><span class="n">root</span><span class="p">);</span>
 	<span class="p">}</span>
-	<span class="c1">//right right
-</span>	<span class="k">if</span><span class="p">(</span><span class="n">balance</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="n">value</span> <span class="o">&gt;</span> <span class="n">root</span><span class="o">-&gt;</span><span class="n">right</span><span class="o">-&gt;</span><span class="n">value</span><span class="p">){</span>
+	<span class="c1">//right right</span>
+	<span class="k">if</span><span class="p">(</span><span class="n">balance</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="n">value</span> <span class="o">&gt;</span> <span class="n">root</span><span class="o">-&gt;</span><span class="n">right</span><span class="o">-&gt;</span><span class="n">value</span><span class="p">){</span>
 		<span class="n">print_debug</span><span class="p">(</span><span class="s">"</span><span class="se">\x1b</span><span class="s">[34mleft rotate in %d</span><span class="se">\x1b</span><span class="s">[0m</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">root</span><span class="o">-&gt;</span><span class="n">value</span><span class="p">);</span>
 		<span class="k">return</span> <span class="n">left_rotation</span><span class="p">(</span><span class="n">root</span><span class="p">);</span>
 	<span class="p">}</span>
-	<span class="c1">//left right
-</span>	<span class="k">if</span><span class="p">(</span><span class="n">balance</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="n">value</span> <span class="o">&gt;</span> <span class="n">root</span><span class="o">-&gt;</span><span class="n">left</span><span class="o">-&gt;</span><span class="n">value</span><span class="p">){</span>
+	<span class="c1">//left right</span>
+	<span class="k">if</span><span class="p">(</span><span class="n">balance</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="n">value</span> <span class="o">&gt;</span> <span class="n">root</span><span class="o">-&gt;</span><span class="n">left</span><span class="o">-&gt;</span><span class="n">value</span><span class="p">){</span>
 		<span class="n">print_debug</span><span class="p">(</span><span class="s">"</span><span class="se">\x1b</span><span class="s">[34mleft rotate in %d</span><span class="se">\x1b</span><span class="s">[0m</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">root</span><span class="o">-&gt;</span><span class="n">left</span><span class="o">-&gt;</span><span class="n">value</span><span class="p">);</span>
 		<span class="n">root</span><span class="o">-&gt;</span><span class="n">left</span><span class="o">=</span><span class="n">left_rotation</span><span class="p">(</span><span class="n">root</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">);</span>
 		<span class="n">print_debug</span><span class="p">(</span><span class="s">"</span><span class="se">\x1b</span><span class="s">[31mright rotate in %d</span><span class="se">\x1b</span><span class="s">[0m</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">root</span><span class="o">-&gt;</span><span class="n">value</span><span class="p">);</span>
 		<span class="k">return</span> <span class="n">right_rotation</span><span class="p">(</span><span class="n">root</span><span class="p">);</span>
 	<span class="p">}</span>
-	<span class="c1">//right left
-</span>	<span class="k">if</span><span class="p">(</span><span class="n">balance</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="n">value</span> <span class="o">&lt;</span> <span class="n">root</span><span class="o">-&gt;</span><span class="n">right</span><span class="o">-&gt;</span><span class="n">value</span><span class="p">){</span>
+	<span class="c1">//right left</span>
+	<span class="k">if</span><span class="p">(</span><span class="n">balance</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="n">value</span> <span class="o">&lt;</span> <span class="n">root</span><span class="o">-&gt;</span><span class="n">right</span><span class="o">-&gt;</span><span class="n">value</span><span class="p">){</span>
 		<span class="n">print_debug</span><span class="p">(</span><span class="s">"</span><span class="se">\x1b</span><span class="s">[31mright rotate in %d</span><span class="se">\x1b</span><span class="s">[0m</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">root</span><span class="o">-&gt;</span><span class="n">right</span><span class="o">-&gt;</span><span class="n">value</span><span class="p">);</span>
 		<span class="n">root</span><span class="o">-&gt;</span><span class="n">right</span><span class="o">=</span><span class="n">right_rotation</span><span class="p">(</span><span class="n">root</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">);</span>
 		<span class="n">print_debug</span><span class="p">(</span><span class="s">"</span><span class="se">\x1b</span><span class="s">[34mleft rotate in %d</span><span class="se">\x1b</span><span class="s">[0m</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">root</span><span class="o">-&gt;</span><span class="n">value</span><span class="p">);</span>
@@ -256,8 +256,8 @@ T2   T3                           T3   T4 ### Dodavanje elementa Dodavanje se za
 	<span class="k">else</span><span class="p">{</span>
 		<span class="k">if</span><span class="p">(</span><span class="n">root</span><span class="o">-&gt;</span><span class="n">left</span> <span class="o">==</span> <span class="nb">NULL</span> <span class="o">||</span> <span class="n">root</span><span class="o">-&gt;</span><span class="n">right</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">){</span>
 			<span class="n">Node</span><span class="o">*</span> <span class="n">tmp</span> <span class="o">=</span> <span class="p">(</span><span class="n">root</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">)</span> <span class="o">?</span> <span class="n">root</span><span class="o">-&gt;</span><span class="n">left</span> <span class="o">:</span> <span class="n">root</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">;</span>
-			<span class="k">if</span><span class="p">(</span><span class="n">tmp</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">){</span><span class="c1">//case when we delete node that is leaf
-</span>				<span class="n">tmp</span> <span class="o">=</span> <span class="n">root</span><span class="p">;</span>
+			<span class="k">if</span><span class="p">(</span><span class="n">tmp</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">){</span><span class="c1">//case when we delete node that is leaf</span>
+				<span class="n">tmp</span> <span class="o">=</span> <span class="n">root</span><span class="p">;</span>
 				<span class="n">root</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
 			<span class="p">}</span>
 			<span class="k">else</span>
@@ -277,26 +277,26 @@ T2   T3                           T3   T4 ### Dodavanje elementa Dodavanje se za
 	 STEP 2:
 	 We distinguish 4 cases
 	 */</span>
-	<span class="c1">//left case
-</span>	<span class="k">if</span><span class="p">(</span><span class="n">balance</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">){</span>
+	<span class="c1">//left case</span>
+	<span class="k">if</span><span class="p">(</span><span class="n">balance</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">){</span>
 		<span class="kt">int</span> <span class="n">balance_left</span> <span class="o">=</span> <span class="n">calculate_balance_factor</span><span class="p">(</span><span class="n">root</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">);</span>
-		<span class="k">if</span><span class="p">(</span><span class="n">balance_left</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">){</span><span class="c1">//left right case
-</span>			<span class="n">print_debug</span><span class="p">(</span><span class="s">"</span><span class="se">\x1b</span><span class="s">[34mleft rotate in %d</span><span class="se">\x1b</span><span class="s">[0m</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">root</span><span class="o">-&gt;</span><span class="n">left</span><span class="o">-&gt;</span><span class="n">value</span><span class="p">);</span>
+		<span class="k">if</span><span class="p">(</span><span class="n">balance_left</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">){</span><span class="c1">//left right case</span>
+			<span class="n">print_debug</span><span class="p">(</span><span class="s">"</span><span class="se">\x1b</span><span class="s">[34mleft rotate in %d</span><span class="se">\x1b</span><span class="s">[0m</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">root</span><span class="o">-&gt;</span><span class="n">left</span><span class="o">-&gt;</span><span class="n">value</span><span class="p">);</span>
 			<span class="n">root</span><span class="o">-&gt;</span><span class="n">left</span> <span class="o">=</span> <span class="n">left_rotation</span><span class="p">(</span><span class="n">root</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">);</span>
 		<span class="p">}</span>
 		<span class="n">print_debug</span><span class="p">(</span><span class="s">"</span><span class="se">\x1b</span><span class="s">[31mright rotate in %d</span><span class="se">\x1b</span><span class="s">[m</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">root</span><span class="o">-&gt;</span><span class="n">value</span><span class="p">);</span>
-		<span class="k">return</span> <span class="n">right_rotation</span><span class="p">(</span><span class="n">root</span><span class="p">);</span><span class="c1">//left left case
-</span>	<span class="p">}</span>
-	<span class="c1">//right case
-</span>	<span class="k">if</span><span class="p">(</span><span class="n">balance</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">1</span><span class="p">){</span>
+		<span class="k">return</span> <span class="n">right_rotation</span><span class="p">(</span><span class="n">root</span><span class="p">);</span><span class="c1">//left left case</span>
+	<span class="p">}</span>
+	<span class="c1">//right case</span>
+	<span class="k">if</span><span class="p">(</span><span class="n">balance</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">1</span><span class="p">){</span>
 		<span class="kt">int</span> <span class="n">balance_right</span> <span class="o">=</span> <span class="n">calculate_balance_factor</span><span class="p">(</span><span class="n">root</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">);</span>
-		<span class="k">if</span><span class="p">(</span><span class="n">balance_right</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">){</span><span class="c1">//right left case
-</span>			<span class="n">print_debug</span><span class="p">(</span><span class="s">"</span><span class="se">\x1b</span><span class="s">[31mright rotate in %d</span><span class="se">\x1b</span><span class="s">[0m</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">root</span><span class="o">-&gt;</span><span class="n">right</span><span class="o">-&gt;</span><span class="n">value</span><span class="p">);</span>
+		<span class="k">if</span><span class="p">(</span><span class="n">balance_right</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">){</span><span class="c1">//right left case</span>
+			<span class="n">print_debug</span><span class="p">(</span><span class="s">"</span><span class="se">\x1b</span><span class="s">[31mright rotate in %d</span><span class="se">\x1b</span><span class="s">[0m</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">root</span><span class="o">-&gt;</span><span class="n">right</span><span class="o">-&gt;</span><span class="n">value</span><span class="p">);</span>
 			<span class="n">root</span><span class="o">-&gt;</span><span class="n">right</span> <span class="o">=</span> <span class="n">right_rotation</span><span class="p">(</span><span class="n">root</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">);</span>
 		<span class="p">}</span>
 		<span class="n">print_debug</span><span class="p">(</span><span class="s">"</span><span class="se">\x1b</span><span class="s">[34mleft rotate in %d</span><span class="se">\x1b</span><span class="s">[0m</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">root</span><span class="o">-&gt;</span><span class="n">value</span><span class="p">);</span>
-		<span class="k">return</span> <span class="n">left_rotation</span><span class="p">(</span><span class="n">root</span><span class="p">);</span><span class="c1">//right right case
-</span>	<span class="p">}</span>
+		<span class="k">return</span> <span class="n">left_rotation</span><span class="p">(</span><span class="n">root</span><span class="p">);</span><span class="c1">//right right case</span>
+	<span class="p">}</span>
 	<span class="k">return</span> <span class="n">root</span><span class="p">;</span>
 <span class="p">}</span>
 

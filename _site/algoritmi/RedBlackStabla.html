@@ -20,7 +20,7 @@
   <nav class="navbar navbar-default">
     <div class="container-fluid">
       <div class="navbar-header">
-        <a class="navbar-brand" href="/">risk><span>_</span></a>
+        <a class="navbar-brand" href="/"><img src="/assets//img/logo.png"></img></a>
       </div>
       <ul class="nav navbar-nav navbar-left">
         <li class=""><a href="/index.html" >Pocetna</a></li>
@@ -245,8 +245,8 @@ macros are here just for better readability, values are not important*/</span>
 	<span class="k">return</span> <span class="n">new_node</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="c1">//this is classic insert into BST, with addition of parrent pointer
-</span><span class="kt">int</span> <span class="n">BST_insert</span><span class="p">(</span><span class="n">Node</span><span class="o">**</span> <span class="n">root</span><span class="p">,</span> <span class="n">Node</span><span class="o">*</span> <span class="n">parrent</span><span class="p">,</span> <span class="n">Node</span><span class="o">*</span> <span class="n">new</span><span class="p">){</span>
+<span class="c1">//this is classic insert into BST, with addition of parrent pointer</span>
+<span class="kt">int</span> <span class="n">BST_insert</span><span class="p">(</span><span class="n">Node</span><span class="o">**</span> <span class="n">root</span><span class="p">,</span> <span class="n">Node</span><span class="o">*</span> <span class="n">parrent</span><span class="p">,</span> <span class="n">Node</span><span class="o">*</span> <span class="n">new</span><span class="p">){</span>
 	<span class="k">if</span><span class="p">(</span><span class="o">*</span><span class="n">root</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">){</span>
 		<span class="n">new</span><span class="o">-&gt;</span><span class="n">parrent</span><span class="o">=</span><span class="n">parrent</span><span class="p">;</span>
 		<span class="o">*</span><span class="n">root</span><span class="o">=</span><span class="n">new</span><span class="p">;</span>
@@ -259,8 +259,8 @@ macros are here just for better readability, values are not important*/</span>
 		<span class="k">return</span> <span class="n">BST_insert</span><span class="p">(</span><span class="o">&amp;</span><span class="p">(</span><span class="o">*</span><span class="n">root</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">,</span> <span class="o">*</span><span class="n">root</span><span class="p">,</span> <span class="n">new</span><span class="p">);</span>
 	<span class="p">}</span>
 	<span class="k">else</span>
-		<span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="c1">//Value allready in BST
-</span>
+		<span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="c1">//Value allready in BST</span>
+
 <span class="p">}</span>
 
 <span class="kt">void</span> <span class="n">insert_node</span><span class="p">(</span><span class="n">Node</span><span class="o">**</span> <span class="n">root</span><span class="p">,</span> <span class="kt">int</span> <span class="n">val</span><span class="p">){</span>
@@ -290,8 +290,8 @@ macros are here just for better readability, values are not important*/</span>
 				<span class="n">g_parrent_ptr</span><span class="o">-&gt;</span><span class="n">color</span><span class="o">=</span><span class="n">RED</span><span class="p">;</span>
 				<span class="n">uncle</span><span class="o">-&gt;</span><span class="n">color</span><span class="o">=</span><span class="n">BLACK</span><span class="p">;</span>
 				<span class="n">parrent_ptr</span><span class="o">-&gt;</span><span class="n">color</span><span class="o">=</span><span class="n">BLACK</span><span class="p">;</span>
-				<span class="n">curr</span><span class="o">=</span><span class="n">g_parrent_ptr</span><span class="p">;</span><span class="c1">//since we are in a loop, we do this so that we could check up if any problem occurred
-</span>			<span class="p">}</span>
+				<span class="n">curr</span><span class="o">=</span><span class="n">g_parrent_ptr</span><span class="p">;</span><span class="c1">//since we are in a loop, we do this so that we could check up if any problem occurred</span>
+			<span class="p">}</span>
 			<span class="cm">/*
 			 CaseA2
 			 uncle is either NULL or BLACK, we do rotations
@@ -367,8 +367,8 @@ macros are here just for better readability, values are not important*/</span>
 	<span class="p">}</span>
 	<span class="cm">/*if we are deleting node with both children we copy the successor and then remove the succesor, so we
 	only deal with cases when we are deletiong leaf or node that has one child*/</span>
-	<span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">to_remove</span><span class="o">-&gt;</span><span class="n">left</span><span class="o">!=</span><span class="nb">NULL</span> <span class="o">&amp;&amp;</span> <span class="n">to_remove</span><span class="o">-&gt;</span><span class="n">right</span><span class="o">!=</span><span class="nb">NULL</span><span class="p">){</span><span class="c1">//case when node has both children
-</span><span class="cm">/*		Node* tmp = find_min(to_remove-&gt;right);
+	<span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">to_remove</span><span class="o">-&gt;</span><span class="n">left</span><span class="o">!=</span><span class="nb">NULL</span> <span class="o">&amp;&amp;</span> <span class="n">to_remove</span><span class="o">-&gt;</span><span class="n">right</span><span class="o">!=</span><span class="nb">NULL</span><span class="p">){</span><span class="c1">//case when node has both children</span>
+<span class="cm">/*		Node* tmp = find_min(to_remove-&gt;right);
 		it does not matter if we are replacing it with minimum in right subtree or maximum in left subtree
 		both versions are here, test them as you like*/</span>
 
@@ -430,8 +430,8 @@ macros are here just for better readability, values are not important*/</span>
 					<span class="o">*</span><span class="n">root</span><span class="o">=</span><span class="n">rotate_left</span><span class="p">(</span><span class="n">parrent_ptr</span><span class="p">);</span>
 				<span class="k">else</span><span class="p">{</span>
 					<span class="n">sibling</span><span class="o">=</span><span class="n">rotate_left</span><span class="p">(</span><span class="n">parrent_ptr</span><span class="p">);</span>
-					<span class="n">sibling</span><span class="o">-&gt;</span><span class="n">parrent</span><span class="o">-&gt;</span><span class="n">right</span><span class="o">=</span><span class="n">sibling</span><span class="p">;</span><span class="c1">//since we know that sibling is here right child we can safely do this
-</span>				<span class="p">}</span>
+					<span class="n">sibling</span><span class="o">-&gt;</span><span class="n">parrent</span><span class="o">-&gt;</span><span class="n">right</span><span class="o">=</span><span class="n">sibling</span><span class="p">;</span><span class="c1">//since we know that sibling is here right child we can safely do this</span>
+				<span class="p">}</span>
 				<span class="n">sibling</span><span class="o">=</span><span class="n">parrent_ptr</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">;</span>
 			<span class="p">}</span>
 			<span class="k">if</span><span class="p">(</span><span class="n">is_black</span><span class="p">(</span><span class="n">sibling</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="n">is_black</span><span class="p">(</span><span class="n">sibling</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">)){</span>
@@ -446,11 +446,11 @@ macros are here just for better readability, values are not important*/</span>
 					<span class="n">set_color</span><span class="p">(</span><span class="n">sibling</span><span class="p">,</span> <span class="n">RED</span><span class="p">);</span>
 					<span class="n">set_color</span><span class="p">(</span><span class="n">sibling</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">,</span> <span class="n">BLACK</span><span class="p">);</span>
 					
-					<span class="n">sibling</span><span class="o">-&gt;</span><span class="n">parrent</span><span class="o">-&gt;</span><span class="n">right</span> <span class="o">=</span> <span class="n">rotate_right</span><span class="p">(</span><span class="n">sibling</span><span class="p">);</span><span class="c1">//since sibling cant be root, no need to check that
-</span>					<span class="n">sibling</span><span class="o">=</span><span class="n">curr</span><span class="o">-&gt;</span><span class="n">parrent</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">;</span>
+					<span class="n">sibling</span><span class="o">-&gt;</span><span class="n">parrent</span><span class="o">-&gt;</span><span class="n">right</span> <span class="o">=</span> <span class="n">rotate_right</span><span class="p">(</span><span class="n">sibling</span><span class="p">);</span><span class="c1">//since sibling cant be root, no need to check that</span>
+					<span class="n">sibling</span><span class="o">=</span><span class="n">curr</span><span class="o">-&gt;</span><span class="n">parrent</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">;</span>
 				<span class="p">}</span>
-				<span class="c1">//right right case
-</span>				<span class="n">set_color</span><span class="p">(</span><span class="n">sibling</span><span class="p">,</span> <span class="n">color_of</span><span class="p">(</span><span class="n">curr</span><span class="o">-&gt;</span><span class="n">parrent</span><span class="p">));</span>
+				<span class="c1">//right right case</span>
+				<span class="n">set_color</span><span class="p">(</span><span class="n">sibling</span><span class="p">,</span> <span class="n">color_of</span><span class="p">(</span><span class="n">curr</span><span class="o">-&gt;</span><span class="n">parrent</span><span class="p">));</span>
 				<span class="n">set_color</span><span class="p">(</span><span class="n">curr</span><span class="o">-&gt;</span><span class="n">parrent</span><span class="p">,</span> <span class="n">BLACK</span><span class="p">);</span>
 				<span class="n">set_color</span><span class="p">(</span><span class="n">sibling</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">,</span> <span class="n">BLACK</span><span class="p">);</span>
 				<span class="k">if</span><span class="p">(</span><span class="n">parrent_ptr</span> <span class="o">==</span> <span class="o">*</span><span class="n">root</span><span class="p">){</span>
@@ -469,19 +469,19 @@ macros are here just for better readability, values are not important*/</span>
 
 		<span class="p">}</span>
 		<span class="k">else</span><span class="p">{</span>
-			<span class="c1">//case when current node is right child, mirror case of case above
-</span>			<span class="n">Node</span><span class="o">*</span> <span class="n">parrent_ptr</span> <span class="o">=</span> <span class="n">curr</span><span class="o">-&gt;</span><span class="n">parrent</span><span class="p">;</span>
+			<span class="c1">//case when current node is right child, mirror case of case above</span>
+			<span class="n">Node</span><span class="o">*</span> <span class="n">parrent_ptr</span> <span class="o">=</span> <span class="n">curr</span><span class="o">-&gt;</span><span class="n">parrent</span><span class="p">;</span>
 			<span class="n">Node</span><span class="o">*</span> <span class="n">sibling</span> <span class="o">=</span> <span class="n">parrent_ptr</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">;</span>
 			<span class="k">if</span><span class="p">(</span><span class="n">is_red</span><span class="p">(</span><span class="n">sibling</span><span class="p">)){</span>
 				<span class="n">set_color</span><span class="p">(</span><span class="n">sibling</span><span class="p">,</span> <span class="n">BLACK</span><span class="p">);</span>
 				<span class="n">set_color</span><span class="p">(</span><span class="n">parrent_ptr</span><span class="p">,</span> <span class="n">RED</span><span class="p">);</span>
-				<span class="c1">//right rotate
-</span>				<span class="k">if</span><span class="p">(</span><span class="o">*</span><span class="n">root</span> <span class="o">==</span> <span class="n">parrent_ptr</span><span class="p">)</span>
+				<span class="c1">//right rotate</span>
+				<span class="k">if</span><span class="p">(</span><span class="o">*</span><span class="n">root</span> <span class="o">==</span> <span class="n">parrent_ptr</span><span class="p">)</span>
 					<span class="o">*</span><span class="n">root</span><span class="o">=</span><span class="n">rotate_right</span><span class="p">(</span><span class="n">parrent_ptr</span><span class="p">);</span>
 				<span class="k">else</span><span class="p">{</span>
 					<span class="n">sibling</span><span class="o">=</span><span class="n">rotate_right</span><span class="p">(</span><span class="n">parrent_ptr</span><span class="p">);</span>
-					<span class="n">sibling</span><span class="o">-&gt;</span><span class="n">parrent</span><span class="o">-&gt;</span><span class="n">left</span> <span class="o">=</span> <span class="n">sibling</span><span class="p">;</span><span class="c1">//we know that sibling is left
-</span>				<span class="p">}</span>
+					<span class="n">sibling</span><span class="o">-&gt;</span><span class="n">parrent</span><span class="o">-&gt;</span><span class="n">left</span> <span class="o">=</span> <span class="n">sibling</span><span class="p">;</span><span class="c1">//we know that sibling is left</span>
+				<span class="p">}</span>
 				<span class="n">sibling</span><span class="o">=</span><span class="n">parrent_ptr</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">;</span>
 			<span class="p">}</span>
 			<span class="k">if</span><span class="p">(</span><span class="n">is_black</span><span class="p">(</span><span class="n">sibling</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="n">is_black</span><span class="p">(</span><span class="n">sibling</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">)){</span>
@@ -572,8 +572,8 @@ macros are here just for better readability, values are not important*/</span>
 	<span class="n">node1</span><span class="o">-&gt;</span><span class="n">color</span><span class="o">=</span><span class="n">node2</span><span class="o">-&gt;</span><span class="n">color</span><span class="p">;</span>
 	<span class="n">node2</span><span class="o">-&gt;</span><span class="n">color</span><span class="o">=</span><span class="n">tmp</span><span class="p">;</span>
 <span class="p">}</span>
-<span class="c1">//helper functions, here so that code would be more pleasant to read, gets rid of all the NULL checks in conditions
-</span><span class="kt">void</span> <span class="n">set_color</span><span class="p">(</span><span class="n">Node</span><span class="o">*</span> <span class="n">node</span><span class="p">,</span> <span class="n">bool</span> <span class="n">color</span><span class="p">){</span>
+<span class="c1">//helper functions, here so that code would be more pleasant to read, gets rid of all the NULL checks in conditions</span>
+<span class="kt">void</span> <span class="n">set_color</span><span class="p">(</span><span class="n">Node</span><span class="o">*</span> <span class="n">node</span><span class="p">,</span> <span class="n">bool</span> <span class="n">color</span><span class="p">){</span>
 	<span class="k">if</span><span class="p">(</span><span class="n">node</span><span class="o">!=</span><span class="nb">NULL</span><span class="p">)</span>
 		<span class="n">node</span><span class="o">-&gt;</span><span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">;</span>
 <span class="p">}</span>
@@ -593,8 +593,8 @@ macros are here just for better readability, values are not important*/</span>
 		<span class="k">return</span><span class="p">;</span>
 	<span class="n">inorder</span><span class="p">(</span><span class="n">root</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">);</span>
 	<span class="kt">int</span> <span class="n">color</span> <span class="o">=</span> <span class="p">(</span><span class="n">root</span><span class="o">-&gt;</span><span class="n">color</span> <span class="o">==</span> <span class="n">BLACK</span><span class="p">)</span> <span class="o">?</span> <span class="mi">90</span> <span class="o">:</span> <span class="mi">31</span><span class="p">;</span>
-	<span class="n">printf</span><span class="p">(</span><span class="s">"\e[1;%d;107m%d \e[0;0m</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span><span class="n">root</span><span class="o">-&gt;</span><span class="n">val</span><span class="p">);</span><span class="c1">//using escape codes for nicer output
-</span>	<span class="n">inorder</span><span class="p">(</span><span class="n">root</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">);</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"\e[1;%d;107m%d \e[0;0m</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span><span class="n">root</span><span class="o">-&gt;</span><span class="n">val</span><span class="p">);</span><span class="c1">//using escape codes for nicer output</span>
+	<span class="n">inorder</span><span class="p">(</span><span class="n">root</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">);</span>
 <span class="p">}</span>
 
 </code></pre></div></div>

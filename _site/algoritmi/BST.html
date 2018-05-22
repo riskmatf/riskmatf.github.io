@@ -20,7 +20,7 @@
   <nav class="navbar navbar-default">
     <div class="container-fluid">
       <div class="navbar-header">
-        <a class="navbar-brand" href="/">risk><span>_</span></a>
+        <a class="navbar-brand" href="/"><img src="/assets//img/logo.png"></img></a>
       </div>
       <ul class="nav navbar-nav navbar-left">
         <li class=""><a href="/index.html" >Pocetna</a></li>
@@ -171,8 +171,8 @@ Svaki od 3 načina se sastoji iz 3 koraka.</p>
 	<span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">value</span> <span class="o">&lt;</span> <span class="p">(</span><span class="o">*</span><span class="n">root</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">val</span><span class="p">)</span>
 		<span class="k">return</span> <span class="n">insert</span><span class="p">(</span><span class="o">&amp;</span><span class="p">(</span><span class="o">*</span><span class="n">root</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">,</span> <span class="n">value</span><span class="p">);</span>
 	<span class="k">else</span>
-		<span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="c1">//value already in BST
-</span>
+		<span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="c1">//value already in BST</span>
+
 <span class="p">}</span>
 <span class="n">Node</span><span class="o">*</span> <span class="n">find_max</span><span class="p">(</span><span class="n">Node</span><span class="o">*</span> <span class="n">root</span><span class="p">){</span>
 	<span class="k">while</span><span class="p">(</span><span class="n">root</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">)</span>
@@ -191,14 +191,14 @@ Svaki od 3 načina se sastoji iz 3 koraka.</p>
 		<span class="n">delete</span><span class="p">(</span><span class="o">&amp;</span><span class="p">(</span><span class="o">*</span><span class="n">root</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">,</span> <span class="n">value</span><span class="p">);</span>
 	<span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">value</span> <span class="o">&lt;</span> <span class="p">(</span><span class="o">*</span><span class="n">root</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">val</span><span class="p">)</span>
 		<span class="n">delete</span><span class="p">(</span><span class="o">&amp;</span><span class="p">(</span><span class="o">*</span><span class="n">root</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">,</span> <span class="n">value</span><span class="p">);</span>
-	<span class="k">else</span><span class="p">{</span><span class="c1">//found node that has to be deleted
-</span>		<span class="k">if</span><span class="p">((</span><span class="o">*</span><span class="n">root</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">left</span> <span class="o">==</span> <span class="nb">NULL</span> <span class="o">||</span> <span class="p">(</span><span class="o">*</span><span class="n">root</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">right</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">){</span><span class="c1">//node has 0 or 1 child
-</span>			<span class="n">Node</span><span class="o">*</span> <span class="n">tmp</span> <span class="o">=</span> <span class="p">((</span><span class="o">*</span><span class="n">root</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">left</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span> <span class="o">?</span> <span class="p">(</span><span class="o">*</span><span class="n">root</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">right</span> <span class="o">:</span> <span class="p">(</span><span class="o">*</span><span class="n">root</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">;</span>
+	<span class="k">else</span><span class="p">{</span><span class="c1">//found node that has to be deleted</span>
+		<span class="k">if</span><span class="p">((</span><span class="o">*</span><span class="n">root</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">left</span> <span class="o">==</span> <span class="nb">NULL</span> <span class="o">||</span> <span class="p">(</span><span class="o">*</span><span class="n">root</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">right</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">){</span><span class="c1">//node has 0 or 1 child</span>
+			<span class="n">Node</span><span class="o">*</span> <span class="n">tmp</span> <span class="o">=</span> <span class="p">((</span><span class="o">*</span><span class="n">root</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">left</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span> <span class="o">?</span> <span class="p">(</span><span class="o">*</span><span class="n">root</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">right</span> <span class="o">:</span> <span class="p">(</span><span class="o">*</span><span class="n">root</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">;</span>
 			<span class="n">free</span><span class="p">(</span><span class="o">*</span><span class="n">root</span><span class="p">);</span>
 			<span class="o">*</span><span class="n">root</span> <span class="o">=</span> <span class="n">tmp</span><span class="p">;</span>
 		<span class="p">}</span>
-		<span class="k">else</span><span class="p">{</span><span class="c1">//node has 2 children
-</span>			<span class="n">Node</span><span class="o">*</span> <span class="n">tmp</span> <span class="o">=</span> <span class="n">find_max</span><span class="p">((</span><span class="o">*</span><span class="n">root</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">);</span>
+		<span class="k">else</span><span class="p">{</span><span class="c1">//node has 2 children</span>
+			<span class="n">Node</span><span class="o">*</span> <span class="n">tmp</span> <span class="o">=</span> <span class="n">find_max</span><span class="p">((</span><span class="o">*</span><span class="n">root</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">);</span>
 			<span class="p">(</span><span class="o">*</span><span class="n">root</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">val</span> <span class="o">=</span> <span class="n">tmp</span><span class="o">-&gt;</span><span class="n">val</span><span class="p">;</span>
 			<span class="n">delete</span><span class="p">(</span><span class="o">&amp;</span><span class="p">(</span><span class="o">*</span><span class="n">root</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">,</span> <span class="n">tmp</span><span class="o">-&gt;</span><span class="n">val</span><span class="p">);</span>
 		<span class="p">}</span>
