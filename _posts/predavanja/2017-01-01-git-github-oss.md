@@ -2,7 +2,7 @@
 category: predavanja
 layout: post
 title: Git, Github i OpenSource
-author: Stevan Nestorovic
+author: Stevan Nestorović
 description: Uvod u git, github i opensource softver.
 video: none
 code: none

@@ -1,7 +1,7 @@
 - naziv: Razvjov aplikacija za veb u python-u
   predavac: Stevan Nestorovic
-  opis: "Drage kolege i koleginice, u nedelju 26.03. u ucionici 830 bice odrzan drugi deo predavanja
-	o razvoju aplikacija za veb u python-u upotrebom Flask framework-a(srp. radni okvir). Dosadasnji kod se nalazi na <a href=\"github.com/riskmatf/830live\">github</a>-u. Teme koje cemo proci ce biti upotreba baza, kao i postavljanje aplikacije na internet."
+  opis: "Drage kolege i koleginice, u nedelju 26.03. u učionici 830 bice održan drugi deo predavanja
+	o razvoju aplikacija za veb u python-u upotrebom Flask framework-a(srp. radni okvir). Dosadašnji kod se nalazi na <a href=\"github.com/riskmatf/flask-notes\">github</a>-u. Teme koje cemo proci ce biti upotreba baza, kao i postavljanje aplikacije na internet."
 - naziv: Uvod u BASH
   predavac: Pedja Trifunov
   opis: "Drage kolege i koleginice,
