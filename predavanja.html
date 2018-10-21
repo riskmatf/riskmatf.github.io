@@ -3,23 +3,26 @@ layout: default
 title: /risk/predavanja
 ---
 <div class="row">
-  <ul class="clear-list">
-    {% for p in site.categories.predavanja%}
-      <li class="panel panel-primary">
-        <div class="panel-heading">
-          <h3 class="panel-title">{{p.title}}</h3>
-        </div>
-        <div class="panel-body">
-          <h5><span class="text-primary">Autor:</span> {{p.author}}</h5>
+  <div class="col-md-11">
+    <ul class="clear-list">
+      {% for p in site.categories.predavanja%}
+        <li class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">{{p.title}}</h3>
+          </div>
+          <div class="panel-body">
+            <h5><span class="text-primary">Autor:</span> {{p.author}}</h5>
 
-          <p>{{p.description}}</p>
-          {% if p.video != 'none' %}<a href="{{p.video}}" class="btn btn-primary btn-xs">Video</a> {% endif %}
+            <p>{{p.description}}</p>
+            {% if p.video != 'none' %}<a href="{{p.video}}" class="btn btn-primary btn-xs">Video</a> {% endif %}
 
-          {% if p.slides != 'none' %}<a href="{{site.assets}}data/{{p.slides}}" class="btn btn-primary btn-xs">Slajdovi</a> {% endif %}
+            {% if p.slides != 'none' %}<a href="{{site.assets}}data/{{p.slides}}" class="btn btn-primary btn-xs">Slajdovi</a> {% endif %}
 
-          {% if p.code != 'none' %}<a href="{{p.code}}" class="btn btn-primary btn-xs">Kod</a> {% endif %}
-        </div>
-      </li>
-    {% endfor %}
-  </ul>
+            {% if p.code != 'none' %}<a href="{{p.code}}" class="btn btn-primary btn-xs">Kod</a> {% endif %}
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="col-md-1"></div>
 </div>
