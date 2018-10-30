@@ -3,13 +3,12 @@
 	<meta charset="UTF-8">
 
 	<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
-	<link rel="stylesheet" href="/assets/css/darkly.min.css">
+	<link id="ccss" rel="stylesheet" href="/assets/css/darkly.min.css">
 	<link rel="stylesheet" href="/assets/css/custom.css">
 
-	<script type="text/javascript" src="/assets/js/lib/jquery.min.js"></script>
 	<script type="text/javascript" src="/assets/js/lib/bootstrap.min.js"></script>
-	<script type="text/javascript" src="/assets/js/lib/typed.js"></script>
 	<script src="https://use.fontawesome.com/17876a6156.js"></script>
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
 
 	<title>/risk/predavanja</title>
 </head>
@@ -17,19 +16,21 @@
 	<div class="container">
 			<div class="row">
   <header class="col-md-12 primary">
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-default navbar-fixed-top navbar-expand-lg">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand" href="/"><img style="max-height:100%; max-width:100%; object-fit contain"src="https://i.imgur.com/vPIuIJr.png"></img></a>
+          <a class="navbar-brand" href="/"><img style="max-height:100%; max-width:100%; object-fit contain" src="https://i.imgur.com/vPIuIJr.png"></a>
         </div>
-        <ul class="nav navbar-nav">
-          <li><a href="/index.html" >Početna</a></li>
-          <!-- <li><a href="/obavestenja.html">Obaveštenja</a></li> -->
-          <li><a href="/predavanja.html" >Predavanja</a></li>
-          <!-- <li><a href="/projekti.html" >Projekti</a></li> -->
-          <li><a href="https://github.com/riskmatf">GitHub</a></li>
-          <li><a href="https://www.facebook.com/groups/1192849077458638/">Facebook</a></li>
-        </ul>
+	<div class="collapse navbar-collapse" id="menu">
+	        <ul class="nav navbar-nav">
+        	  <li><a href="/index.html" >Početna</a></li>
+          	  <!-- <li><a href="/obavestenja.html">Obaveštenja</a></li> -->
+          	  <li><a href="/predavanja.html" >Predavanja</a></li>
+          	  <!-- <li><a href="/projekti.html" >Projekti</a></li> -->
+          	  <li><a href="https://github.com/riskmatf" target="_blank">GitHub</a></li>
+          	  <li><a href="https://www.facebook.com/groups/1192849077458638/" target="_blank">Facebook</a></li>
+        	</ul>
+        </div>
       </div>
     </nav>
   </header>
@@ -38,6 +39,22 @@
 		  <div class="row">
   <div class="col-md-11">
     <ul class="clear-list">
+      
+        <li class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Git, Github i OpenSource</h3>
+          </div>
+          <div class="panel-body">
+            <h5><span class="text-primary">Autor:</span> Stevan Nestorović</h5>
+
+            <p>Uvod u git, github i opensource softver.</p>
+            
+
+            
+
+            <a href="https://github.com/riskmatf/git-radionica" class="btn btn-primary btn-xs">GitHub repozitorijum</a> 
+          </div>
+        </li>
       
         <li class="panel panel-primary">
           <div class="panel-heading">
@@ -51,7 +68,7 @@
 
             
 
-            <a href="https://github.com/riskmatf/unity3d" class="btn btn-primary btn-xs">Kod</a> 
+            <a href="https://github.com/riskmatf/unity3d" class="btn btn-primary btn-xs">GitHub repozitorijum</a> 
           </div>
         </li>
       
@@ -67,7 +84,7 @@
 
             
 
-            <a href="https://github.com/riskmatf/flask-notes" class="btn btn-primary btn-xs">Kod</a> 
+            <a href="https://github.com/riskmatf/flask-notes" class="btn btn-primary btn-xs">GitHub repozitorijum</a> 
           </div>
         </li>
       
@@ -83,7 +100,7 @@
 
             
 
-            <a href="https://github.com/riskmatf/bash-intro" class="btn btn-primary btn-xs">Kod</a> 
+            <a href="https://github.com/riskmatf/bash-intro" class="btn btn-primary btn-xs">GitHub repozitorijum</a> 
           </div>
         </li>
       
@@ -99,7 +116,7 @@
 
             
 
-            <a href="https://github.com/riskmatf/android-intro01" class="btn btn-primary btn-xs">Kod</a> 
+            <a href="https://github.com/riskmatf/android-intro01" class="btn btn-primary btn-xs">GitHub repozitorijum</a> 
           </div>
         </li>
       
@@ -147,7 +164,7 @@
 
             <a href="/assets/data/stevan-grafika.pdf" class="btn btn-primary btn-xs">Slajdovi</a> 
 
-            <a href="https://github.com/stevannestorovic/risk-grafika" class="btn btn-primary btn-xs">Kod</a> 
+            <a href="https://github.com/stevannestorovic/risk-grafika" class="btn btn-primary btn-xs">GitHub repozitorijum</a> 
           </div>
         </li>
       
@@ -173,5 +190,6 @@
 </div>
 
 	</div>
+	<script src="/assets/js/themes.js"></script>
 </body>
 </html>

@@ -3,13 +3,12 @@
 	<meta charset="UTF-8">
 
 	<link rel="stylesheet" href="{{site.assets}}css/bootstrap.min.css">
-	<link rel="stylesheet" href="{{site.assets}}css/darkly.min.css">
+	<link id="ccss" rel="stylesheet" href="{{site.assets}}css/darkly.min.css">
 	<link rel="stylesheet" href="{{site.assets}}css/custom.css">
 
-	<script type="text/javascript" src="{{site.assets}}js/lib/jquery.min.js"></script>
 	<script type="text/javascript" src="{{site.assets}}js/lib/bootstrap.min.js"></script>
-	<script type="text/javascript" src="{{site.assets}}js/lib/typed.js"></script>
 	<script src="https://use.fontawesome.com/17876a6156.js"></script>
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
 
 	<title>{{page.title}}</title>
 </head>
@@ -18,5 +17,6 @@
 			{% include header.html %}
 		  {{ content }}
 	</div>
+	<script src="{{site.assets}}js/themes.js"></script>
 </body>
 </html>
