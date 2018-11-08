@@ -2,6 +2,5 @@ exclude: ['README.md']
 permalink: /:categories/:title
 assets: /assets/
 markdown: kramdown
-highlighter: rouge
-kramdown:
-  syntax_highlighter: rouge
+collections:
+  - photos
