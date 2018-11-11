@@ -1,6 +1,6 @@
 ---
 name: Bash
-date: 12-10-2018
+date: 2-12-2017
 images:
   - path: /assets/img/okupljanja/bash/bash01.jpg
     title: none
