@@ -9,7 +9,7 @@ title: /risk/predavanja
       {% for p in site.categories.predavanja%}
         <li class="panel panel-primary">
           <div class="panel-heading">
-            <h3 class="panel-title">{{p.title}}</h3>
+            <h3 class="panel-title">{{p.title}}, {{p.date | date_to_string}}</h3>
           </div>
           <div class="panel-body">
             <h5><span class="text-primary">Autor:</span> {{p.author}}</h5>
