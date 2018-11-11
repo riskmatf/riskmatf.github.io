@@ -14,6 +14,8 @@ body {
 .crop {
 	height : 200px; 
 	overflow : hidden;
+	margin-top : 2px;
+	margin-bottom : 2px;
 }
 .crop img {
 	display : block;
