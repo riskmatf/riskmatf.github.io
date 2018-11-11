@@ -5,10 +5,10 @@ title: /risk/galerija
 
 {% for album in site.photos %}
   <div class="row">
-      <h1>{{ album.name }}</h1>
+      <h1>{{album.name}}</h1>
       <h5>{{ album.date | date_to_string }}</h5>
       {% for image in album.images %}
-        <img src="{{image.path}}" alt="{{image.desc}}" class="col-md-4 img-responsive img-fluid rounded">
+        <img src="{{image.path}}" alt="{{image.desc}}" class="col-md-4 img-responsive img-fluid">
       {% endfor %}
   </div>
 {% endfor %}
