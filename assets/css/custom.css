@@ -10,3 +10,12 @@
 body {
 	padding-top:70px;
 }
+
+.crop {
+	height : 200px; 
+	overflow : hidden;
+}
+.crop img {
+	display : block;
+	width : 100%;
+}
