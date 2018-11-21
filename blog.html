@@ -1,0 +1,26 @@
+---
+layout: default
+title: /risk/blog
+---
+<div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-xs-10">
+        <ul class="clear-list">
+            {% for p in site.categories.blog %}
+            <li class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">{{p.title}}, {{p.date | date: "%-d/%-m/%Y"}}</h3>
+                </div>
+                <div class="panel-body">
+                    <h5><span class="text-primary">Autor:</span> {{p.author}}</h5>
+                    <!--<p>{{p.excerpt}}</p>-->
+                    <p>{{ p.content | truncatewords:75 }}</p>
+
+                    <button class='btn btn-primary'><a href='{{p.url}}.html'>Pročitaj</a></button>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="col-md-1"></div>
+</div>
