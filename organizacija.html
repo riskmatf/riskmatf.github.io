@@ -1,0 +1,58 @@
+---
+layout: default
+---
+<!--<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">-->
+<!--<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>-->
+<!--<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+<!------ Include the above in your HEAD tag ---------->
+
+<!-- Team -->
+<section id="team" class="pb-5">
+    <div class="container">
+        <h5 class="section-title h1">NAS TIM</h5>
+        <div class="row">
+            <!-- Team member -->
+            {% for o in site.categories.org reversed %}
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="assets/img/organizacija/{{ o.slika }}" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ o.ime }} {{ o.prezime }}</h5>
+                        <p class="card-text">
+                            Lorem ipsum lorem lorem selo volem lorem ipsum selo volem.
+                        </p>
+
+                        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<style>
+.card .box ul {
+    margin:0;
+    padding:0;
+}
+.card .box ul li {
+    list-style:none;
+    float:left;
+}
+.card .box ul li a {
+    display:block;
+    color:#aaa;
+    margin:0 10px;
+    font-size:20px;
+    transition:0.5s;
+    text-align:center;
+}
+.card .box ul li:hover a {
+    color:#e91e63;
+</style>
+<!-- Team -->
