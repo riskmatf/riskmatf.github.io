@@ -1,0 +1,151 @@
+<html>
+<head>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-129543038-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'UA-129543038-1');
+</script>
+
+<meta charset="UTF-8">
+
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+
+<!--Bootstrap 4 migration prepared-->
+<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
+
+<link id="ccss" rel="stylesheet" href="/assets/css/darkly.min.css">
+<link rel="stylesheet" href="/assets/css/custom.css">
+
+<script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="/assets/js/lib/bootstrap.min.js"></script>
+
+<!--Bootstrap 4 migration prepared-->
+<!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>-->
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>-->
+<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>-->
+
+<script src="https://use.fontawesome.com/17876a6156.js"></script>
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"><Paste>
+	<meta charset="UTF-8">
+
+	<title>Web aplikacija za organizaciju</title>
+</head>
+<body>
+	<header class="col-md-12 primary">
+	<nav class="navbar navbar-default navbar-fixed-top">
+	<div class="container-fluid">
+		<div class="navbar-header">
+		<a class="navbar-brand" href="/"><img style="max-height:100%; max-width:100%; object-fit contain" src="https://i.imgur.com/vPIuIJr.png"></a>
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+		</div>
+		<div class="collapse navbar-collapse" id="myNavbar">
+			<ul class="nav navbar-nav">
+				<li><a href="/index.html" >Početna</a></li>
+				<!-- <li><a href="/obavestenja.html">Obaveštenja</a></li> -->
+				<li><a href="/predavanja.html">Predavanja</a></li>
+
+                <!--TODO-->
+				<!--<li><a href="/organizacija.html">Organizacija</a></li>-->
+				<li><a href="/blog.html">Blog</a></li>
+				<!-- <li><a href="/projekti.html" >Projekti</a></li> -->
+				<li><a href="/galerija.html">Galerija</a></li> 
+				<li><a href="https://github.com/riskmatf" target="_blank">GitHub</a></li>
+				<li><a href="https://www.facebook.com/groups/1192849077458638/" target="_blank">Facebook</a></li>
+				<li><a href="/prijava_predavanja.html">Prijava predavanja</a></li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+</header>
+
+	<div class="container">
+		  <p><a href="https://github.com/riskmatf/ksi3">Github Link</a></p>
+<h3 id="sadrzaj">Sadrzaj</h3>
+
+<ul>
+  <li><a href="#namena">Namena aplikacije</a></li>
+  <li><a href="#instalacija">Instalacija</a></li>
+  <li><a href="#todo">TODO</a></li>
+  <li><a href="#tehnologije">Tehnologije koje se koriste</a></li>
+  <li><a href="#kako-doprineti">Kako doprineti</a></li>
+</ul>
+
+<h3 id="namena">Namena</h3>
+<p>Aplikacija sluzi za predlaganje, organizovanje i arhiviranje aktivnosti kluba.</p>
+
+<h3 id="instalacija">Instalacija</h3>
+<p>Na linuxu je potrebno imati instaliran <a href="http://howtoubuntu.org/how-to-install-lamp-on-ubuntu">LAMP stack</a>.
+Na windowsu je potrebno imati instaliran <a href="https://www.apachefriends.org/index.html">XAMPP</a>.
+Treba editovati <a href="https://github.com/atpgamma/ksi3/blob/master/app/database.php">database.php</a> u skladu sa podesavanjima kod vas, uglavnom promena sifre i username-a.
+Takodje treba napraviti mysql bazu koja se zove ksi, to se moze lako iz komandne linije</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mysql&gt; CREATE DATABASE ksi;
+$ mysql -u &lt;ime&gt; -p ksi &lt; ksi.sql
+</code></pre></div></div>
+
+<h3 id="todo">TODO</h3>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />dodati korisnike, registracija i logovanje, povezati to sa aktivnostima</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />lepse srediti konfiguraciju</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />ispisati tekst za pocetnu stranu, o klubu, staviti linkove za chat itd.</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />srediti css, forme, meni, responsive</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />srediti redirect na /klub/aktivnosti kada se okaci aktivnost, trenutno samo ispisuje neki bezveze tekst</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />doraditi uputsvo za instalciju</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />srediti konfiguraciju, glavni url, podaci za bazu..</li>
+</ul>
+
+<h3 id="tehnologije">Tehnologije</h3>
+<p>Tehnologije koje se koriste su PHP, HTML, CSS i JavaScript. Ukoliko niste upoznati sa nekom od njih, evo par resursa za njihovo ucenje:</p>
+
+<ul>
+  <li><a href="https://www.codecademy.com/">Codecademy</a>, ovde mozete pokupiti osnove svake</li>
+  <li><a href="http://phpsrbija.github.io/php-the-right-way/">PHP na pravi nacin</a>, ovo obavezno procitati za PHP</li>
+  <li><a href="http://htmldog.com/guides/">HTMLDog</a>, za ucenje HTML-a CSS-a i JavaScript-a</li>
+</ul>
+
+<p>Pored ovoga za saradnju se koristi <em>git</em> i <em>github</em>. Evo par resursa i za njih:</p>
+
+<ul>
+  <li><a href="https://git-scm.com/book/sr/v2">Knjiga</a> - nije do kraja prevedena na srpski, ali dobar deo jeste</li>
+  <li><a href="http://rogerdudler.github.io/git-guide/">git - the simple guide </a></li>
+</ul>
+
+<h2 id="kako-doprineti">Kako doprineti</h2>
+<p>Da biste doprineli razvoju aplikacije potrebno je prvo da imate github nalog i git instaliran na kompjuteru.</p>
+
+<p><a href="https://github.com/join?source=header-home">Otvori github nalog</a>, <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">instaliraj git</a>.</p>
+
+<p>Zatim <a href="http://i.imgur.com/mDYVhkX.png">fork</a>-ujte repozitorijum i  klonirajte ga sa</p>
+
+<p><code class="highlighter-rouge">git clone https:\\github.com\&lt;vase ime&gt;\aktivnosti</code></p>
+
+<p>Ovo ce napraviti lokalnu kopiju aplikacije kod vas. Jedino sto je jos ostalo je da dodate <em>upstream</em> da bi mogli kaciti kod na glavni repo. To radimo sa</p>
+
+<p><code class="highlighter-rouge">git remote add upstream https:\\github.com\klubstudenatainformatike\aktivnosti</code></p>
+
+<p>Razlog za <em>upstream</em> je taj sto se glavna verzija koda stalno menja i da biste bili u toku sa tim, nov kod povlacite odatle sa</p>
+
+<p><code class="highlighter-rouge">git pull upstream master</code></p>
+
+<p>i tako ste uvek u toku. Ukoliko vam je nesto nejasno iz ovog uputsva, a verovatno jeste, pogledajte <a href="https://www.youtube.com/watch?v=mENDYhfxH-o">ovaj</a> video.</p>
+
+
+	</div>
+</body>
+</html>

@@ -1,0 +1,667 @@
+<html>
+<head>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-129543038-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'UA-129543038-1');
+</script>
+
+<meta charset="UTF-8">
+
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+
+<!--Bootstrap 4 migration prepared-->
+<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
+
+<link id="ccss" rel="stylesheet" href="/assets/css/darkly.min.css">
+<link rel="stylesheet" href="/assets/css/custom.css">
+
+<script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="/assets/js/lib/bootstrap.min.js"></script>
+
+<!--Bootstrap 4 migration prepared-->
+<!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>-->
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>-->
+<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>-->
+
+<script src="https://use.fontawesome.com/17876a6156.js"></script>
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"><Paste>
+	<meta charset="UTF-8">
+
+	<title>Crveno-Crna Stabla</title>
+</head>
+<body>
+	<header class="col-md-12 primary">
+	<nav class="navbar navbar-default navbar-fixed-top">
+	<div class="container-fluid">
+		<div class="navbar-header">
+		<a class="navbar-brand" href="/"><img style="max-height:100%; max-width:100%; object-fit contain" src="https://i.imgur.com/vPIuIJr.png"></a>
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+		</div>
+		<div class="collapse navbar-collapse" id="myNavbar">
+			<ul class="nav navbar-nav">
+				<li><a href="/index.html" >Početna</a></li>
+				<!-- <li><a href="/obavestenja.html">Obaveštenja</a></li> -->
+				<li><a href="/predavanja.html">Predavanja</a></li>
+
+                <!--TODO-->
+				<!--<li><a href="/organizacija.html">Organizacija</a></li>-->
+				<li><a href="/blog.html">Blog</a></li>
+				<!-- <li><a href="/projekti.html" >Projekti</a></li> -->
+				<li><a href="/galerija.html">Galerija</a></li> 
+				<li><a href="https://github.com/riskmatf" target="_blank">GitHub</a></li>
+				<li><a href="https://www.facebook.com/groups/1192849077458638/" target="_blank">Facebook</a></li>
+				<li><a href="/prijava_predavanja.html">Prijava predavanja</a></li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+</header>
+
+	<div class="container">
+		  <h2 id="crveno-crna-stabla">CRVENO-CRNA STABLA</h2>
+<p><strong>Crveno-crna</strong> stabla spadaju u <strong>samobalansirajuca</strong> binarna stabla pretrage. Međutim, ne moraju uvek biti savršeno balansirana, tj ne mora za svaki čvor važiti da je razlika visine levog i desnog podstabla najviše 1. Ove situacije su retke, razlike nisu velike te su dozvoljene zato što ne menjaju asimptosko ponašanje operacija.</p>
+
+<p>Ovim se smanjuje broj rotacija, te su često ova stabla brža od AVL stabala.</p>
+
+<p>Operacije pretrage, dodavanja i brisanja elemnta iz crveno-crnog stabla su O(log(n))</p>
+
+<p><strong>NAPOMENA</strong></p>
+
+<p>NULL čvor koji se spominje u tekstu zapravo nije čvor već NULL pokazivač, međutim radi lakšeg razumevanja crveno-crnih stabala uzima se kao čvor.</p>
+
+<h3 id="pravila">Pravila</h3>
+<ol>
+  <li>Čvor mora biti ili crven ili crn.</li>
+  <li>Koren je uvek crn.</li>
+  <li>Ne smeju postojati dva susedna crvena čvora.</li>
+  <li>Svaki put od korena do NULL čvora ima isti broj crnih čvorova.</li>
+  <li>NULL čvor je crn.</li>
+  <li>Novi čvor koji se ubacuje je uvek crven.</li>
+</ol>
+
+<p><strong>Crna visina</strong> crveno-crnog stabla je broj crnih čvorova na putu od korena do NULL čvorova.</p>
+
+<p><strong>Visina</strong> stabla je uvek &lt;= 2log<sub>2</sub>(n+1)</p>
+
+<h3 id="ubacivanje-u-stablo">Ubacivanje u stablo</h3>
+
+<p>Ubacivanje se vrši u dva koraka:</p>
+
+<ol>
+  <li>Klasično ubacivanje u BSP.</li>
+  <li>Prepravljanje stabla tako da zadovoljava pravila.
+    <h4 id="prepravljanje">Prepravljanje</h4>
+    <p>Za prepravljanje stabla koriste se <strong>rotacija</strong> i\ili <strong>menjanje boja</strong>.</p>
+  </li>
+</ol>
+
+<p>Šta će se koristiti zavisi od boje brata roditelja(u daljem tekstu stric) trenutno razamatranog čvora.</p>
+
+<p>Označimo sa :</p>
+
+<p>X-trenutni čvor</p>
+
+<p>O-otac od X</p>
+
+<p>D-otac od O</p>
+
+<p>S-drugi sin od D(može bit NULL)</p>
+
+<p>Ukoliko je S <strong>crven</strong> radi se menjanje boja, i to:</p>
+
+<ol>
+  <li>Menjaju se boje O i S na crnu.</li>
+  <li>Menja se boja D na crvenu.</li>
+  <li>Da ovo menjanje boja ne bi prekršilo neko od pravila, stavljamo X=D i ponavljamo postupak prepravljanja.</li>
+</ol>
+
+<p>Ukoliko je S <strong>crn</strong> rade se rotacija i menjanje boje. Razlikujemo 4 slučaja:</p>
+
+<ol>
+  <li>
+    <p>Levo levo</p>
+
+    <p>O je levi sin od D, X je levi sin od O</p>
+
+    <p>Radimo desnu u čvoru D i zatim menjamo boje D i O</p>
+  </li>
+  <li>
+    <p>Levo desno</p>
+
+    <p>O je levi sin od D, X je desni sin od O.</p>
+
+    <p>Radimo levu rotaciju u čvoru O, zatim primenimo 1.</p>
+  </li>
+  <li>
+    <p>Desno desno</p>
+
+    <p>O je desni sin od D, X je desni sin od O.</p>
+
+    <p>Radimo levu rotaciju u čvoru D i zatim menjamo bolje D i O</p>
+  </li>
+  <li>
+    <p>Desno levo</p>
+
+    <p>O je desni sin od D, X je levi sin od O.</p>
+
+    <p>Radimo desnu rotaciju u O, zatim primenimo 3</p>
+  </li>
+</ol>
+
+<h3 id="brisanje-iz-stabla">Brisanje iz stabla</h3>
+
+<p>Nasuprot ubacivanju u stablo, ovde umesto boje ujaka(uncle) posmatramo boju brata(sibling) da bi utvrdili slučaj u kom se nalazimo.</p>
+
+<p>Dok je kod ubacivanja najčešće bilo narušeno pravilo dva uzastopna crvena čvora, kod brisanja je najčešće narušeno pravilo da od korena do lista mora biti isti broj crnih čvorova.</p>
+
+<p>Kako je brisanje relativno komplikovan proces, uvodimo pojam <strong>duplo crnog</strong> čvora.
+<strong>Duplo crni</strong> čvor nastaje kada brišemo crni čvor i njega menjamo drugim crnim čvorom. Tada se, da bi crna visina stabla ostala ista, čvor kojim menjamo obrisani naziva duplo crnim. Glavni zadatak nam postaje da duplo crni čvor prebacimo da postane samo crni čvor. To radimo, kao i kod ubacivanja, rotacijama i menjanjem boja.</p>
+
+<h4 id="postupak-brisanja">Postupak brisanja</h4>
+
+<p>Brisanje se odvija u dve faze:</p>
+
+<ol>
+  <li>
+    <p>Obično brisanje iz BSP</p>
+  </li>
+  <li>
+    <p>Prepravljanje stabla nakon brisanja</p>
+  </li>
+</ol>
+
+<p>Kada vršimo obično brisanje, uvek završimo sa brisanjem čvora koji nema dece ili ima samo jedno dete. Ukoliko ima 2 deteta, menjamo sa nekim od njegovih naslednika(najmanjem u desnom podstablu ili najvećem u levom) i dalje brišemo tog naslednika.</p>
+<h4 id="prepravljanje-1">Prepravljanje</h4>
+<p>Označimo čvor koji brišemo sa X, čvor kojim menjamo X sa Y i sa B brata od Y.
+Kod prepravljanja, razlikujemo dva veća slučaja.</p>
+
+<p>1.Ukoliko su ili X ili Y crveni, jednostavno brisanje čvora je dovoljno s obzirom da brišemo crveni čvor i neće biti promene u crnoj visini stabla.</p>
+
+<p>2.Ukoliko si i X i Y crni, tada nam se javlja <strong>duplo crni</strong> slučaj.</p>
+
+<ol>
+  <li>Ukoliko je B crn i bar jedno njegovo dete je crveno, razlikujemo 4 slučaja:
+Označimo sa C crveno dete od B
+    <ol>
+      <li>
+        <p>Levo Levo</p>
+
+        <p>Ukoliko je B levi sin svog oca i C levi sin od B ili su oba deteta od B crvena</p>
+      </li>
+      <li>
+        <p>Levo Desno</p>
+
+        <p>Ukoliko je B levi sin svog oca i C desni sin od B</p>
+      </li>
+      <li>
+        <p>Desno Desno</p>
+
+        <p>Ukoliko je B desni sin svog oca i C desni sin od B ili su oba deteta od B crvena</p>
+      </li>
+      <li>
+        <p>Desno levo</p>
+
+        <p>Ukoliko je B desni sin svog oca i C levi sin od B</p>
+      </li>
+    </ol>
+  </li>
+  <li>Ukoliko je B crn i oba deteta su mu crna, promenimo boju od B na crvenu i krenemo isti postupak za roditelja.</li>
+  <li>Ukoliko je B crven, primenimo rotaciju da ga podignemo gore, promenimo boje njemu i roditelju i ceo postupak nastavimo sa novim B. Novi B će uvek biti crn(zato što će on biti dete starog B, ako je staro B bilo crveno njegova deca ne mogu biti), pa radimo 1 i 2 za njega. Primetimo da, pošto se ovaj slučaj svodi na prethodna dva, dobra praksa je u kodu njega prvog ispitati, pa će prirodnim tokom koda on stići do ostalih slučajeva.</li>
+</ol>
+
+<p><strong>rb.h</strong></p>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;stdbool.h&gt;
+</span>
+<span class="k">typedef</span> <span class="k">struct</span> <span class="n">node</span><span class="p">{</span>
+	<span class="kt">int</span> <span class="n">val</span><span class="p">;</span>
+	<span class="k">struct</span> <span class="n">node</span><span class="o">*</span> <span class="n">left</span><span class="p">;</span>
+	<span class="k">struct</span> <span class="n">node</span><span class="o">*</span> <span class="n">right</span><span class="p">;</span>
+	<span class="k">struct</span> <span class="n">node</span><span class="o">*</span> <span class="n">parrent</span><span class="p">;</span>
+	<span class="n">bool</span> <span class="n">color</span><span class="p">;</span>
+<span class="p">}</span><span class="n">Node</span><span class="p">;</span>
+<span class="cm">/*we have only two options for color, so bool fits well
+macros are here just for better readability, values are not important*/</span>
+
+<span class="cp">#define RED true
+#define BLACK false
+</span>
+<span class="n">Node</span><span class="o">*</span> <span class="n">new_node</span><span class="p">(</span><span class="kt">int</span> <span class="n">val</span><span class="p">);</span>
+<span class="kt">int</span> <span class="n">BST_insert</span><span class="p">(</span><span class="n">Node</span><span class="o">**</span> <span class="n">root</span><span class="p">,</span> <span class="n">Node</span><span class="o">*</span> <span class="n">parrent</span><span class="p">,</span> <span class="n">Node</span><span class="o">*</span> <span class="n">new</span><span class="p">);</span>
+<span class="kt">void</span> <span class="n">insert_node</span><span class="p">(</span><span class="n">Node</span><span class="o">**</span> <span class="n">root</span><span class="p">,</span> <span class="kt">int</span> <span class="n">val</span><span class="p">);</span>
+<span class="kt">void</span> <span class="n">fix_tree_after_insert</span><span class="p">(</span><span class="n">Node</span><span class="o">**</span> <span class="n">root</span><span class="p">,</span> <span class="n">Node</span><span class="o">*</span> <span class="n">curr</span><span class="p">);</span>
+<span class="kt">void</span> <span class="n">remove_node</span><span class="p">(</span><span class="n">Node</span><span class="o">**</span> <span class="n">root</span><span class="p">,</span> <span class="kt">int</span> <span class="n">val</span><span class="p">);</span>
+<span class="kt">void</span> <span class="n">fix_tree_after_remove</span><span class="p">(</span><span class="n">Node</span><span class="o">**</span> <span class="n">root</span><span class="p">,</span> <span class="n">Node</span><span class="o">*</span> <span class="n">curr</span><span class="p">);</span>
+
+<span class="n">Node</span><span class="o">*</span> <span class="n">rotate_left</span><span class="p">(</span><span class="n">Node</span><span class="o">*</span><span class="p">);</span>
+<span class="n">Node</span><span class="o">*</span> <span class="n">rotate_right</span><span class="p">(</span><span class="n">Node</span><span class="o">*</span><span class="p">);</span>
+
+<span class="n">Node</span><span class="o">*</span> <span class="n">find_min</span><span class="p">(</span><span class="n">Node</span><span class="o">*</span> <span class="n">root</span><span class="p">);</span>
+<span class="n">Node</span><span class="o">*</span> <span class="n">get_node</span><span class="p">(</span><span class="n">Node</span><span class="o">*</span><span class="n">root</span><span class="p">,</span> <span class="kt">int</span> <span class="n">val</span><span class="p">);</span>
+<span class="n">Node</span><span class="o">*</span> <span class="n">find_max</span><span class="p">(</span><span class="n">Node</span><span class="o">*</span> <span class="n">root</span><span class="p">);</span>
+
+<span class="n">bool</span> <span class="n">color_of</span><span class="p">(</span><span class="n">Node</span><span class="o">*</span> <span class="n">node</span><span class="p">);</span>
+<span class="n">bool</span> <span class="n">is_black</span><span class="p">(</span><span class="n">Node</span><span class="o">*</span> <span class="n">node</span><span class="p">);</span>
+<span class="kt">void</span> <span class="n">swap_colors</span><span class="p">(</span><span class="n">Node</span><span class="o">*</span> <span class="n">node1</span><span class="p">,</span> <span class="n">Node</span><span class="o">*</span> <span class="n">node2</span><span class="p">);</span>
+<span class="kt">void</span> <span class="n">set_color</span><span class="p">(</span><span class="n">Node</span><span class="o">*</span> <span class="n">node</span><span class="p">,</span> <span class="n">bool</span> <span class="n">color</span><span class="p">);</span>
+<span class="n">bool</span> <span class="n">is_red</span><span class="p">(</span><span class="n">Node</span><span class="o">*</span> <span class="n">node</span><span class="p">);</span>
+
+<span class="kt">void</span> <span class="n">inorder</span><span class="p">(</span><span class="n">Node</span><span class="o">*</span> <span class="n">root</span><span class="p">);</span>
+
+
+</code></pre></div></div>
+<p><strong>rb.c</strong></p>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;stdbool.h&gt;
+#include "rb.h"
+</span>
+<span class="n">Node</span><span class="o">*</span> <span class="n">create_node</span><span class="p">(</span><span class="kt">int</span> <span class="n">val</span><span class="p">){</span>
+	<span class="n">Node</span><span class="o">*</span> <span class="n">new_node</span> <span class="o">=</span> <span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="n">Node</span><span class="p">));</span>
+	<span class="k">if</span><span class="p">(</span><span class="n">new_node</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span>
+		<span class="k">return</span> <span class="n">new_node</span><span class="p">;</span>
+	<span class="n">new_node</span><span class="o">-&gt;</span><span class="n">val</span><span class="o">=</span><span class="n">val</span><span class="p">;</span>
+	<span class="n">new_node</span><span class="o">-&gt;</span><span class="n">left</span><span class="o">=</span><span class="n">new_node</span><span class="o">-&gt;</span><span class="n">right</span><span class="o">=</span><span class="n">new_node</span><span class="o">-&gt;</span><span class="n">parrent</span><span class="o">=</span><span class="nb">NULL</span><span class="p">;</span>
+	<span class="n">new_node</span><span class="o">-&gt;</span><span class="n">color</span><span class="o">=</span><span class="n">RED</span><span class="p">;</span>
+	<span class="k">return</span> <span class="n">new_node</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">//this is classic insert into BST, with addition of parrent pointer</span>
+<span class="kt">int</span> <span class="n">BST_insert</span><span class="p">(</span><span class="n">Node</span><span class="o">**</span> <span class="n">root</span><span class="p">,</span> <span class="n">Node</span><span class="o">*</span> <span class="n">parrent</span><span class="p">,</span> <span class="n">Node</span><span class="o">*</span> <span class="n">new</span><span class="p">){</span>
+	<span class="k">if</span><span class="p">(</span><span class="o">*</span><span class="n">root</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">){</span>
+		<span class="n">new</span><span class="o">-&gt;</span><span class="n">parrent</span><span class="o">=</span><span class="n">parrent</span><span class="p">;</span>
+		<span class="o">*</span><span class="n">root</span><span class="o">=</span><span class="n">new</span><span class="p">;</span>
+		<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+	<span class="p">}</span>
+	<span class="k">if</span><span class="p">(</span><span class="n">new</span><span class="o">-&gt;</span><span class="n">val</span> <span class="o">&gt;</span> <span class="p">(</span><span class="o">*</span><span class="n">root</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">val</span><span class="p">){</span>
+		<span class="k">return</span> <span class="n">BST_insert</span><span class="p">(</span><span class="o">&amp;</span><span class="p">(</span><span class="o">*</span><span class="n">root</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">,</span> <span class="o">*</span><span class="n">root</span><span class="p">,</span> <span class="n">new</span><span class="p">);</span>
+	<span class="p">}</span>
+	<span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">new</span><span class="o">-&gt;</span><span class="n">val</span> <span class="o">&lt;</span> <span class="p">(</span><span class="o">*</span><span class="n">root</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">val</span><span class="p">){</span>
+		<span class="k">return</span> <span class="n">BST_insert</span><span class="p">(</span><span class="o">&amp;</span><span class="p">(</span><span class="o">*</span><span class="n">root</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">,</span> <span class="o">*</span><span class="n">root</span><span class="p">,</span> <span class="n">new</span><span class="p">);</span>
+	<span class="p">}</span>
+	<span class="k">else</span>
+		<span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="c1">//Value allready in BST</span>
+
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="n">insert_node</span><span class="p">(</span><span class="n">Node</span><span class="o">**</span> <span class="n">root</span><span class="p">,</span> <span class="kt">int</span> <span class="n">val</span><span class="p">){</span>
+	<span class="n">Node</span><span class="o">*</span> <span class="n">new</span><span class="o">=</span><span class="n">create_node</span><span class="p">(</span><span class="n">val</span><span class="p">);</span>
+	<span class="k">if</span><span class="p">(</span><span class="n">BST_insert</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="n">new</span><span class="p">)</span><span class="o">!=</span><span class="mi">0</span><span class="p">)</span>
+		<span class="n">printf</span><span class="p">(</span><span class="s">"Value allready in BST.</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+	<span class="k">else</span>
+		<span class="n">fix_tree_after_insert</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">new</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="n">fix_tree_after_insert</span><span class="p">(</span><span class="n">Node</span><span class="o">**</span> <span class="n">root</span><span class="p">,</span> <span class="n">Node</span><span class="o">*</span> <span class="n">curr</span><span class="p">){</span>
+	<span class="n">Node</span><span class="o">*</span> <span class="n">parrent_ptr</span><span class="o">=</span><span class="nb">NULL</span><span class="p">;</span>
+	<span class="n">Node</span><span class="o">*</span> <span class="n">g_parrent_ptr</span><span class="o">=</span><span class="nb">NULL</span><span class="p">;</span>
+
+	<span class="k">while</span><span class="p">(</span><span class="n">curr</span><span class="o">!=*</span><span class="n">root</span> <span class="o">&amp;&amp;</span> <span class="n">is_red</span><span class="p">(</span><span class="n">curr</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="n">is_red</span><span class="p">(</span><span class="n">curr</span><span class="o">-&gt;</span><span class="n">parrent</span><span class="p">)){</span>
+		<span class="n">parrent_ptr</span><span class="o">=</span><span class="n">curr</span><span class="o">-&gt;</span><span class="n">parrent</span><span class="p">;</span>
+		<span class="n">g_parrent_ptr</span><span class="o">=</span><span class="n">parrent_ptr</span><span class="o">-&gt;</span><span class="n">parrent</span><span class="p">;</span>
+		<span class="cm">/*  Case : A
+		Parent of pt is left child of Grand-parent of pt */</span>
+		<span class="k">if</span><span class="p">(</span><span class="n">parrent_ptr</span><span class="o">==</span><span class="n">g_parrent_ptr</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">){</span>
+			<span class="n">Node</span><span class="o">*</span> <span class="n">uncle</span> <span class="o">=</span> <span class="n">g_parrent_ptr</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">;</span>
+			<span class="cm">/*
+			 Case A1: uncle is red
+			 Only recoloring is required
+			 */</span>
+			<span class="k">if</span><span class="p">(</span><span class="n">uncle</span><span class="o">!=</span><span class="nb">NULL</span> <span class="o">&amp;&amp;</span> <span class="n">uncle</span><span class="o">-&gt;</span><span class="n">color</span><span class="o">==</span><span class="n">RED</span><span class="p">){</span>
+				<span class="n">g_parrent_ptr</span><span class="o">-&gt;</span><span class="n">color</span><span class="o">=</span><span class="n">RED</span><span class="p">;</span>
+				<span class="n">uncle</span><span class="o">-&gt;</span><span class="n">color</span><span class="o">=</span><span class="n">BLACK</span><span class="p">;</span>
+				<span class="n">parrent_ptr</span><span class="o">-&gt;</span><span class="n">color</span><span class="o">=</span><span class="n">BLACK</span><span class="p">;</span>
+				<span class="n">curr</span><span class="o">=</span><span class="n">g_parrent_ptr</span><span class="p">;</span><span class="c1">//since we are in a loop, we do this so that we could check up if any problem occurred</span>
+			<span class="p">}</span>
+			<span class="cm">/*
+			 CaseA2
+			 uncle is either NULL or BLACK, we do rotations
+			 */</span>
+			<span class="k">else</span><span class="p">{</span>
+				<span class="k">if</span><span class="p">(</span><span class="n">curr</span><span class="o">==</span><span class="n">parrent_ptr</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">){</span>
+					<span class="n">curr</span><span class="o">=</span><span class="n">rotate_left</span><span class="p">(</span><span class="n">parrent_ptr</span><span class="p">);</span>
+					<span class="n">g_parrent_ptr</span><span class="o">-&gt;</span><span class="n">left</span><span class="o">=</span><span class="n">curr</span><span class="p">;</span>
+					<span class="n">curr</span><span class="o">-&gt;</span><span class="n">parrent</span><span class="o">=</span><span class="n">g_parrent_ptr</span><span class="p">;</span>
+				<span class="p">}</span>
+				<span class="k">if</span><span class="p">(</span><span class="n">g_parrent_ptr</span> <span class="o">==</span> <span class="o">*</span><span class="n">root</span><span class="p">){</span>
+				<span class="o">*</span><span class="n">root</span><span class="o">=</span><span class="n">rotate_right</span><span class="p">(</span><span class="n">g_parrent_ptr</span><span class="p">);</span>
+				<span class="n">swap_colors</span><span class="p">(</span><span class="o">*</span><span class="n">root</span><span class="p">,</span> <span class="n">g_parrent_ptr</span><span class="p">);</span>
+				<span class="p">}</span>
+				<span class="k">else</span><span class="p">{</span>
+					<span class="n">curr</span><span class="o">=</span><span class="n">rotate_right</span><span class="p">(</span><span class="n">g_parrent_ptr</span><span class="p">);</span>
+					<span class="k">if</span><span class="p">(</span><span class="n">curr</span><span class="o">-&gt;</span><span class="n">val</span><span class="o">&gt;</span><span class="n">curr</span><span class="o">-&gt;</span><span class="n">parrent</span><span class="o">-&gt;</span><span class="n">val</span><span class="p">)</span>
+						<span class="n">curr</span><span class="o">-&gt;</span><span class="n">parrent</span><span class="o">-&gt;</span><span class="n">right</span><span class="o">=</span><span class="n">curr</span><span class="p">;</span>
+					<span class="k">else</span>
+						<span class="n">curr</span><span class="o">-&gt;</span><span class="n">parrent</span><span class="o">-&gt;</span><span class="n">left</span><span class="o">=</span><span class="n">curr</span><span class="p">;</span>
+					<span class="n">swap_colors</span><span class="p">(</span><span class="n">curr</span><span class="p">,</span> <span class="n">g_parrent_ptr</span><span class="p">);</span>
+				<span class="p">}</span>
+			<span class="p">}</span>
+		<span class="p">}</span>
+
+		<span class="k">else</span><span class="p">{</span>
+			<span class="cm">/*Case B:
+			  we are in right subtree, so uncle is left
+			 */</span>
+			<span class="n">Node</span><span class="o">*</span> <span class="n">uncle</span> <span class="o">=</span> <span class="n">g_parrent_ptr</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">;</span>
+			<span class="cm">/*Case B1:
+			uncle is red, only recoloring is required*/</span>
+			<span class="k">if</span><span class="p">(</span><span class="n">is_red</span><span class="p">(</span><span class="n">uncle</span><span class="p">)){</span>
+				<span class="n">set_color</span><span class="p">(</span><span class="n">g_parrent_ptr</span><span class="p">,</span> <span class="n">RED</span><span class="p">);</span>
+				<span class="n">set_color</span><span class="p">(</span><span class="n">uncle</span><span class="p">,</span> <span class="n">BLACK</span><span class="p">);</span>
+				<span class="n">set_color</span><span class="p">(</span><span class="n">parrent_ptr</span><span class="p">,</span> <span class="n">BLACK</span><span class="p">);</span>
+				<span class="n">curr</span><span class="o">=</span><span class="n">g_parrent_ptr</span><span class="p">;</span>
+			<span class="p">}</span>
+			<span class="k">else</span><span class="p">{</span>
+				<span class="cm">/*
+				 Case B2:
+				 uncle is either black or NULL, we do rotations
+				 */</span>
+				<span class="k">if</span><span class="p">(</span><span class="n">curr</span><span class="o">==</span><span class="n">parrent_ptr</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">){</span>
+					<span class="n">curr</span><span class="o">=</span><span class="n">rotate_right</span><span class="p">(</span><span class="n">parrent_ptr</span><span class="p">);</span>
+					<span class="n">g_parrent_ptr</span><span class="o">-&gt;</span><span class="n">right</span><span class="o">=</span><span class="n">curr</span><span class="p">;</span>
+				<span class="p">}</span>
+				<span class="k">if</span><span class="p">(</span><span class="n">g_parrent_ptr</span> <span class="o">==</span> <span class="o">*</span><span class="n">root</span><span class="p">){</span>
+					<span class="o">*</span><span class="n">root</span><span class="o">=</span><span class="n">rotate_left</span><span class="p">(</span><span class="n">g_parrent_ptr</span><span class="p">);</span>
+					<span class="n">swap_colors</span><span class="p">(</span><span class="o">*</span><span class="n">root</span><span class="p">,</span> <span class="n">g_parrent_ptr</span><span class="p">);</span>
+				<span class="p">}</span>
+				<span class="k">else</span><span class="p">{</span>
+					<span class="n">curr</span><span class="o">=</span><span class="n">rotate_left</span><span class="p">(</span><span class="n">g_parrent_ptr</span><span class="p">);</span>
+					<span class="k">if</span><span class="p">(</span><span class="n">curr</span><span class="o">-&gt;</span><span class="n">val</span><span class="o">&gt;</span><span class="n">curr</span><span class="o">-&gt;</span><span class="n">parrent</span><span class="o">-&gt;</span><span class="n">val</span><span class="p">)</span>
+						<span class="n">curr</span><span class="o">-&gt;</span><span class="n">parrent</span><span class="o">-&gt;</span><span class="n">right</span><span class="o">=</span><span class="n">curr</span><span class="p">;</span>
+					<span class="k">else</span>
+						<span class="n">curr</span><span class="o">-&gt;</span><span class="n">parrent</span><span class="o">-&gt;</span><span class="n">left</span><span class="o">=</span><span class="n">curr</span><span class="p">;</span>
+					<span class="n">swap_colors</span><span class="p">(</span><span class="n">curr</span><span class="p">,</span> <span class="n">g_parrent_ptr</span><span class="p">);</span>
+					<span class="p">}</span>
+				<span class="p">}</span>
+
+			<span class="p">}</span>
+		<span class="p">}</span>
+
+	<span class="n">set_color</span><span class="p">(</span><span class="o">*</span><span class="n">root</span><span class="p">,</span> <span class="n">BLACK</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="n">remove_node</span><span class="p">(</span><span class="n">Node</span><span class="o">**</span> <span class="n">root</span><span class="p">,</span> <span class="kt">int</span> <span class="n">val</span><span class="p">){</span>
+	<span class="n">Node</span><span class="o">*</span> <span class="n">to_remove</span> <span class="o">=</span> <span class="n">get_node</span><span class="p">(</span><span class="o">*</span><span class="n">root</span><span class="p">,</span> <span class="n">val</span><span class="p">);</span>
+	<span class="k">if</span><span class="p">(</span><span class="n">to_remove</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">){</span>
+		<span class="n">printf</span><span class="p">(</span><span class="s">"Value is not in BST!</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+		<span class="k">return</span><span class="p">;</span>
+	<span class="p">}</span>
+	<span class="cm">/*if we are deleting node with both children we copy the successor and then remove the succesor, so we
+	only deal with cases when we are deletiong leaf or node that has one child*/</span>
+	<span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">to_remove</span><span class="o">-&gt;</span><span class="n">left</span><span class="o">!=</span><span class="nb">NULL</span> <span class="o">&amp;&amp;</span> <span class="n">to_remove</span><span class="o">-&gt;</span><span class="n">right</span><span class="o">!=</span><span class="nb">NULL</span><span class="p">){</span><span class="c1">//case when node has both children</span>
+<span class="cm">/*		Node* tmp = find_min(to_remove-&gt;right);
+		it does not matter if we are replacing it with minimum in right subtree or maximum in left subtree
+		both versions are here, test them as you like*/</span>
+
+		<span class="n">Node</span><span class="o">*</span> <span class="n">tmp</span> <span class="o">=</span> <span class="n">find_max</span><span class="p">(</span><span class="n">to_remove</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">);</span>
+		<span class="n">to_remove</span><span class="o">-&gt;</span><span class="n">val</span> <span class="o">=</span> <span class="n">tmp</span><span class="o">-&gt;</span><span class="n">val</span><span class="p">;</span>
+		<span class="n">to_remove</span><span class="o">=</span><span class="n">tmp</span><span class="p">;</span>
+	<span class="p">}</span>
+	<span class="cm">/*if node had 0 or 1 child, we skip straight to here, if not, previous block made sure that is the case now
+	so we continue to remove that one node that has 0 or 1 child*/</span>
+	<span class="n">Node</span><span class="o">*</span> <span class="n">change</span> <span class="o">=</span> <span class="p">(</span><span class="n">to_remove</span><span class="o">-&gt;</span><span class="n">left</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span> <span class="o">?</span> <span class="n">to_remove</span><span class="o">-&gt;</span><span class="n">right</span> <span class="o">:</span> <span class="n">to_remove</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">;</span>
+
+	<span class="k">if</span><span class="p">(</span><span class="n">change</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">){</span>
+		<span class="n">Node</span><span class="o">*</span> <span class="n">parrent_ptr</span> <span class="o">=</span> <span class="n">to_remove</span><span class="o">-&gt;</span><span class="n">parrent</span><span class="p">;</span>
+		<span class="n">change</span><span class="o">-&gt;</span><span class="n">parrent</span> <span class="o">=</span> <span class="n">parrent_ptr</span><span class="p">;</span>
+		<span class="k">if</span><span class="p">(</span><span class="n">to_remove</span> <span class="o">==</span> <span class="o">*</span><span class="n">root</span><span class="p">){</span>
+			<span class="o">*</span><span class="n">root</span><span class="o">=</span><span class="n">change</span><span class="p">;</span>
+		<span class="p">}</span>
+		<span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">parrent_ptr</span><span class="o">-&gt;</span><span class="n">left</span> <span class="o">==</span> <span class="n">to_remove</span><span class="p">){</span>
+			<span class="n">parrent_ptr</span><span class="o">-&gt;</span><span class="n">left</span> <span class="o">=</span> <span class="n">change</span><span class="p">;</span>
+		<span class="p">}</span>
+		<span class="k">else</span><span class="p">{</span>
+			<span class="n">parrent_ptr</span><span class="o">-&gt;</span><span class="n">right</span> <span class="o">=</span> <span class="n">change</span><span class="p">;</span>
+		<span class="p">}</span>
+		<span class="k">if</span><span class="p">(</span><span class="n">to_remove</span><span class="o">-&gt;</span><span class="n">color</span> <span class="o">==</span> <span class="n">BLACK</span><span class="p">)</span>
+			<span class="n">fix_tree_after_remove</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">change</span><span class="p">);</span>
+	<span class="p">}</span>
+	<span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">to_remove</span> <span class="o">==</span> <span class="o">*</span><span class="n">root</span><span class="p">){</span>
+		<span class="o">*</span><span class="n">root</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+	<span class="p">}</span>
+	<span class="k">else</span><span class="p">{</span>
+		<span class="k">if</span><span class="p">(</span><span class="n">to_remove</span><span class="o">-&gt;</span><span class="n">color</span> <span class="o">==</span> <span class="n">BLACK</span><span class="p">)</span>
+			<span class="n">fix_tree_after_remove</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">to_remove</span><span class="p">);</span>
+	<span class="p">}</span>
+	<span class="cm">/*
+	 *You will notice that this block is similar to one above
+	The reason that these are two different cases is the implementation of fix function
+	it wouldnt work properly if this was done ignoring existance of change node
+	*/</span>
+	<span class="k">if</span><span class="p">(</span><span class="n">to_remove</span> <span class="o">!=</span> <span class="o">*</span><span class="n">root</span> <span class="o">&amp;&amp;</span> <span class="n">change</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">){</span>
+		<span class="k">if</span><span class="p">(</span><span class="n">to_remove</span><span class="o">-&gt;</span><span class="n">parrent</span><span class="o">-&gt;</span><span class="n">left</span> <span class="o">==</span> <span class="n">to_remove</span><span class="p">)</span>
+			<span class="n">to_remove</span><span class="o">-&gt;</span><span class="n">parrent</span><span class="o">-&gt;</span><span class="n">left</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+		<span class="k">else</span>
+			<span class="n">to_remove</span><span class="o">-&gt;</span><span class="n">parrent</span><span class="o">-&gt;</span><span class="n">right</span><span class="o">=</span><span class="nb">NULL</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="n">free</span><span class="p">(</span><span class="n">to_remove</span><span class="p">);</span>
+
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="n">fix_tree_after_remove</span><span class="p">(</span><span class="n">Node</span><span class="o">**</span> <span class="n">root</span><span class="p">,</span> <span class="n">Node</span><span class="o">*</span> <span class="n">curr</span><span class="p">){</span>
+	<span class="k">while</span><span class="p">(</span><span class="n">curr</span><span class="o">!=*</span><span class="n">root</span> <span class="o">&amp;&amp;</span> <span class="n">is_black</span><span class="p">(</span><span class="n">curr</span><span class="p">)){</span>
+		<span class="k">if</span><span class="p">(</span><span class="n">curr</span> <span class="o">==</span> <span class="n">curr</span><span class="o">-&gt;</span><span class="n">parrent</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">){</span>
+			<span class="n">Node</span><span class="o">*</span> <span class="n">parrent_ptr</span> <span class="o">=</span> <span class="n">curr</span><span class="o">-&gt;</span><span class="n">parrent</span><span class="p">;</span>
+			<span class="n">Node</span><span class="o">*</span> <span class="n">sibling</span> <span class="o">=</span> <span class="n">parrent_ptr</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">;</span>
+			<span class="k">if</span><span class="p">(</span><span class="n">is_red</span><span class="p">(</span><span class="n">sibling</span><span class="p">)){</span>
+				<span class="n">set_color</span><span class="p">(</span><span class="n">parrent_ptr</span><span class="p">,</span> <span class="n">RED</span><span class="p">);</span>
+				<span class="n">set_color</span><span class="p">(</span><span class="n">sibling</span><span class="p">,</span> <span class="n">BLACK</span><span class="p">);</span>
+				<span class="k">if</span><span class="p">(</span><span class="n">parrent_ptr</span> <span class="o">==</span> <span class="o">*</span><span class="n">root</span><span class="p">)</span>
+					<span class="o">*</span><span class="n">root</span><span class="o">=</span><span class="n">rotate_left</span><span class="p">(</span><span class="n">parrent_ptr</span><span class="p">);</span>
+				<span class="k">else</span><span class="p">{</span>
+					<span class="n">sibling</span><span class="o">=</span><span class="n">rotate_left</span><span class="p">(</span><span class="n">parrent_ptr</span><span class="p">);</span>
+					<span class="n">sibling</span><span class="o">-&gt;</span><span class="n">parrent</span><span class="o">-&gt;</span><span class="n">right</span><span class="o">=</span><span class="n">sibling</span><span class="p">;</span><span class="c1">//since we know that sibling is here right child we can safely do this</span>
+				<span class="p">}</span>
+				<span class="n">sibling</span><span class="o">=</span><span class="n">parrent_ptr</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">;</span>
+			<span class="p">}</span>
+			<span class="k">if</span><span class="p">(</span><span class="n">is_black</span><span class="p">(</span><span class="n">sibling</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="n">is_black</span><span class="p">(</span><span class="n">sibling</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">)){</span>
+				<span class="n">set_color</span><span class="p">(</span><span class="n">sibling</span><span class="p">,</span> <span class="n">RED</span><span class="p">);</span>
+				<span class="n">curr</span><span class="o">=</span><span class="n">curr</span><span class="o">-&gt;</span><span class="n">parrent</span><span class="p">;</span>
+			<span class="p">}</span>
+			<span class="k">else</span><span class="p">{</span>
+				<span class="cm">/*one or both of siblings children is red
+				sibling is right child, if the right child of sibling is black that means that left child is red
+				that gives us right left case which we transform in right right case*/</span>
+				<span class="k">if</span><span class="p">(</span><span class="n">is_black</span><span class="p">(</span><span class="n">sibling</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">)){</span>
+					<span class="n">set_color</span><span class="p">(</span><span class="n">sibling</span><span class="p">,</span> <span class="n">RED</span><span class="p">);</span>
+					<span class="n">set_color</span><span class="p">(</span><span class="n">sibling</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">,</span> <span class="n">BLACK</span><span class="p">);</span>
+					
+					<span class="n">sibling</span><span class="o">-&gt;</span><span class="n">parrent</span><span class="o">-&gt;</span><span class="n">right</span> <span class="o">=</span> <span class="n">rotate_right</span><span class="p">(</span><span class="n">sibling</span><span class="p">);</span><span class="c1">//since sibling cant be root, no need to check that</span>
+					<span class="n">sibling</span><span class="o">=</span><span class="n">curr</span><span class="o">-&gt;</span><span class="n">parrent</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">;</span>
+				<span class="p">}</span>
+				<span class="c1">//right right case</span>
+				<span class="n">set_color</span><span class="p">(</span><span class="n">sibling</span><span class="p">,</span> <span class="n">color_of</span><span class="p">(</span><span class="n">curr</span><span class="o">-&gt;</span><span class="n">parrent</span><span class="p">));</span>
+				<span class="n">set_color</span><span class="p">(</span><span class="n">curr</span><span class="o">-&gt;</span><span class="n">parrent</span><span class="p">,</span> <span class="n">BLACK</span><span class="p">);</span>
+				<span class="n">set_color</span><span class="p">(</span><span class="n">sibling</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">,</span> <span class="n">BLACK</span><span class="p">);</span>
+				<span class="k">if</span><span class="p">(</span><span class="n">parrent_ptr</span> <span class="o">==</span> <span class="o">*</span><span class="n">root</span><span class="p">){</span>
+					<span class="o">*</span><span class="n">root</span><span class="o">=</span><span class="n">rotate_left</span><span class="p">(</span><span class="n">parrent_ptr</span><span class="p">);</span>
+				<span class="p">}</span>
+				<span class="k">else</span><span class="p">{</span>
+					<span class="n">sibling</span><span class="o">=</span><span class="n">rotate_left</span><span class="p">(</span><span class="n">parrent_ptr</span><span class="p">);</span>
+					<span class="k">if</span><span class="p">(</span><span class="n">parrent_ptr</span><span class="o">-&gt;</span><span class="n">parrent</span><span class="o">-&gt;</span><span class="n">parrent</span><span class="o">-&gt;</span><span class="n">left</span> <span class="o">==</span> <span class="n">parrent_ptr</span><span class="p">){</span>
+						<span class="n">parrent_ptr</span><span class="o">-&gt;</span><span class="n">parrent</span><span class="o">-&gt;</span><span class="n">parrent</span><span class="o">-&gt;</span><span class="n">left</span> <span class="o">=</span> <span class="n">sibling</span><span class="p">;</span>
+					<span class="p">}</span>
+					<span class="k">else</span>
+						<span class="n">parrent_ptr</span><span class="o">-&gt;</span><span class="n">parrent</span><span class="o">-&gt;</span><span class="n">parrent</span><span class="o">-&gt;</span><span class="n">right</span> <span class="o">=</span> <span class="n">sibling</span><span class="p">;</span>
+				<span class="p">}</span>
+				<span class="n">curr</span><span class="o">=*</span><span class="n">root</span><span class="p">;</span>
+			<span class="p">}</span>
+
+		<span class="p">}</span>
+		<span class="k">else</span><span class="p">{</span>
+			<span class="c1">//case when current node is right child, mirror case of case above</span>
+			<span class="n">Node</span><span class="o">*</span> <span class="n">parrent_ptr</span> <span class="o">=</span> <span class="n">curr</span><span class="o">-&gt;</span><span class="n">parrent</span><span class="p">;</span>
+			<span class="n">Node</span><span class="o">*</span> <span class="n">sibling</span> <span class="o">=</span> <span class="n">parrent_ptr</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">;</span>
+			<span class="k">if</span><span class="p">(</span><span class="n">is_red</span><span class="p">(</span><span class="n">sibling</span><span class="p">)){</span>
+				<span class="n">set_color</span><span class="p">(</span><span class="n">sibling</span><span class="p">,</span> <span class="n">BLACK</span><span class="p">);</span>
+				<span class="n">set_color</span><span class="p">(</span><span class="n">parrent_ptr</span><span class="p">,</span> <span class="n">RED</span><span class="p">);</span>
+				<span class="c1">//right rotate</span>
+				<span class="k">if</span><span class="p">(</span><span class="o">*</span><span class="n">root</span> <span class="o">==</span> <span class="n">parrent_ptr</span><span class="p">)</span>
+					<span class="o">*</span><span class="n">root</span><span class="o">=</span><span class="n">rotate_right</span><span class="p">(</span><span class="n">parrent_ptr</span><span class="p">);</span>
+				<span class="k">else</span><span class="p">{</span>
+					<span class="n">sibling</span><span class="o">=</span><span class="n">rotate_right</span><span class="p">(</span><span class="n">parrent_ptr</span><span class="p">);</span>
+					<span class="n">sibling</span><span class="o">-&gt;</span><span class="n">parrent</span><span class="o">-&gt;</span><span class="n">left</span> <span class="o">=</span> <span class="n">sibling</span><span class="p">;</span><span class="c1">//we know that sibling is left</span>
+				<span class="p">}</span>
+				<span class="n">sibling</span><span class="o">=</span><span class="n">parrent_ptr</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">;</span>
+			<span class="p">}</span>
+			<span class="k">if</span><span class="p">(</span><span class="n">is_black</span><span class="p">(</span><span class="n">sibling</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="n">is_black</span><span class="p">(</span><span class="n">sibling</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">)){</span>
+				<span class="n">set_color</span><span class="p">(</span><span class="n">sibling</span><span class="p">,</span> <span class="n">RED</span><span class="p">);</span>
+				<span class="n">curr</span><span class="o">=</span><span class="n">curr</span><span class="o">-&gt;</span><span class="n">parrent</span><span class="p">;</span>
+			<span class="p">}</span>
+			<span class="k">else</span><span class="p">{</span>
+				<span class="k">if</span><span class="p">(</span><span class="n">is_black</span><span class="p">(</span><span class="n">sibling</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">)){</span>
+					<span class="n">set_color</span><span class="p">(</span><span class="n">sibling</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">,</span> <span class="n">BLACK</span><span class="p">);</span>
+					<span class="n">set_color</span><span class="p">(</span><span class="n">sibling</span><span class="p">,</span> <span class="n">RED</span><span class="p">);</span>
+					<span class="n">sibling</span><span class="o">-&gt;</span><span class="n">parrent</span><span class="o">-&gt;</span><span class="n">left</span><span class="o">=</span><span class="n">rotate_left</span><span class="p">(</span><span class="n">sibling</span><span class="p">);</span>
+					<span class="n">sibling</span><span class="o">=</span><span class="n">curr</span><span class="o">-&gt;</span><span class="n">parrent</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">;</span>
+				<span class="p">}</span>
+				<span class="n">set_color</span><span class="p">(</span><span class="n">sibling</span><span class="p">,</span> <span class="n">color_of</span><span class="p">(</span><span class="n">curr</span><span class="o">-&gt;</span><span class="n">parrent</span><span class="p">));</span>
+				<span class="n">set_color</span><span class="p">(</span><span class="n">curr</span><span class="o">-&gt;</span><span class="n">parrent</span><span class="p">,</span> <span class="n">BLACK</span><span class="p">);</span>
+				<span class="n">set_color</span><span class="p">(</span><span class="n">sibling</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">,</span> <span class="n">BLACK</span><span class="p">);</span>
+				<span class="k">if</span><span class="p">(</span><span class="n">parrent_ptr</span> <span class="o">==</span> <span class="o">*</span><span class="n">root</span><span class="p">){</span>
+					<span class="o">*</span><span class="n">root</span> <span class="o">=</span> <span class="n">rotate_right</span><span class="p">(</span><span class="n">parrent_ptr</span><span class="p">);</span>
+				<span class="p">}</span>
+				<span class="k">else</span><span class="p">{</span>
+					<span class="n">sibling</span><span class="o">=</span><span class="n">rotate_right</span><span class="p">(</span><span class="n">parrent_ptr</span><span class="p">);</span>
+					<span class="k">if</span><span class="p">(</span><span class="n">parrent_ptr</span><span class="o">-&gt;</span><span class="n">parrent</span><span class="o">-&gt;</span><span class="n">parrent</span><span class="o">-&gt;</span><span class="n">left</span> <span class="o">==</span> <span class="n">parrent_ptr</span><span class="p">)</span>
+						<span class="n">parrent_ptr</span><span class="o">-&gt;</span><span class="n">parrent</span><span class="o">-&gt;</span><span class="n">parrent</span><span class="o">-&gt;</span><span class="n">left</span> <span class="o">=</span> <span class="n">sibling</span><span class="p">;</span>
+					<span class="k">else</span>
+						<span class="n">parrent_ptr</span><span class="o">-&gt;</span><span class="n">parrent</span><span class="o">-&gt;</span><span class="n">parrent</span><span class="o">-&gt;</span><span class="n">right</span><span class="o">=</span><span class="n">sibling</span><span class="p">;</span>
+				<span class="p">}</span>
+				<span class="n">curr</span><span class="o">=*</span><span class="n">root</span><span class="p">;</span>
+			<span class="p">}</span>
+		<span class="p">}</span>
+
+	<span class="p">}</span>
+	<span class="n">set_color</span><span class="p">(</span><span class="n">curr</span><span class="p">,</span> <span class="n">BLACK</span><span class="p">);</span>
+<span class="p">}</span>
+
+
+
+<span class="n">Node</span><span class="o">*</span> <span class="n">rotate_left</span><span class="p">(</span><span class="n">Node</span><span class="o">*</span> <span class="n">curr</span><span class="p">){</span>
+	<span class="n">Node</span><span class="o">*</span> <span class="n">tmp1</span><span class="o">=</span><span class="n">curr</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">;</span>
+	<span class="n">Node</span><span class="o">*</span> <span class="n">tmp2</span><span class="o">=</span><span class="n">tmp1</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">;</span>
+	<span class="n">curr</span><span class="o">-&gt;</span><span class="n">right</span><span class="o">=</span><span class="n">tmp2</span><span class="p">;</span>
+	<span class="k">if</span><span class="p">(</span><span class="n">tmp2</span><span class="o">!=</span><span class="nb">NULL</span><span class="p">)</span>
+		<span class="n">tmp2</span><span class="o">-&gt;</span><span class="n">parrent</span><span class="o">=</span><span class="n">curr</span><span class="p">;</span>
+	<span class="n">tmp1</span><span class="o">-&gt;</span><span class="n">left</span><span class="o">=</span><span class="n">curr</span><span class="p">;</span>
+	<span class="n">tmp1</span><span class="o">-&gt;</span><span class="n">parrent</span><span class="o">=</span><span class="n">curr</span><span class="o">-&gt;</span><span class="n">parrent</span><span class="p">;</span>
+	<span class="n">curr</span><span class="o">-&gt;</span><span class="n">parrent</span><span class="o">=</span><span class="n">tmp1</span><span class="p">;</span>
+	<span class="n">curr</span><span class="o">=</span><span class="n">tmp1</span><span class="p">;</span>
+	<span class="k">return</span> <span class="n">curr</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="n">Node</span><span class="o">*</span> <span class="n">rotate_right</span><span class="p">(</span><span class="n">Node</span><span class="o">*</span> <span class="n">curr</span><span class="p">){</span>
+	<span class="n">Node</span><span class="o">*</span> <span class="n">tmp1</span><span class="o">=</span><span class="n">curr</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">;</span>
+	<span class="n">Node</span><span class="o">*</span> <span class="n">tmp2</span><span class="o">=</span><span class="n">tmp1</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">;</span>
+	<span class="n">curr</span><span class="o">-&gt;</span><span class="n">left</span><span class="o">=</span><span class="n">tmp2</span><span class="p">;</span>
+	<span class="k">if</span><span class="p">(</span><span class="n">tmp2</span><span class="o">!=</span><span class="nb">NULL</span><span class="p">)</span>
+		<span class="n">tmp2</span><span class="o">-&gt;</span><span class="n">parrent</span><span class="o">=</span><span class="n">curr</span><span class="p">;</span>
+	<span class="n">tmp1</span><span class="o">-&gt;</span><span class="n">right</span><span class="o">=</span><span class="n">curr</span><span class="p">;</span>
+	<span class="n">tmp1</span><span class="o">-&gt;</span><span class="n">parrent</span><span class="o">=</span><span class="n">curr</span><span class="o">-&gt;</span><span class="n">parrent</span><span class="p">;</span>
+	<span class="n">curr</span><span class="o">-&gt;</span><span class="n">parrent</span><span class="o">=</span><span class="n">tmp1</span><span class="p">;</span>
+	<span class="n">curr</span><span class="o">=</span><span class="n">tmp1</span><span class="p">;</span>
+	<span class="k">return</span> <span class="n">curr</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+<span class="n">Node</span><span class="o">*</span> <span class="n">find_min</span><span class="p">(</span><span class="n">Node</span><span class="o">*</span> <span class="n">root</span><span class="p">){</span>
+	<span class="k">while</span><span class="p">(</span><span class="n">root</span><span class="o">-&gt;</span><span class="n">left</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">)</span>
+		<span class="n">root</span><span class="o">=</span><span class="n">root</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">;</span>
+	<span class="k">return</span> <span class="n">root</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">Node</span><span class="o">*</span> <span class="n">get_node</span><span class="p">(</span><span class="n">Node</span><span class="o">*</span> <span class="n">root</span><span class="p">,</span> <span class="kt">int</span> <span class="n">val</span><span class="p">){</span>
+	<span class="k">if</span><span class="p">(</span><span class="n">root</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span>
+		<span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
+	<span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">val</span> <span class="o">&gt;</span> <span class="n">root</span><span class="o">-&gt;</span><span class="n">val</span><span class="p">)</span>
+		<span class="k">return</span> <span class="n">get_node</span><span class="p">(</span><span class="n">root</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">,</span> <span class="n">val</span><span class="p">);</span>
+	<span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">val</span> <span class="o">&lt;</span> <span class="n">root</span><span class="o">-&gt;</span><span class="n">val</span><span class="p">)</span>
+		<span class="k">return</span> <span class="n">get_node</span><span class="p">(</span><span class="n">root</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">,</span> <span class="n">val</span><span class="p">);</span>
+	<span class="k">else</span>
+		<span class="k">return</span> <span class="n">root</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="n">Node</span><span class="o">*</span> <span class="n">find_max</span><span class="p">(</span><span class="n">Node</span><span class="o">*</span> <span class="n">root</span><span class="p">){</span>
+	<span class="k">if</span><span class="p">(</span><span class="n">root</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span>
+		<span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
+	<span class="k">while</span><span class="p">(</span><span class="n">root</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">)</span>
+		<span class="n">root</span><span class="o">=</span><span class="n">root</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">;</span>
+	<span class="k">return</span> <span class="n">root</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kt">void</span> <span class="n">swap_colors</span><span class="p">(</span><span class="n">Node</span><span class="o">*</span> <span class="n">node1</span><span class="p">,</span> <span class="n">Node</span><span class="o">*</span> <span class="n">node2</span><span class="p">){</span>
+	<span class="n">bool</span> <span class="n">tmp</span><span class="o">=</span><span class="n">node1</span><span class="o">-&gt;</span><span class="n">color</span><span class="p">;</span>
+	<span class="n">node1</span><span class="o">-&gt;</span><span class="n">color</span><span class="o">=</span><span class="n">node2</span><span class="o">-&gt;</span><span class="n">color</span><span class="p">;</span>
+	<span class="n">node2</span><span class="o">-&gt;</span><span class="n">color</span><span class="o">=</span><span class="n">tmp</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c1">//helper functions, here so that code would be more pleasant to read, gets rid of all the NULL checks in conditions</span>
+<span class="kt">void</span> <span class="n">set_color</span><span class="p">(</span><span class="n">Node</span><span class="o">*</span> <span class="n">node</span><span class="p">,</span> <span class="n">bool</span> <span class="n">color</span><span class="p">){</span>
+	<span class="k">if</span><span class="p">(</span><span class="n">node</span><span class="o">!=</span><span class="nb">NULL</span><span class="p">)</span>
+		<span class="n">node</span><span class="o">-&gt;</span><span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="n">bool</span> <span class="n">is_black</span><span class="p">(</span><span class="n">Node</span><span class="o">*</span> <span class="n">node</span><span class="p">){</span>
+	<span class="k">return</span> <span class="p">(</span><span class="n">node</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span> <span class="o">?</span> <span class="nb">true</span> <span class="o">:</span> <span class="n">node</span><span class="o">-&gt;</span><span class="n">color</span> <span class="o">==</span> <span class="n">BLACK</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">bool</span> <span class="n">is_red</span><span class="p">(</span><span class="n">Node</span><span class="o">*</span> <span class="n">node</span><span class="p">){</span>
+	<span class="k">return</span> <span class="p">(</span><span class="n">node</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span> <span class="o">?</span> <span class="nb">false</span> <span class="o">:</span> <span class="n">node</span><span class="o">-&gt;</span><span class="n">color</span> <span class="o">==</span> <span class="n">RED</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="n">bool</span> <span class="n">color_of</span><span class="p">(</span><span class="n">Node</span><span class="o">*</span> <span class="n">node</span><span class="p">){</span>
+	<span class="k">return</span> <span class="p">(</span><span class="n">node</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span> <span class="o">?</span> <span class="n">BLACK</span> <span class="o">:</span> <span class="n">node</span><span class="o">-&gt;</span><span class="n">color</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="n">inorder</span><span class="p">(</span><span class="n">Node</span><span class="o">*</span> <span class="n">root</span><span class="p">){</span>
+	<span class="k">if</span><span class="p">(</span><span class="n">root</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span>
+		<span class="k">return</span><span class="p">;</span>
+	<span class="n">inorder</span><span class="p">(</span><span class="n">root</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">);</span>
+	<span class="kt">int</span> <span class="n">color</span> <span class="o">=</span> <span class="p">(</span><span class="n">root</span><span class="o">-&gt;</span><span class="n">color</span> <span class="o">==</span> <span class="n">BLACK</span><span class="p">)</span> <span class="o">?</span> <span class="mi">90</span> <span class="o">:</span> <span class="mi">31</span><span class="p">;</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"\e[1;%d;107m%d \e[0;0m</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span><span class="n">root</span><span class="o">-&gt;</span><span class="n">val</span><span class="p">);</span><span class="c1">//using escape codes for nicer output</span>
+	<span class="n">inorder</span><span class="p">(</span><span class="n">root</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">);</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+<p><strong>main.c</strong></p>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;stdbool.h&gt;
+#include "rb.h"
+</span>
+<span class="kt">int</span> <span class="n">main</span><span class="p">(</span><span class="kt">void</span><span class="p">){</span>
+
+	<span class="n">Node</span><span class="o">*</span> <span class="n">root</span><span class="o">=</span><span class="nb">NULL</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">tmp</span><span class="p">;</span>
+	<span class="k">while</span><span class="p">(</span><span class="n">scanf</span><span class="p">(</span><span class="s">"%d"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">tmp</span><span class="p">)</span><span class="o">!=</span><span class="n">EOF</span><span class="p">)</span>
+		<span class="n">insert_node</span><span class="p">(</span><span class="o">&amp;</span><span class="n">root</span><span class="p">,</span> <span class="n">tmp</span><span class="p">);</span>
+	<span class="n">inorder</span><span class="p">(</span><span class="n">root</span><span class="p">);</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">Delete: "</span><span class="p">);</span>
+	<span class="n">scanf</span><span class="p">(</span><span class="s">"%d"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">tmp</span><span class="p">);</span>
+	<span class="n">remove_node</span><span class="p">(</span><span class="o">&amp;</span><span class="n">root</span><span class="p">,</span> <span class="n">tmp</span><span class="p">);</span>
+	<span class="n">inorder</span><span class="p">(</span><span class="n">root</span><span class="p">);</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+
+
+	</div>
+</body>
+</html>
