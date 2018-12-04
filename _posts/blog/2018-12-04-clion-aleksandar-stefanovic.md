@@ -68,14 +68,14 @@ Nakon što ste instalirali *CLion* (a u korake instalacije neću zalaziti jer mo
 vebu), otvorite ga i uživajte u *artsy 
 splash-screen-u*, a zatim možemo da pređemo na samo nameštanje:
 
-![splash-screen]({{site.baseurl}}/assets/img/blog/2018-12-04-clion-aleksandar-stefanovic/splash.png)
+<img alt='splash-screen' class='img-fluid' src="{{site.baseurl}}/assets/img/blog/2018-12-04-clion-aleksandar-stefanovic/splash.png">
 
 
 # Za one koji već imaju postojeći projekat:
 
 Izaberite opciju *Import Project from Sources*, i pronađite svoj projekat:
 
-![project directory]({{site.baseurl}}/assets/img/blog/2018-12-04-clion-aleksandar-stefanovic/project_directory.png)
+<img alt='project directory' class='img-fluid' src="{{site.baseurl}}/assets/img/blog/2018-12-04-clion-aleksandar-stefanovic/project_directory.png">
 
 U narednom prozoru, izaberite sve izvorne datoteke vašeg projekta (najčešće će IDE sam da izabere
 sve odgovarajuće datoteke).
@@ -125,7 +125,7 @@ Pritisnite `Reload Changes` u traci iznad skripte, i to je to! 🎉
 Nakon ovoga, ako ne nije podvukao neki problem, projekat će moći da se kompilira i pokrene pritiskom
 na zeleno `Run` dugme:
 
-![RUN]({{site.baseurl}}/assets/img/blog/2018-12-04-clion-aleksandar-stefanovic/RUN.png)
+<img alt='RUN' class='img-fluid' src="{{site.baseurl}}/assets/img/blog/2018-12-04-clion-aleksandar-stefanovic/RUN.png">
 
 Prekočite naredni odeljak, do *Zaključka*...
 
@@ -138,7 +138,7 @@ Izaberite opciju *Check out from Version Control* i tu, naravno, izaberite *Git*
 Zatim, otvorite vaš projekat na GitHub-u, i pronađite adresu za kloniranje, koji se otkriva
 pritiskom na zeleno dugme:
 
-![github link]({{site.baseurl}}/assets/img/blog/2018-12-04-clion-aleksandar-stefanovic/github-link.png)
+<img alt='github link' class='img-fluid' src="{{site.baseurl}}/assets/img/blog/2018-12-04-clion-aleksandar-stefanovic/github-link.png">
 
 Tu adresu unesite u odgovarajuće polje CLion-a.
 
@@ -211,7 +211,7 @@ add_executable(RG123_moj_projekat main.cpp)
 Zatim izaberite "Load CMake project" u traci iznad skripte. Ako je sve prošlo kako treba, moći ćete
 da pokrenete kompilaciju pritiskom na `Run` dugme:
 
-![RUN]({{site.baseurl}}/assets/img/blog/2018-12-04-clion-aleksandar-stefanovic/RUN.png)
+<img alt='RUN' class='img-fluid' src="{{site.baseurl}}/assets/img/blog/2018-12-04-clion-aleksandar-stefanovic/RUN.png">
 
 ***
 
@@ -220,8 +220,8 @@ da pokrenete kompilaciju pritiskom na `Run` dugme:
 Ovde ću stati sa ovim člankom, što znači da ćete i dalje morati kroz terminal da koristite Git.
 Ali ne klonite duhom! Naredni deo članka stiže, koji će do detalja objasniti kako da koristite
 Git u *CLion*-u, a nakon toga možda usledi i neki članak o tome kako da iskoristite funkcionalnosti
-*CLion*-a, e.g. debagovanje, automatsko preimenovanje, etc. 🙂
+*CLion*-a, e.g. debagovanje, automatsko preimenovanje, etc.
 
-Pozdrav! 👋
+Pozdrav!
 
 

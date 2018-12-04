@@ -2,28 +2,26 @@
 layout: default
 ---
 <div class='row'>
-    <div class='col-xs-1'></div>
-    <div class='col-xs-10'>
-        <div class="panel panel-primary">
-            <div class="panel-heading">
-                <h3 class="panel-title">{{page.title}}</h3>
-            </div>
-            <div class="panel-body">
+    <!--<div class='col-xs-1'></div>-->
+        <div class="card">
+            <h5 class="card-header">{{ page.title }}</h5>
+            <div class="card-body">
+            <div class='col-xs-12'>
                 {{ content }}
             </div>
         </div>
     </div>
-    <div class='col-xs-1'></div>
+    <!--<div class='col-xs-1'></div>-->
 </div>
 
-    {% if page.comments %}
-      <div class="row">
+{% if page.comments %}
+    <div class="row">
         <div class="col-xs-1"></div>
         <div class="col-xs-10">
-          <div id="commento"></div>
-          <script src="https://cdn.commento.io/js/commento.js"></script>
+            <div id="commento"></div>
+            <script src="https://cdn.commento.io/js/commento.js"></script>
         </div>
         <div class="col-xs-1"></div>
-      </div>
-    {% endif %}
+    </div>
+{% endif %}
 

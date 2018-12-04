@@ -2,25 +2,23 @@
 layout: default
 title: /risk/blog
 ---
-<div class="row">
-    <div class="col-md-1"></div>
-    <div class="col-xs-10">
-        <ul class="clear-list">
-            {% for p in site.categories.blog %}
-            <li class="panel panel-primary">
-                <div class="panel-heading">
-                    <h3 class="panel-title">{{p.title}}, {{p.date | date: "%-d/%-m/%Y"}}</h3>
-                </div>
-                <div class="panel-body">
-                    <h5><span class="text-primary">Autor:</span> {{p.author}}</h5>
-                    <!--<p>{{p.excerpt}}</p>-->
-                    <p>{{ p.content | truncatewords:75 }}</p>
-
-                    <a href='{{p.url}}.html'><button class='btn btn-primary'>Pročitaj</button></a>
-                </div>
-            </li>
-            {% endfor %}
-        </ul>
+{% for p in site.categories.blog %}
+<br>
+<div class='row'>
+    <div class="card">
+        <h5 class="card-header">{{ p.title }}</h5>
+        <div class="card-body">
+            <div class='col-md-12'>
+                <!--<p class="card-title text-primary">{{ p.author }}</p>-->
+                <p><span class="text-primary"><i class="fas fa-chalkboard-teacher"></i></span> {{p.author}}</p>
+                <p><span class="text-primary"><i class="fas fa-calendar-alt"></i></span> {{p.date | date: "%-d/%-m/%Y"}}</p>
+                <img style="width: 150px" class='img-fluid img-thumbnail' src="{{site.baseurl}}/assets/img/people_images/{{ p.authorimg }}" alt="Autorova slika">
+                <p>{{ p.content | remove_first:p.excerpt | truncatewords:75 }}</p>
+                <a href='{{p.url}}.html'><button class='btn btn-primary'><i class="fas fa-glasses"></i> Pročitaj</button></a>
+            </div>
+            <!--<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>-->
+            <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
+        </div>
     </div>
-    <div class="col-md-1"></div>
 </div>
+{% endfor %}
