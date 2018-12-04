@@ -1,0 +1,342 @@
+<html>
+<head>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-129543038-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'UA-129543038-1');
+</script>
+
+<meta charset="UTF-8">
+
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+
+<!--Bootstrap 4 migration prepared-->
+<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
+
+<link id="ccss" rel="stylesheet" href="/assets/css/darkly.min.css">
+<link rel="stylesheet" href="/assets/css/custom.css">
+
+<script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="/assets/js/lib/bootstrap.min.js"></script>
+
+<!--Bootstrap 4 migration prepared-->
+<!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>-->
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>-->
+<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>-->
+
+<script src="https://use.fontawesome.com/17876a6156.js"></script>
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"><Paste>
+	<meta charset="UTF-8">
+
+	<title>Kako i zašto koristiti IDE za projekat iz Računarske grafike</title>
+</head>
+<body>
+	<header class="col-md-12 primary">
+	<nav class="navbar navbar-default navbar-fixed-top">
+	<div class="container-fluid">
+		<div class="navbar-header">
+		<a class="navbar-brand" href="/"><img style="max-height:100%; max-width:100%; object-fit contain" src="https://i.imgur.com/vPIuIJr.png"></a>
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+		</div>
+		<div class="collapse navbar-collapse" id="myNavbar">
+			<ul class="nav navbar-nav">
+				<li><a href="/index.html" >Početna</a></li>
+				<!-- <li><a href="/obavestenja.html">Obaveštenja</a></li> -->
+				<li><a href="/predavanja.html">Predavanja</a></li>
+
+                <!--TODO-->
+				<!--<li><a href="/organizacija.html">Organizacija</a></li>-->
+				<li><a href="/blog.html">Blog</a></li>
+				<!-- <li><a href="/projekti.html" >Projekti</a></li> -->
+				<li><a href="/galerija.html">Galerija</a></li> 
+				<li><a href="https://github.com/riskmatf" target="_blank">GitHub</a></li>
+				<li><a href="https://www.facebook.com/groups/1192849077458638/" target="_blank">Facebook</a></li>
+				<li><a href="/prijava_predavanja.html">Prijava predavanja</a></li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+</header>
+
+	<div class="container">
+		  <div class='row'>
+    <div class='col-xs-1'></div>
+    <div class='col-xs-10'>
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Kako i zašto koristiti IDE za projekat iz Računarske grafike</h3>
+            </div>
+            <div class="panel-body">
+                <!--Kartica koja prikazuje sliku autora-->
+<div class="row">
+    <div class="col-xs-6 col-xs-4">
+        <div class="thumbnail">
+            <img src="/assets/img/people_images/aleksandar-stefanovic.jpg" alt="Autorova slika">
+            <div class="caption">
+                <h4>Autor: Aleksandar Stefanović</h4>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h3 id="kako-i-zašto-koristiti-ide-za-projekat-iz-računarske-grafike">Kako i zašto koristiti IDE za projekat iz Računarske grafike</h3>
+
+<p>Projekat iz grafike je prvi projekat koji radimo nasamo, sa naših računara,
+i prvi put da projekat nije samo vežbanje za test. Ovo napominjem jer su mnogi
+ljudi davali argument da <em>žele da vežbaju u istom programu na kojem će raditi
+test</em> (što je najčešće Gedit ili Kate), i to podržavam.</p>
+
+<p>Međutim, ne treba po automatizmu raditi baš <em>sve</em> projekte sa kojima se 
+susrećemo u osnovnom uređivaču teksta. Postoji više razloga za to, a neki od
+najbitnijih su razlika u tome da li ćete na projektu nedeljno raditi 7 sati,
+ili 10 sati (eto 3 sata nedeljeno više za učenje PPJ-a, nije li to sjajno?!),
+a postoje i kozmetičke razlike, koje su vidljive u tome koliko vam je kose
+ostalo na glavi nakon što ste je u besu svu počupali jer <em>glupi program ne radi
+na ovom glupom mestu, a celog sam ga lepo namestio</em>…</p>
+
+<p>Ali ozbiljno, jedno dobro razvojno okruženje nudi jako puno pogodnosti, 
+među kojima su:</p>
+
+<ul>
+  <li>
+    <p>Jako dobra statička analiza, koja će vas upozoriti na probleme koje ste
+prevideli, čak i pre nego što pokrenete kompilaciju.</p>
+  </li>
+  <li>
+    <p>Predviđanja, formatiranje i automatsko unošenje šablonskih konstrukcija:
+Umesto što ručno pišemo neke očigledne stvari, pustimo da IDE ubrza taj proces,
+kako bi se mi fokusirali na to <em>šta</em> pišemo, a ne i <em>kako</em> pišemo. Setite se samo kako
+smo uz pomoć IntelliJIDEA unosili getter-e, setter-e i konstruktore u par koraka.</p>
+  </li>
+  <li>
+    <p>Debager koji zapravo nije komplikovan za korišćenje: jednim klikom 
+kažemo IDE-u gde da pauzira sa izvršavanjem, i kada on stane, mi 
+analiziramo podatke na bilo kom steku, na bilo kojoj niti. Ova funkcija mi je
+nasamo spasla barem 50 niti kose svaki put kad naiđem na bag.</p>
+  </li>
+  <li>
+    <p>Ugrađena kontrola verzija (iliti git, u našem slučaju): Zamislite svet u
+kojem ne morate da koristite terminal da biste koristili git. Zar to ne bi bilo
+IDEalno?</p>
+  </li>
+  <li>
+    <p>Automatski hrani ribice u vašem akvarijumu… okej, možda u nekoj budućoj verziji…</p>
+  </li>
+</ul>
+
+<h2 id="dobro-ubedio-si-me-koje-razvojno-okruženje-da-izaberem">Dobro, ubedio si me, koje razvojno okruženje da izaberem?</h2>
+
+<p>Ja lično koristim <em>CLion</em> za svoje C/C++ projekte. Razlozi su to što je ovo IDE
+kompanije <em>JetBrains</em>, iste one koja pravi <em>IntelliJIDEA</em>, pa su i sama
+okruženja jako slična međusobno: ako znate da koristite jedno, znate da
+koristite i drugo (i analogno za <em>PyCharm</em> okruženjem za Python).</p>
+
+<blockquote>
+  <p>Ostatak ovog članka će podrazumevati da ste se povinuli mom uticaju, i
+odlučili za <em>CLion</em>, i slede instrukcije o tome kako da namestite vaš projekat
+u njemu.</p>
+</blockquote>
+
+<hr />
+
+<p><em>CLion</em> nije besplatan, zapravo je profesionalan alat i jako je skup (barem
+iz naše, studentske, nekorporativne perspektive), ali je srećom besplatan u
+okviru studentskog paketa koji <em>JetBrains</em> nudi svim studentima, uključujući i
+nas (<em>jeej</em>). Možete 30 dana da koristite <em>CLion</em> besplatno, preuzimajući ga
+<a href="https://www.jetbrains.com/clion/">odavde</a>, a ako se odlučite da ga koristite na duže vreme,
+možete da ostvarite pravo na licencu pomoću <a href="https://www.jetbrains.com/student/"><em>JetBrains</em>
+studentskog paketa</a>.</p>
+
+<p>Nakon što ste instalirali <em>CLion</em> (a u korake instalacije neću zalaziti jer mogu da se nađu na
+vebu), otvorite ga i uživajte u <em>artsy 
+splash-screen-u</em>, a zatim možemo da pređemo na samo nameštanje:</p>
+
+<p><img src="/assets/img/blog/2018-12-04-clion-aleksandar-stefanovic/splash.png" alt="splash-screen" /></p>
+
+<h1 id="za-one-koji-već-imaju-postojeći-projekat">Za one koji već imaju postojeći projekat:</h1>
+
+<p>Izaberite opciju <em>Import Project from Sources</em>, i pronađite svoj projekat:</p>
+
+<p><img src="/assets/img/blog/2018-12-04-clion-aleksandar-stefanovic/project_directory.png" alt="project directory" /></p>
+
+<p>U narednom prozoru, izaberite sve izvorne datoteke vašeg projekta (najčešće će IDE sam da izabere
+sve odgovarajuće datoteke).</p>
+
+<p>Sada će se otvoriti glavni prozor okruženja. Još malo pa gotovo!</p>
+
+<p><strong>Ako vas okruženje pita da li želite da dodate neke datoteke u Git, to odbijte!</strong></p>
+
+<p>Otvorite <code class="highlighter-rouge">.gitignore</code> datoteku, i tamo dodajte ovih par linija:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># CLion internal files
+/.idea
+
+# Build directories
+/build
+/cmake-build-*
+</code></pre></div></div>
+
+<p>Ovim kažemo Git-u da prestane da nas smara sa internim i privremenim datotekama.</p>
+
+<p>Potrebno je još srediti <em>build script</em>. <em>CLion</em> koristi <em>CMake</em>, koji radi kao
+apstrakcija iznad samog <em>Makefile</em>-a, i omogućava da samo kažemo koje datoteke
+su izvorne, i pustimo da <em>CMake</em> sam napravi odgovarajući <em>Makefile</em>. Ovo je najverovatnije poslednji put
+da morate da ručno nameštate <em>build script</em>, jer će nakon toga <em>CLion</em> da to radi umesto vas.</p>
+
+<p>Analogno tome što koristimo <code class="highlighter-rouge">-lGL -lGLU -lglut</code> kada koristimo <em>GCC</em>, sada ćemo
+naglasiti da želimo da povežemo ove biblioteke. Otvorimo <code class="highlighter-rouge">CMakeLists.txt</code>
+datoteku, i tamo dodajmo ove linije <strong><em>pre</em></strong> <code class="highlighter-rouge">add_executable</code>, tako da naša datoteka izgleda
+nalik ovome:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cmake_minimum_required(VERSION 3.12)
+project(RG123_moj_projekat C)
+
+set(CMAKE_C_STANDARD 11)
+
+link_libraries(GL)
+link_libraries(GLU)
+link_libraries(glut)
+
+add_executable(RG123_moj_projekat main.c)
+</code></pre></div></div>
+
+<p>Pritisnite <code class="highlighter-rouge">Reload Changes</code> u traci iznad skripte, i to je to! 🎉</p>
+
+<p>Nakon ovoga, ako ne nije podvukao neki problem, projekat će moći da se kompilira i pokrene pritiskom
+na zeleno <code class="highlighter-rouge">Run</code> dugme:</p>
+
+<p><img src="/assets/img/blog/2018-12-04-clion-aleksandar-stefanovic/RUN.png" alt="RUN" /></p>
+
+<p>Prekočite naredni odeljak, do <em>Zaključka</em>…</p>
+
+<hr />
+
+<h1 id="za-one-koji-još-uvek-nisu-započeli-svoj-projekat">Za one koji još uvek nisu započeli svoj projekat:</h1>
+
+<p>Izaberite opciju <em>Check out from Version Control</em> i tu, naravno, izaberite <em>Git</em>.</p>
+
+<p>Zatim, otvorite vaš projekat na GitHub-u, i pronađite adresu za kloniranje, koji se otkriva
+pritiskom na zeleno dugme:</p>
+
+<p><img src="/assets/img/blog/2018-12-04-clion-aleksandar-stefanovic/github-link.png" alt="github link" /></p>
+
+<p>Tu adresu unesite u odgovarajuće polje CLion-a.</p>
+
+<p>Zatim, izaberite “Log in to GitHub”, jer ćete morati pre ili kasnije da se prijavite, pa je
+najbolje da to uradite sada.</p>
+
+<p>Nakon što se prijavite, i klonirate projekat, otvoriće vam se prozor okruženja 🎉</p>
+
+<p>Međutim, čeka nas još malo posla:</p>
+
+<p><strong>Ako vas okruženje pita da li želite da dodate neke datoteke u Git, to odbijte!</strong></p>
+
+<p>Otvorite <code class="highlighter-rouge">.gitignore</code> datoteku, i tamo dodajte ovih par linija:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># CLion internal files
+/.idea
+
+# Build directories
+/build
+/cmake-build-*
+</code></pre></div></div>
+
+<p>Ovim kažemo Git-u da prestane da nas smara sa internim i privremenim datotekama.</p>
+
+<p>Sada napravite osnovnu <em>C</em> datoteku u korenom direktorijumu (npr. <code class="highlighter-rouge">main.c</code>), koja može da ostane
+prazna trenutno.</p>
+
+<p><em>CLion</em> koristi <em>CMake</em>, koji radi kao
+apstrakcija iznad samog <em>Makefile</em>-a, i omogućava da samo kažemo koje datoteke
+su izvorne, i pustimo da <em>CMake</em> sam napravi odgovarajući <em>Makefile</em>. Ovo je najverovatnije poslednji put
+da morate da ručno nameštate <em>build script</em>, jer će nakon toga <em>CLion</em> da to radi umesto vas.</p>
+
+<p>Napravite CMakeLists.txt u korenom direktorijumu, desnim klikom na koreni direktorijum (koji će se
+zvati <code class="highlighter-rouge">RG123-moj-projekat</code>), i tu birajući “<code class="highlighter-rouge">New</code> &gt; <code class="highlighter-rouge">File</code>”. Ovaj put želimo da ubacimo u ovu datoteku u git, tako
+da prihvatite to u prozoru koji je iskočio. Onda prekopirajte ovaj tekst, i ručno ga izmenite da ga
+oblikujete prema vašem projektu:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cmake_minimum_required(VERSION 3.12)
+# Ime vašeg projekta i jezik u kojem radite
+project(RG123_moj_projekat C)
+
+set(CMAKE_C_STANDARD 11)
+
+link_libraries(GL)
+link_libraries(GLU)
+link_libraries(glut)
+ 
+add_executable(RG123_moj_projekat main.c)
+</code></pre></div></div>
+
+<p>A ako koristite C++, datoteka treba da izgleda ovako:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cmake_minimum_required(VERSION 3.12)
+# Ime vašeg projekta i jezik u kojem radite
+project(RG123_moj_projekat CXX)
+
+set(CMAKE_CXX_STANDARD 14)
+
+link_libraries(GL)
+link_libraries(GLU)
+link_libraries(glut)
+
+add_executable(RG123_moj_projekat main.cpp)
+</code></pre></div></div>
+
+<p>Zatim izaberite “Load CMake project” u traci iznad skripte. Ako je sve prošlo kako treba, moći ćete
+da pokrenete kompilaciju pritiskom na <code class="highlighter-rouge">Run</code> dugme:</p>
+
+<p><img src="/assets/img/blog/2018-12-04-clion-aleksandar-stefanovic/RUN.png" alt="RUN" /></p>
+
+<hr />
+
+<h1 id="zaključak">Zaključak</h1>
+
+<p>Ovde ću stati sa ovim člankom, što znači da ćete i dalje morati kroz terminal da koristite Git.
+Ali ne klonite duhom! Naredni deo članka stiže, koji će do detalja objasniti kako da koristite
+Git u <em>CLion</em>-u, a nakon toga možda usledi i neki članak o tome kako da iskoristite funkcionalnosti
+<em>CLion</em>-a, e.g. debagovanje, automatsko preimenovanje, etc. 🙂</p>
+
+<p>Pozdrav! 👋</p>
+
+
+
+            </div>
+        </div>
+    </div>
+    <div class='col-xs-1'></div>
+</div>
+
+    
+      <div class="row">
+        <div class="col-xs-1"></div>
+        <div class="col-xs-10">
+          <div id="commento"></div>
+          <script src="https://cdn.commento.io/js/commento.js"></script>
+        </div>
+        <div class="col-xs-1"></div>
+      </div>
+    
+
+
+	</div>
+</body>
+</html>

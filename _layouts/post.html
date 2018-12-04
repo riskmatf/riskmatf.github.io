@@ -1,4 +1,16 @@
 ---
-layout: default
+layout: default-panel
 ---
+<!--Kartica koja prikazuje sliku autora-->
+<div class="row">
+    <div class="col-xs-6 col-xs-4">
+        <div class="thumbnail">
+            <img src="{{site.baseurl}}/assets/img/people_images/{{ page.authorimg }}" alt="Autorova slika">
+            <div class="caption">
+                <h4>Autor: {{ page.author }}</h4>
+            </div>
+        </div>
+    </div>
+</div>
+
 {{ content }}
