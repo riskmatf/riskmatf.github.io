@@ -3,11 +3,9 @@ layout: default
 title: /risk/predavanja
 ---
 <div class="row">
-  <div class="col-md-1"></div>
-  <div class="col-xs-10">
-    <ul class="clear-list">
+  <!--<div class="col-md-1"></div>-->
+  <div class="col-xs-12">
       {% for p in site.categories.predavanja%}
-        <br>
         <div class="card">
             <h5 class="card-header">{{ p.title }}</h5>
             <div class="card-body">
@@ -23,8 +21,8 @@ title: /risk/predavanja
                 {% if p.code != 'none' %}<a href="{{p.code}}" class="btn btn-info btn-xs">GitHub repozitorijum</a> {% endif %}
             </div>
         </div>
+        <br>
       {% endfor %}
-    </ul>
   </div>
-  <div class="col-md-1"></div>
+  <!--<div class="col-md-1"></div>-->
 </div>
