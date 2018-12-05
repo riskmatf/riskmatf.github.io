@@ -14,7 +14,7 @@
                 {% if navitem.visible %}
                 <li class='{% if page.active == navitem.active %}active{% endif %} nav-item'>
                     <a class='nav-link' href="{{site.baseurl}}/{{navitem.url}}">
-                        {{ navitem.icon }}
+                        <i class='{{navitem.iconclasses}}'></i>
                         {{ navitem.name }}
                     </a>
                 </li>

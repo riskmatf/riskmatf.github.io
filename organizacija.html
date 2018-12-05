@@ -1,58 +1,52 @@
 ---
 layout: default
+active: organizacija
 ---
-<!--<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">-->
-<!--<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>-->
-<!--<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
-<!------ Include the above in your HEAD tag ---------->
 
-<!-- Team -->
-<section id="team" class="pb-5">
-    <div class="container">
-        <h5 class="section-title h1">NAS TIM</h5>
-        <div class="row">
-            <!-- Team member -->
-            {% for o in site.categories.org reversed %}
-            <div class="col-xs-12 col-sm-6 col-md-4">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="assets/img/organizacija/{{ o.slika }}" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ o.ime }} {{ o.prezime }}</h5>
-                        <p class="card-text">
-                            Lorem ipsum lorem lorem selo volem lorem ipsum selo volem.
-                        </p>
+<!-- Page Heading -->
+<h1 class="">Organizacioni tim
+    <!-- <small>Secondary Text</small> -->
+</h1>
 
-                        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                        <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                        <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-                        <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                        <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                    </div>
+<div class="row">
+    {% for member in site.categories.org reversed %}
+    {% if member.visible %}
+    <div class="col-lg-4 col-sm-6 mb-4">
+        <div class="card h-70">
+
+            <figure class="snip1401">
+                <img class='card-img-top img-thumbnail img-fluid' src="{{site.assets}}/img/organizacija/{{member.slika}}" alt="sample67" />
+                <figcaption>
+                    <h3>{{ member.ime }} {{ member.prezime }}</h3>
+                    <p>Which is worse, that everyone has his price, or that the price is always so low.</p>
+                </figcaption><i class="ion-ios-home-outline"></i>
+                <a href="#"></a>
+            </figure>
+
+            <!-- <a href="#"><img class="card-img-top img-thumbnail img-fluid" src="{{site.assets}}/img/organizacija/{{member.slika}}" -->
+                    <!-- alt=""></a> -->
+
+            <div class="card-body">
+                <h4 class="card-title">
+                    <!-- <a href="#"> -->
+                    {{ member.ime }} {{ member.prezime }}
+                    <!-- </a> -->
+                </h4>
+                <p class="card-text">
+                    <i class="fas fa-tasks"></i> {{ member.posao }}
+                </p>
+                <i class='fa-lg {{member.emailicon}}'></i> {{member.email}}
+                <br><br>
+                <div class='text-center'>
+                    {% for socialitem in member.social %}
+                    <a href="{{socialitem.url}}">
+                        <i class='fa-lg {{socialitem.icon}}'></i>
+                    </a>
+                    {% endfor %}
                 </div>
             </div>
-            {% endfor %}
         </div>
     </div>
-</section>
-
-<style>
-.card .box ul {
-    margin:0;
-    padding:0;
-}
-.card .box ul li {
-    list-style:none;
-    float:left;
-}
-.card .box ul li a {
-    display:block;
-    color:#aaa;
-    margin:0 10px;
-    font-size:20px;
-    transition:0.5s;
-    text-align:center;
-}
-.card .box ul li:hover a {
-    color:#e91e63;
-</style>
-<!-- Team -->
+    {% endif %}
+    {% endfor %}
+</div>

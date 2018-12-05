@@ -10,6 +10,12 @@
   icon: <i class="fas fa-chalkboard-teacher"></i>
   iconclasses: fas fa-chalkboard-teacher
   visible: true
+- url: organizacija.html
+  name: Organizacija
+  active: organizacija
+  icon: <i class="fas fa-images"></i>
+  iconclasses: fas fa-users
+  visible: false
 - url: blog.html
   name: Blog
   active: blog
