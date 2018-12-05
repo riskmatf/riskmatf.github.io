@@ -31,14 +31,16 @@
 
           <ul class="list-unstyled">
               {% for navitem in site.data.navitems %}
-              <li>
-                <p>
-                    <a href="{{site.baseurl}}/{{navitem.url}}">
-                      <i class='{{navitem.iconclasses}} mr-2'></i>
-                      {{navitem.name | upcase }}
-                    </a>
-                </p>
-              </li>
+                {% if navitem.visible %}
+                  <li>
+                    <p>
+                        <a href="{{site.baseurl}}/{{navitem.url}}">
+                          <i class='{{navitem.iconclasses}} mr-2'></i>
+                          {{navitem.name | upcase }}
+                        </a>
+                    </p>
+                  </li>
+                {% endif %}
               {% endfor %}
           </ul>
 

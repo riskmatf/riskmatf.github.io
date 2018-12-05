@@ -11,12 +11,14 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             {% for navitem in site.data.navitems %}
+                {% if navitem.visible %}
                 <li class='{% if page.active == navitem.active %}active{% endif %} nav-item'>
                     <a class='nav-link' href="{{site.baseurl}}/{{navitem.url}}">
                         {{ navitem.icon }}
                         {{ navitem.name }}
                     </a>
                 </li>
+                {% endif %}
             {% endfor %}
             <!-- <li class='{% if page.url contains 'ind' %}active{% endif %} nav-item'><a class='nav-link' href="/index.html">Početna</a></li>
             <li class='{% if page.url contains '/predavanja' %}active{% endif %} nav-item'><a class='nav-link' href="/predavanja.html">Predavanja</a></li>
