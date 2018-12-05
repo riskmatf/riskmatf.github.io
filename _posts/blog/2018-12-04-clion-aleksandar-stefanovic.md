@@ -223,6 +223,3 @@ Git u *CLion*-u, a nakon toga možda usledi i neki članak o tome kako da iskori
 *CLion*-a, e.g. debagovanje, automatsko preimenovanje, etc.
 
 Pozdrav!
-
-{{ site.data.blog-komentari['comment-embed'] }}
-
