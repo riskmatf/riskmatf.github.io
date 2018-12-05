@@ -6,30 +6,3 @@
 .dark-icon {
   color: #212121;
 }
-
-body { background: #333; height: 2000px }
-
-.social {
-  width: 200px;
-  height: 220px;
-  position: fixed;
-  margin-top: 30px;
-  perspective: 1000px
-}
-
-.social li a {
-  display: block;
-  height: 20px;
-  width: 40px;
-  background: #222;
-  border-bottom: 1px solid #333;
-  font: normal normal normal
-  16px/20px 
-  'FontAwesome', 'Source Sans Pro', Helvetica, Arial, sans-serif;
-  color: #fff;
-  -webkit-font-smoothing: antialiased;
-  padding: 10px;
-  text-decoration: none;
-  text-align: center;
-  transition: background .5s ease .300ms
-}
