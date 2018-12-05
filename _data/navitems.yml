@@ -4,9 +4,9 @@
   icon: <i class="fas fa-home"></i>
   iconclasses: fas fa-home
   visible: true
-- url: predavanja.html
-  name: Predavanja
-  active: predavanja
+- url: okupljanja.html
+  name: Okupljanja
+  active: okupljanja
   icon: <i class="fas fa-chalkboard-teacher"></i>
   iconclasses: fas fa-chalkboard-teacher
   visible: true

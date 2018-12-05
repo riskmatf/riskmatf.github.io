@@ -78,23 +78,11 @@
           <!-- Social buttons -->
           <h5 class="font-weight-bold text-uppercase mb-4">Pratite nas</h5>
 
-          <!-- Facebook -->
-          <a target="_blank" href="{{site.data.social['facebook']}}" type="button" class="btn btn-social-icon btn-facebook">
-            <span class="white-icon fab fa-facebook"></span>
-          </a>
-          <!-- Instagram +-->
-          <a target="_blank" href="{{site.data.social['instagram']}}" type="button" class="btn btn-social-icon btn-instagram">
-            <i class="white-icon fab fa-instagram"></i>
-          </a>
-          <!-- Github -->
-          <a target="_blank" href="{{site.data.social['github']}}" type="button" class="btn btn-social-icon btn-github">
-            <i class="white-icon fab fa-github"></i>
-          </a>
-          <!-- Mail -->
-          <a target="_blank" href="{{site.data.social['email']}}" type="button" class="btn btn-social-icon btn-reddit">
-            <i class="fa fa-envelope"></i>
-          </a>
-
+          {% for socialitem in site.data.social %}
+            <a target="_blank" href="{{socialitem.url}}" type="button" class="btn btn-social-icon btn-{{socialitem.name}}">
+              <span class="{{socialitem.awesome-icons}}"></span>
+            </a>
+          {% endfor %}
         </div>
         <!-- Grid column -->
 

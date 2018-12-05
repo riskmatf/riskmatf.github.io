@@ -3,6 +3,10 @@
     color: #ffffff;
 }
 
+.dark-icon {
+  color: #212121;
+}
+
 body { background: #333; height: 2000px }
 
 .social {
