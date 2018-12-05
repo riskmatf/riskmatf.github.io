@@ -33,7 +33,10 @@
               {% for navitem in site.data.navitems %}
               <li>
                 <p>
-                    <a href="{{site.baseurl}}/{{navitem.url}}">{{navitem.name | upcase }}</a>
+                    <a href="{{site.baseurl}}/{{navitem.url}}">
+                      <i class='{{navitem.iconclasses}} mr-2'></i>
+                      {{navitem.name | upcase }}
+                    </a>
                 </p>
               </li>
               {% endfor %}
@@ -53,14 +56,14 @@
           <ul class="list-unstyled">
             <li>
               <p>
-                <i class="fa fa-home mr-3"></i> Studentski Trg 16, Beograd</p>
+                <i class="fa fa-home mr-2"></i> Studentski Trg 16, Beograd</p>
             </li>
             <li>
               <p>
-                <i class="fa fa-envelope mr-3"></i> risk@alas.matf.bg.ac.rs</p>
+                <i class="fa fa-envelope mr-2"></i> risk@alas.matf.bg.ac.rs</p>
             </li>
-            <!-- <li> <p> <i class="fa fa-phone mr-3"></i> + 01 234 567 88</p> </li>
-            <li> <p> <i class="fa fa-print mr-3"></i> + 01 234 567 89</p> </li> -->
+            <!-- <li> <p> <i class="fa fa-phone mr-2"></i> + 01 234 567 88</p> </li>
+            <li> <p> <i class="fa fa-print mr-2"></i> + 01 234 567 89</p> </li> -->
           </ul>
 
         </div>

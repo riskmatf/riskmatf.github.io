@@ -2,15 +2,19 @@
   name: Početna
   active: pocetna
   icon: <i class="fas fa-home"></i>
+  iconclasses: fas fa-home
 - url: predavanja.html
   name: Predavanja
   active: predavanja
   icon: <i class="fas fa-chalkboard-teacher"></i>
+  iconclasses: fas fa-chalkboard-teacher
 - url: blog.html
   name: Blog
   active: blog
   icon: <i class="fas fa-edit"></i>
+  iconclasses: fas fa-edit
 - url: galerija.html
   name: Galerija
   active: galerija
   icon: <i class="fas fa-images"></i>
+  iconclasses: fas fa-images
