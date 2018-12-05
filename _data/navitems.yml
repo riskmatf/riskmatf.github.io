@@ -27,4 +27,4 @@
   active: galerija
   icon: <i class="fas fa-images"></i>
   iconclasses: fas fa-images
-  visible: false
+  visible: true

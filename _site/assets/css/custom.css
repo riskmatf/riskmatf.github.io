@@ -18,3 +18,16 @@ h1, h2, h3, h4, h5, h6 {
 li {
   font-family: 'Montserrat', sans-serif;
 }
+
+.crop {
+	height : 189px; 
+  overflow : hidden;
+  bottom: 0;
+}
+
+.crop img {
+	display : block;
+  width : 100%;
+  position: absolute;
+  bottom: 0;
+} 
