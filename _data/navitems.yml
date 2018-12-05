@@ -15,7 +15,7 @@
   active: organizacija
   icon: <i class="fas fa-images"></i>
   iconclasses: fas fa-users
-  visible: false
+  visible: true
 - url: blog.html
   name: Blog
   active: blog

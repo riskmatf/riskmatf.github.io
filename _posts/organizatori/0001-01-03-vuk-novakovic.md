@@ -1,9 +1,9 @@
 ---
 ime: Vuk
 prezime: Novaković
-slika: nmicovic.png
+slika: placeholder.png
 category: org
-visible: false
+visible: true
 posao: Organizacija
 email: vnovakovic96@gmail.com
 emailicon: fas fa-envelope
