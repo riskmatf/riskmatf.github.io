@@ -224,4 +224,5 @@ Git u *CLion*-u, a nakon toga možda usledi i neki članak o tome kako da iskori
 
 Pozdrav!
 
+{{ site.data.blog-komentari['comment-embed'] }}
 
