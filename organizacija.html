@@ -4,9 +4,9 @@ active: organizacija
 ---
 
 <!-- Page Heading -->
-<h1 class="">Organizacioni tim
+<h2 class="">Organizacioni tim
     <!-- <small>Secondary Text</small> -->
-</h1>
+</h2>
 
 <div class="row">
     {% for member in site.categories.org reversed %}
@@ -14,17 +14,9 @@ active: organizacija
     <div class="col-lg-4 col-sm-6 mb-4">
         <div class="card h-70">
 
-            <figure class="snip1401">
-                <img class='card-img-top img-thumbnail img-fluid' src="{{site.assets}}/img/organizacija/{{member.slika}}" alt="sample67" />
-                <figcaption>
-                    <h3>{{ member.ime }} {{ member.prezime }}</h3>
-                    <p>Which is worse, that everyone has his price, or that the price is always so low.</p>
-                </figcaption><i class="ion-ios-home-outline"></i>
-                <a href="#"></a>
-            </figure>
-
-            <!-- <a href="#"><img class="card-img-top img-thumbnail img-fluid" src="{{site.assets}}/img/organizacija/{{member.slika}}" -->
-                    <!-- alt=""></a> -->
+            <!-- <a href="#"> -->
+                <img class="card-img-top img-thumbnail img-fluid" src="{{site.assets}}/img/organizacija/{{member.slika}}" alt="">
+            <!-- </a> -->
 
             <div class="card-body">
                 <h4 class="card-title">
