@@ -15,7 +15,6 @@ active: galerija
             {% for image in album.images %}
               <div class = "col-lg-4 col-sm-12 my-2 crop">
                 <img src="{{image.path}}" alt="{{image.desc}}" class="card-img-top img-responsive img-fluid">
-                <p>{{album.images.size}}</p>
               </div>
             {% endfor %}
             </div>
