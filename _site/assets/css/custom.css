@@ -7,6 +7,12 @@
   color: #212121;
 }
 
+pre.highlight {
+    padding: 5px;
+    background: rgba(60,63,65,1);
+    color: #fafafa
+}
+
 p {
   font-family: 'Montserrat', sans-serif;
 }
