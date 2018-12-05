@@ -35,12 +35,16 @@
                 </div>
             </li>
         </ul>
-        <!--TODO - raspadne se na telefonu -->
         <ul class="nav navbar-nav ml-auto">
-            <li class="nav-item"><a href="{{site.data.social['facebook']}}" class="nav-link"><i class="fab fa-lg fa-facebook"></i></a></li>
-			<li class="nav-item"><a href="{{site.data.social['github']}}" class="nav-link"><i class="fab fa-lg fa-github"></i></a></li>
-			<li class="nav-item"><a href="{{site.data.social['instagram']}}" class="nav-link"><i class="fab fa-lg fa-instagram"></i></a></li>
-            <li class="nav-item"><a href="{{site.data.social['email']}}" class="nav-link"><i class="fas fa-lg fa-envelope"></i></a></li>
+             <li class="divider"></li>
+            {% for socialitem in site.data.social %}
+                <li class="nav-item">
+                    <a target="_blank" href="{{socialitem.url}}" class="nav-link">
+                        {{socialitem.navicon}}
+                        <span class="d-inline d-inline d-sm-inline d-md-inline d-lg-none">{{socialitem.name | capitalize}}</span>
+                    </a>
+                </li>
+            {% endfor %}
         </ul>
     </div>
 </nav>

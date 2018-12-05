@@ -10,10 +10,8 @@ active: predavanja
         <div class="card">
             <h5 class="card-header">{{ p.title }}</h5>
             <div class="card-body">
-                <!--<h5 class="card-title">Special title treatment</h5>-->
-                <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
-                <h5><span class="text-primary">Predavač <i class="fas fa-chalkboard-teacher"></i></span> {{p.author}}</h5>
-                <h5><span class="text-primary">Datum <i class="fas fa-calendar-alt"></i></span> {{p.date | date: "%-d/%-m/%Y"}}</h5>
+                <p><span class="text-primary"><i class="fas fa-chalkboard-teacher"></i></span> {{p.author}}</p>
+                <p><span class="text-primary"><i class="fas fa-calendar-alt"></i></span> {{p.date | date: "%-d/%-m/%Y"}}</p>
 
 
                 <p>{{p.description}}</p>

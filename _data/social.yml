@@ -1,4 +1,12 @@
-facebook: https://www.facebook.com/groups/1192849077458638/?ref=bookmarks
-instagram: https://www.instagram.com/riskmatf/
-github: https://www.github.com/riskmatf
-email: mailto:risk@alas.matf.bg.ac.rs
+- name: facebook
+  url: https://www.facebook.com/groups/1192849077458638/?ref=bookmarks
+  navicon: <i class="fab fa-lg fa-facebook"></i>
+- name: instagram
+  url: https://www.instagram.com/riskmatf/
+  navicon: <i class="fab fa-lg fa-instagram"></i>
+- name: github
+  url: https://www.github.com/riskmatf
+  navicon: <i class="fab fa-lg fa-github"></i>
+- name: email
+  url: mailto:risk@alas.matf.bg.ac.rs
+  navicon: <i class="fas fa-lg fa-envelope"></i>
