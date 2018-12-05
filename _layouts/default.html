@@ -1,22 +1,26 @@
 <html>
+
 <head>
-    {% include includes.html %}
+	{% include includes.html %}
 
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge"><Paste>
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<meta charset="UTF-8">
 
 	<title>{{page.title}}</title>
 </head>
+
 <body>
 	{% include header.html %}
-	<div class="container">
-        <!--Required in order to offset everything from fixed navbar-->
-        <div class='col-xs-12'>
-            <br> <br> <br>
-        </div>
 
-		  {{ content }}
+	<div class="container">
+		<!--Required in order to offset everything from fixed navbar-->
+		<div class='col-xs-12'>
+			<br> <br> <br>
+		</div>
+
+		{{ content }}
 	</div>
+	{% include footer.html %}
 </body>
 </html>

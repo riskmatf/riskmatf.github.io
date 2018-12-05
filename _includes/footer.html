@@ -1,0 +1,109 @@
+<!-- Footer -->
+<footer class="page-footer font-small mdb-color lighten-3 pt-4">
+
+    <!-- Footer Links -->
+    <div class="container text-center text-md-left">
+
+      <!-- Grid row -->
+      <div class="row">
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 mr-auto my-md-4 my-0 mt-4 mb-1">
+
+          <!-- Content -->
+          <!-- <h5 class="font-weight-bold text-uppercase mb-4">RISK</h5> -->
+          <img src="https://i.imgur.com/vPIuIJr.png" class='img-fluid' style='width: 100px' alt='risk logo'>
+          <br>
+          <br>
+          <p>Ne idi utabanim putem. Umesto toga kreni tamo gde puta nema i ostavi trag.</p>
+          <!-- <img src="https://i.imgur.com/vPIuIJr.png" class='img-fluid' style='width: 100px' alt='risk logo'> -->
+
+        </div>
+        <!-- Grid column -->
+
+        <hr class="clearfix w-100 d-md-none">
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 mx-auto my-md-4 my-0 mt-4 mb-1">
+
+          <!-- Links -->
+          <h5 class="font-weight-bold text-uppercase mb-4">Navigacija</h5>
+
+          <ul class="list-unstyled">
+              {% for navitem in site.data.navitems %}
+              <li>
+                <p>
+                    <a href="{{site.baseurl}}/{{navitem.url}}">{{navitem.name | upcase }}</a>
+                </p>
+              </li>
+              {% endfor %}
+          </ul>
+
+        </div>
+        <!-- Grid column -->
+
+        <hr class="clearfix w-100 d-md-none">
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1">
+
+          <!-- Contact details -->
+          <h5 class="font-weight-bold text-uppercase mb-4">Kontakt</h5>
+
+          <ul class="list-unstyled">
+            <li>
+              <p>
+                <i class="fa fa-home mr-3"></i> Studentski Trg 16, Beograd</p>
+            </li>
+            <li>
+              <p>
+                <i class="fa fa-envelope mr-3"></i> risk@alas.matf.bg.ac.rs</p>
+            </li>
+            <!-- <li> <p> <i class="fa fa-phone mr-3"></i> + 01 234 567 88</p> </li>
+            <li> <p> <i class="fa fa-print mr-3"></i> + 01 234 567 89</p> </li> -->
+          </ul>
+
+        </div>
+        <!-- Grid column -->
+        <hr class="clearfix w-100 d-md-none">
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 text-center mx-auto my-4">
+
+          <!-- Social buttons -->
+          <h5 class="font-weight-bold text-uppercase mb-4">Pratite nas</h5>
+
+          <!-- Facebook -->
+          <a target="_blank" href="{{site.data.social['facebook']}}" type="button" class="btn btn-social-icon btn-facebook">
+            <span class="white-icon fab fa-facebook"></span>
+          </a>
+          <!-- Instagram +-->
+          <a target="_blank" href="{{site.data.social['instagram']}}" type="button" class="btn btn-social-icon btn-instagram">
+            <i class="white-icon fab fa-instagram"></i>
+          </a>
+          <!-- Github -->
+          <a target="_blank" href="{{site.data.social['github']}}" type="button" class="btn btn-social-icon btn-github">
+            <i class="white-icon fab fa-github"></i>
+          </a>
+          <!-- Mail -->
+          <a target="_blank" href="{{site.data.social['email']}}" type="button" class="btn btn-social-icon btn-reddit">
+            <i class="fa fa-envelope"></i>
+          </a>
+
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Grid row -->
+
+    </div>
+    <!-- Footer Links -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2018 RISK
+      <!-- <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a> -->
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+  <!-- Footer -->

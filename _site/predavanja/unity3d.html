@@ -1,6 +1,7 @@
 <html>
+
 <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
+	<!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129543038-1"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
@@ -23,6 +24,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<!-- Bootstrap social for stylized social media icons -->
+<link rel="stylesheet" href="/assets/css/bootstrap-social.css">
 <!--****************************************************************************************************-->
 
 <!--****************************************************************************************************-->
@@ -37,11 +40,12 @@
 
 
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge"><Paste>
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<meta charset="UTF-8">
 
 	<title>Unity3D - uvod u razvoj igara</title>
 </head>
+
 <body>
 	<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">
@@ -55,44 +59,70 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-            <li class=' nav-item'><a class='nav-link' href="/index.html">Početna</a></li>
+            
+                <li class=' nav-item'>
+                    <a class='nav-link' href="/index.html">
+                        <i class="fas fa-home"></i>
+                        Početna
+                    </a>
+                </li>
+            
+                <li class=' nav-item'>
+                    <a class='nav-link' href="/predavanja.html">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        Predavanja
+                    </a>
+                </li>
+            
+                <li class=' nav-item'>
+                    <a class='nav-link' href="/blog.html">
+                        <i class="fas fa-edit"></i>
+                        Blog
+                    </a>
+                </li>
+            
+                <li class=' nav-item'>
+                    <a class='nav-link' href="/galerija.html">
+                        <i class="fas fa-images"></i>
+                        Galerija
+                    </a>
+                </li>
+            
+            <!-- <li class=' nav-item'><a class='nav-link' href="/index.html">Početna</a></li>
             <li class='active nav-item'><a class='nav-link' href="/predavanja.html">Predavanja</a></li>
             <li class=' nav-item'><a class='nav-link' href="/blog.html">Blog</a></li>
-            <li class=' nav-item'><a class='nav-link' href="/galerija.html">Galerija</a></li> 
-            <li class=' nav-item'><a class='nav-link' href="/prijava_predavanja.html">Prijava predavanja</a></li>
-            <!--TODO-->
-            <!--<li class="nav-item dropdown">-->
-                <!--<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
-                    <!--Kontakt-->
-                <!--</a>-->
-                <!--<div class="dropdown-menu" aria-labelledby="navbarDropdown">-->
-                    <!--<a class="dropdown-item" href="#">Prijava predavanja (anketa)</a>-->
-                    <!--<a class="dropdown-item" href="#">Šta bi voleli da slušate (anketa)</a>-->
-                    <!--<div class="dropdown-divider"></div>-->
-                    <!--<a class="dropdown-item" href="#">Kontakt</a>-->
-                <!--</div>-->
-            <!--</li>-->
+            <li class=' nav-item'><a class='nav-link' href="/galerija.html">Galerija</a></li>  -->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-smile-beam"></i>
+                    Vaš doprinos
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a target="_blank" class="dropdown-item" href="https://docs.google.com/forms/d/e/1FAIpQLSfg1xM9EjhyOcUR9AIpQm6bhq6RflLOhWriCPTwl2TiNviAhA/viewform?usp=sf_link">Prijava predavanja (anketa)</a>
+                    <a target="_blank" class="dropdown-item" href="https://docs.google.com/forms/d/e/1FAIpQLSfyLBaMQ2GZSKtlfYxcKnLtZiJLp-RCRBxji1bMAaFeuM16sw/viewform?usp=sf_link">Šta bi voleli da slušate (anketa)</a>
+                    <!-- <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Kontakt</a> -->
+                </div>
+            </li>
         </ul>
         <!--TODO - raspadne se na telefonu -->
-        <ul class="nav navbar-nav navbar-right">
-            <li><a target="_blank" href="https://www.facebook.com/groups/1192849077458638/?ref=bookmarks"><i class="fab fa-facebook"></i></a></li>
-            &nbsp;
-            <li><a target="_blank" href="https://www.github.com/riskmatf"><i class="fab fa-github"></i></a></li>
-            &nbsp;
-            <li><a target="_blank" href="https://www.instagram.com/riskmatf/"><i class="fab fa-instagram"></i></a></li>
-            &nbsp;
-            <li><a href="#"><i class="fas fa-envelope"></i></a></li>
+        <ul class="nav navbar-nav ml-auto">
+            <li class="nav-item"><a href="https://www.facebook.com/groups/1192849077458638/?ref=bookmarks" class="nav-link"><i class="fab fa-lg fa-facebook"></i></a></li>
+			<li class="nav-item"><a href="https://www.github.com/riskmatf" class="nav-link"><i class="fab fa-lg fa-github"></i></a></li>
+			<li class="nav-item"><a href="https://www.instagram.com/riskmatf/" class="nav-link"><i class="fab fa-lg fa-instagram"></i></a></li>
+            <li class="nav-item"><a href="mailto:risk@alas.matf.bg.ac.rs" class="nav-link"><i class="fas fa-lg fa-envelope"></i></a></li>
         </ul>
     </div>
 </nav>
 
-	<div class="container">
-        <!--Required in order to offset everything from fixed navbar-->
-        <div class='col-xs-12'>
-            <br> <br> <br>
-        </div>
 
-		  <div class='row'>
+	<div class="container">
+		<!--Required in order to offset everything from fixed navbar-->
+		<div class='col-xs-12'>
+			<br> <br> <br>
+		</div>
+
+		<div class='row'>
     <!--<div class='col-xs-1'></div>-->
         <div class="card">
             <h5 class="card-header">Unity3D - uvod u razvoj igara</h5>
@@ -121,5 +151,132 @@
 
 
 	</div>
+	<!-- Footer -->
+<footer class="page-footer font-small mdb-color lighten-3 pt-4">
+
+    <!-- Footer Links -->
+    <div class="container text-center text-md-left">
+
+      <!-- Grid row -->
+      <div class="row">
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 mr-auto my-md-4 my-0 mt-4 mb-1">
+
+          <!-- Content -->
+          <!-- <h5 class="font-weight-bold text-uppercase mb-4">RISK</h5> -->
+          <img src="https://i.imgur.com/vPIuIJr.png" class='img-fluid' style='width: 100px' alt='risk logo'>
+          <br>
+          <br>
+          <p>Ne idi utabanim putem. Umesto toga kreni tamo gde puta nema i ostavi trag.</p>
+          <!-- <img src="https://i.imgur.com/vPIuIJr.png" class='img-fluid' style='width: 100px' alt='risk logo'> -->
+
+        </div>
+        <!-- Grid column -->
+
+        <hr class="clearfix w-100 d-md-none">
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 mx-auto my-md-4 my-0 mt-4 mb-1">
+
+          <!-- Links -->
+          <h5 class="font-weight-bold text-uppercase mb-4">Navigacija</h5>
+
+          <ul class="list-unstyled">
+              
+              <li>
+                <p>
+                    <a href="/index.html">POČETNA</a>
+                </p>
+              </li>
+              
+              <li>
+                <p>
+                    <a href="/predavanja.html">PREDAVANJA</a>
+                </p>
+              </li>
+              
+              <li>
+                <p>
+                    <a href="/blog.html">BLOG</a>
+                </p>
+              </li>
+              
+              <li>
+                <p>
+                    <a href="/galerija.html">GALERIJA</a>
+                </p>
+              </li>
+              
+          </ul>
+
+        </div>
+        <!-- Grid column -->
+
+        <hr class="clearfix w-100 d-md-none">
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1">
+
+          <!-- Contact details -->
+          <h5 class="font-weight-bold text-uppercase mb-4">Kontakt</h5>
+
+          <ul class="list-unstyled">
+            <li>
+              <p>
+                <i class="fa fa-home mr-3"></i> Studentski Trg 16, Beograd</p>
+            </li>
+            <li>
+              <p>
+                <i class="fa fa-envelope mr-3"></i> risk@alas.matf.bg.ac.rs</p>
+            </li>
+            <!-- <li> <p> <i class="fa fa-phone mr-3"></i> + 01 234 567 88</p> </li>
+            <li> <p> <i class="fa fa-print mr-3"></i> + 01 234 567 89</p> </li> -->
+          </ul>
+
+        </div>
+        <!-- Grid column -->
+        <hr class="clearfix w-100 d-md-none">
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 text-center mx-auto my-4">
+
+          <!-- Social buttons -->
+          <h5 class="font-weight-bold text-uppercase mb-4">Pratite nas</h5>
+
+          <!-- Facebook -->
+          <a target="_blank" href="https://www.facebook.com/groups/1192849077458638/?ref=bookmarks" type="button" class="btn btn-social-icon btn-facebook">
+            <span class="white-icon fab fa-facebook"></span>
+          </a>
+          <!-- Instagram +-->
+          <a target="_blank" href="https://www.instagram.com/riskmatf/" type="button" class="btn btn-social-icon btn-instagram">
+            <i class="white-icon fab fa-instagram"></i>
+          </a>
+          <!-- Github -->
+          <a target="_blank" href="https://www.github.com/riskmatf" type="button" class="btn btn-social-icon btn-github">
+            <i class="white-icon fab fa-github"></i>
+          </a>
+          <!-- Mail -->
+          <a target="_blank" href="mailto:risk@alas.matf.bg.ac.rs" type="button" class="btn btn-social-icon btn-reddit">
+            <i class="fa fa-envelope"></i>
+          </a>
+
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Grid row -->
+
+    </div>
+    <!-- Footer Links -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2018 RISK
+      <!-- <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a> -->
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+  <!-- Footer -->
 </body>
 </html>

@@ -1,0 +1,16 @@
+- url: index.html
+  name: Početna
+  active: pocetna
+  icon: <i class="fas fa-home"></i>
+- url: predavanja.html
+  name: Predavanja
+  active: predavanja
+  icon: <i class="fas fa-chalkboard-teacher"></i>
+- url: blog.html
+  name: Blog
+  active: blog
+  icon: <i class="fas fa-edit"></i>
+- url: galerija.html
+  name: Galerija
+  active: galerija
+  icon: <i class="fas fa-images"></i>
