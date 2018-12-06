@@ -2,12 +2,8 @@
 layout: default-panel
 ---
 <!--Dodati klasu 'mx-auto' za slucaj da je potrebno centrirati karticu horizontalno-->
-<div class="card" style="width: 18rem;">
-    <img style="" class='card-img-top img-fluid img-thumbnail' src="{{site.baseurl}}/assets/img/people_images/{{ page.authorimg }}" alt="Autorova slika">
-    <div class="card-body">
-        <p><span class="text-primary"><i class="fas fa-chalkboard-teacher"></i></span> {{page.author}}</p>
-        <p><span class="text-primary"><i class="fas fa-calendar-alt"></i></span> {{page.date | date: "%-d/%-m/%Y"}}</p>
-    </div>
+<div class="card col-md-6" style="padding-top: 1rem">
+    {% include blog/header.html page=page %}
 </div>
 <br>
 
