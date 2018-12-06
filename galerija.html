@@ -3,23 +3,27 @@ layout: default
 title: /risk/galerija
 active: galerija
 ---
+<div class="container">
 
-{% for album in site.photos %}
-  <div class = "card">
-    <div class = "card-header ">
-        <h1 class="text-center" style="margin-top:2px">{{ album.name }}</h1>
-        <h5 class="text-center">{{ album.date | date: "%-d.%-m.%Y." }}</h5>
+  {% for album in site.photos %}
+    <div class = "card">
+      <div class = "card-header p-1">
+        <h5 class="text-center m-0">{{ album.name }}</h5>
+        <p class="text-center m-0">{{ album.date | date: "%-d.%-m.%Y." }}</p>
+      </div>
+
+      <div class = "card-body">
+        <div class = "row">
+
+        {% for image in album.images %}
+          <div class = "col-lg-4 col-md-6 my-1 crop">
+            <img src="{{image.path}}" alt="{{image.desc}}" class="img-responsive img-fluid">
+          </div>
+        {% endfor %}
+
+        </div>      
+      </div>
     </div>
-    <div class = "card-body">
-            <div class = "row">
-            {% for image in album.images %}
-              <div class = "col-lg-4 col-sm-12 my-2 crop">
-                <img src="{{image.path}}" alt="{{image.desc}}" class="card-img-top img-responsive img-fluid">
-              </div>
-            {% endfor %}
-            </div>
-          
-        
-    </div>
-  </div>
-{% endfor %}
+  {% endfor %}
+
+</div>
