@@ -1,7 +1,7 @@
 ---
 ime: Vuk
 prezime: Novaković
-slika: placeholder.png
+slika: vnovakovic.jpg
 category: org
 visible: true
 posao: Organizacija
