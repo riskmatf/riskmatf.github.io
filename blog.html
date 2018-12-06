@@ -11,9 +11,13 @@ active: blog
         <div class="card-body">
             <div class='col-md-12'>
                 <!--<p class="card-title text-primary">{{ p.author }}</p>-->
-                <p><span class="text-primary"><i class="fas fa-chalkboard-teacher"></i></span> {{p.author}}</p>
-                <p><span class="text-primary"><i class="fas fa-calendar-alt"></i></span> {{p.date | date: "%-d/%-m/%Y"}}</p>
-                <img style="width: 150px" class='img-fluid img-thumbnail' src="{{site.baseurl}}/assets/img/people_images/{{ p.authorimg }}" alt="Autorova slika">
+                <div class='row' style="padding-left: 1.25rem">
+                    <img class='img-fluid img-thumbnail blog-header-img' src="{{site.baseurl}}/assets/img/people_images/{{ p.authorimg }}" alt="Autorova slika">
+                    <div style="margin-left: 15px">
+                        <p><span class="text-primary"><i class="fas fa-chalkboard-teacher"></i></span> {{p.author}}</p>
+                        <p><span class="text-primary"><i class="fas fa-calendar-alt"></i></span> {{p.date | date: "%-d/%-m/%Y"}}</p>
+                    </div>
+                </div>
                 <p>{{ p.content | remove_first:p.excerpt | truncatewords:75 }}</p>
                 <a href='{{p.url}}.html'><button class='btn btn-primary'><i class="fas fa-glasses"></i> Pročitaj</button></a>
             </div>

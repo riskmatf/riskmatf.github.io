@@ -13,6 +13,15 @@ pre.highlight {
     color: #fafafa
 }
 
+.blog-header-img {
+    width: 70px;
+    height: 70px;
+    /* Da bi slika bila okrugla */
+    border-radius: 50%;
+    /* Da bi slika bila kvadratnog oblika bez obzira na njen pravi oblik (crop strategijom) */
+    object-fit: cover;
+}
+
 p {
   font-family: 'Montserrat', sans-serif;
 }
