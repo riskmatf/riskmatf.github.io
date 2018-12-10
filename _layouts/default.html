@@ -9,11 +9,11 @@
 	<meta charset="UTF-8">
 
 	{% for style in page.styles %}
-		<link type='text/css' href="{{style}}"/>
+		<link rel='stylesheet' type='text/css' href="{{style}}"/>
 	{% endfor %}
 
 	{% for script in page.scripts %}
-		<link type='text/css' href="{{script}}"/>
+		<script type='text/javascript' src="{{script}}"></script>
 	{% endfor %}
 
 	<title>{{page.title}}</title>
