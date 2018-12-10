@@ -1,0 +1,35 @@
+.desktop-layout
+{
+    height: 70vh;
+    overflow-y: auto;
+    overflow-x:hidden;
+}
+
+
+.mobile-layout
+{
+
+}
+
+.img
+{
+    height: 5vw;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+
+.album
+{
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.album-underline
+{
+    width: 0px;
+    background-color: lightblue;
+    height: 2.5px;
+
+}
