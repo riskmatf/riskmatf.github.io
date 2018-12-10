@@ -22,6 +22,11 @@ pre.highlight {
     object-fit: cover;
 }
 
+/* Elementi sa no-images klasom ne prikazuju slike unutar njih. */
+.no-img img {
+    display: none;
+}
+
 p {
   font-family: 'Montserrat', sans-serif;
 }

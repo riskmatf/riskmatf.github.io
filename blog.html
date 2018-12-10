@@ -12,7 +12,10 @@ active: blog
             <div class='col-md-12'>
                 <!--<p class="card-title text-primary">{{ p.author }}</p>-->
                 {% include blog/header.html page=p %}
-                <p>{{ p.content | remove_first:p.excerpt | truncatewords:75 }}</p>
+                <!--div wrapper zato što no-img klasa ne može da se primeni na <p>-->
+                <div  class="no-img">
+                    <p>{{ p.content | remove_first:p.excerpt | truncatewords:75 }}</p>
+                </div>
                 <a href='{{p.url}}.html'><button class='btn btn-primary'><i class="fas fa-glasses"></i> Pročitaj</button></a>
             </div>
             <!--<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>-->
