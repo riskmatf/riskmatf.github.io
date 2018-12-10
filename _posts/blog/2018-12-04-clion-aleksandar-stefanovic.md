@@ -8,6 +8,8 @@ comments: true
 ---
 ### {{ page.title }}
 
+<img alt='splash-screen' class='img-fluid' src="{{site.baseurl}}/assets/img/blog/2018-12-04-clion-aleksandar-stefanovic/banner.png">
+
 Projekat iz grafike je prvi projekat koji radimo nasamo, sa naših računara,
 i prvi put da projekat nije samo vežbanje za test. Ovo napominjem jer su mnogi
 ljudi davali argument da *žele da vežbaju u istom programu na kojem će raditi
