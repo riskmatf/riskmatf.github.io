@@ -2,48 +2,75 @@
 layout: default
 title: /risk/galerija
 active: galerija
+styles:
+    - /assets/css/galleryStyle.css
+scripts:
+    - /assets/js/anime.min.js
 ---
 <div class = "container">
-  <div class="row justify-content-center">
-    <!-- Carousel -->
-    <div id="carousel-gallery" class="carousel slide w-75" data-ride="carousel">
-      <div class="carousel-inner">
-        <!-- outer loop -->
-        {% for album in site.photos reversed %}
-          {% assign outer_index = forloop.index0 %}
-
-          {% for image in album.images %}
-            {% if outer_index == 0 and forloop.index0 == 0 %} <!-- first image-->
-              <div class = "carousel-item active">
-                <img src="{{image.path}}" alt="{{image.desc}}"
-                    class="d-block img-responsive img-fluid">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>{{album.name}}</h5>
-                    <p>{{album.date | date: "%-d.%-m.%Y."}}</p>
+  <div class='desktop-layout d-none d-md-block'>
+    <div class="row">
+        <div class='col-5'>
+            {% for it in (0..site.photos.size) %}
+                <div class='album'
+                     onclick='onAlbumClicked({{it}})'
+                >
+                    {{site.photos[it].name}}
                 </div>
-              </div>
-            {% else %}
-              <div class = "carousel-item justify-content-center ">
-                <img src="{{image.path}}" alt="{{image.desc}}"
-                    class="d-block img-responsive img-fluid">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>{{album.name}}</h5>
-                    <p>{{album.date | date: "%-d.%-m.%Y."}}</p>
-                  </div>
-              </div>
-            {% endif %}
-          {% endfor %}
+                <div class='album-underline'></div>
+            {% endfor %}
 
-        {% endfor %}
-      </div>
-      <a class="carousel-control-prev" href="#carousel-gallery" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#carousel-gallery" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div><!--carousel-->
-  </div><!--row-->
-</div><!--container-->
+        </div>
+
+
+        <div class='col'>
+            <div class='row'>
+                <div class='col' id='main_image'>
+                    <img width='100%' src='{{site.photos[0].images[0].path}}'>
+                </div>
+            </div>
+
+            <div class='row justify-content-between' id='other_images'>
+                {% for img in site.photos[0].images %}
+                <div class='col-3 mt-2'>
+                    <div class='img img-thumbnail' style='background-image: url("{{img.path}}")'></div>
+                </div>
+                {% endfor %}
+                {% for img in site.photos[1].images %}
+                <div class='col-3 mt-2'>
+                    <div class='img img-thumbnail' style='background-image: url("{{img.path}}")'></div>
+                </div>
+                {% endfor %}
+            </div>
+
+            </div>
+        </div>
+    </div>
+  </div>
+
+    <div class='mobile-layout d-md-none d-sm-block'>
+        <div class="row">
+            <div class='col'>
+                Hi this is mobile, watch your step constructions in progress!
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type='text/javascript'>
+    albums = [
+		{% for album in site.photos %}
+        {
+        	name:'{{album.name}}',
+            images:[
+                {%for img in album.images%}
+                    '{{img.path}}',
+                {%endfor%}
+            ]
+        },
+        {% endfor%}
+    ];
+
+</script>
+
+<script type='text/javascript' src='/assets/js/galleryScript.js'></script>
