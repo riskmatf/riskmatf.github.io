@@ -1,13 +1,53 @@
 ---
 layout: default
-title: /risk/projekti
+active: projekti
 ---
-<ul class="clear-list">
-  {% for p in site.categories.projekti %}
-    <li>
-      <a href="{{ p.url }}"><h3>{{ p.title }}</h3></a>
-      <p>{{p.description}}</p>
-      {% if p.github != 'none' %}<a href="{{ p.github }}" class="btn btn-success btn-xs">Github</a>{% endif %}
-    </li>
-  {% endfor %}
-</ul>
+<!-- Page Heading -->
+<h2 class="">Projekti
+	<!-- <small>Secondary Text</small> -->
+</h2>
+<p>
+U okviru organizacije postoji nekoliko projekata o kojima više informacija možete
+pronaći na ovoj stranici. Ukoliko želite da predložite novi projekat, možete to učiniti
+<a target="_blank" href="{{site.data.ankete['prijava-projekta']}}">ovde</a>,
+a ukoliko želite da se pridružite nekom od postojećih, možete nas kontaktirati
+putem mejla ili neke od društvenih mreža.
+</p>
+<hr>
+
+<div id="accordion">
+	{% for project in site.categories.projekti %}
+	{% if project.visible %}
+		<div class="card">
+			<div class="card-header" id="heading-{{project.pro}}">
+				<h5 class="mb-0">
+					<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#{{project.projectid}}" aria-expanded="false" aria-controls="{{project.projectid}}">
+						<img class="img-fluid img-thumbnail project-header-img" src="{{site.assets}}/img/projekti/{{project.slika}}" alt="">
+						{{ project.title }} - {{ project.shortdesc }}
+					</button>
+				</h5>
+			</div>
+			<div id="{{project.projectid}}" class="collapse" aria-labelledby="heading-{{project.pr}}" data-parent="#accordion">
+				<div class="card-body">
+					<ul class='list-group'>
+						{{ project.description }}
+                        <br><br>
+						<h6>Učesnici:</h6>
+						{% for dev in project.ucesnici %} 
+						<li class='list-group-item'>
+							{{ dev.ime }}
+						</li>
+						{% endfor %}
+					</ul>
+					<br>
+
+					Github:
+					<a href="{{ project.github }}" target="_blank">
+						<i class='fab fa-github'></i>
+					</a>
+				</div>
+			</div>
+		</div>
+	{% endif %}
+	{% endfor %}
+</div> 

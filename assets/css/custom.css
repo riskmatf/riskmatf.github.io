@@ -22,6 +22,16 @@ pre.highlight {
     object-fit: cover;
 }
 
+.project-header-img {
+    width: 30;
+    height: 30;
+    /* Da bi slika bila okrugla */
+    border-radius: 50%;
+    /* Da bi slika bila kvadratnog oblika bez obzira na njen pravi oblik (crop strategijom) */
+    object-fit: cover;
+}
+
+
 /* Elementi sa no-images klasom ne prikazuju slike unutar njih. */
 .no-img img {
     display: none;

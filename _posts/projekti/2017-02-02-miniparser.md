@@ -1,6 +1,7 @@
 ---
 category: projekti
 layout: post
+visible: false
 title: Mini Parser
 description: Mini parser koji smo radili na jednom sastajanju sekcije.
 github: https://github.com/riskmatf/miniparser
