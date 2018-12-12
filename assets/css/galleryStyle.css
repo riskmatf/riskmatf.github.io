@@ -1,10 +1,9 @@
 .desktop-layout
 {
     height: 70vh;
-    overflow-y: auto;
+    overflow-y: hidden;
     overflow-x:hidden;
 }
-
 
 .mobile-layout
 {
@@ -19,7 +18,6 @@
     background-size:cover;
 }
 
-
 .album
 {
     font-weight: bold;
@@ -32,4 +30,31 @@
     background-color: lightblue;
     height: 2.5px;
 
+}
+
+.cover-all
+{
+    position: fixed;
+    left: 0;
+    top:0;
+    z-index: 10000;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    opacity: 0;
+    padding: 10px;
+}
+
+#imageview
+{
+    background-color: black;
+    height: 80vh;
+}
+
+.carousel-image-container
+{
+    max-height: 80vh;
+    width: auto;
+    max-width: 100%;
 }

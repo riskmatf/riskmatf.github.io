@@ -1,12 +1,21 @@
-document.querySelector('.album').style.color= 'lightblue';
-let first_underline = document.querySelector('.album-underline');
-var animation =  anime(
-	{
-    targets: first_underline,
-    width: '100%'
-	});
+const mainImageSize = {width:'100%', height:'20vw'};
+const otherImageSize= {width:'100%', height:'5vw'};
 
-first_underline.classList.add('underline-active');
+init();
+
+function init()
+{
+	document.querySelector('.album').style.color= 'lightblue';
+	let first_underline = document.querySelector('.album-underline');
+	anime(
+		{
+    		targets: first_underline,
+    		width: '100%'
+		});
+
+	first_underline.classList.add('underline-active');
+	changeImages(0);
+}
 
 function changeImages(to)
 {
@@ -15,68 +24,150 @@ function changeImages(to)
      let first  = images[0];
      let rest = images.slice(1);
 
-     var t = anime(
+     anime(
      	{
 			targets:['.img', '#main_image > img'],
 			width: 0,
 			height:0,
 			opacity:0,
+			easing:'linear',
+			duration:500,
 			complete: function()
 			{
          	    let els = document.querySelectorAll('#other_images > .col-3');
          	    for(let el of els)
-	              {
-	              	el.remove();
-	              }
+         	    {
+         	    	if(el)
+					{
+						el.remove();
+					}
+	            }
 
-		   els = document.querySelector('#main_image > img');
-             els.remove();
+         	    els = document.querySelector('#main_image > div.img');
+         	    if(els)
+				{
+					els.remove();
+				}
+         	    let main_img = createMainImage(first);
 
-             let main_img = createImageTag(first);
-             document.querySelector('#main_image').append(main_img)
+         	    document.querySelector('#main_image').append(main_img);
 
-		   let restImages = [];
-             let otherImagesRoot = document.querySelector('#other_images');
+				let restImages = [];
+				let otherImagesRoot = document.querySelector('#other_images');
 
-		   for(let imgSrc of rest)
-		   {
-		   		let img = createMyImage(imgSrc);
-		  		restImages.push(img);
-		  		otherImagesRoot.append(img);
-		   }
+				for(let imgIndex in rest)
+				{
+					let img = createOtherImages(rest[imgIndex], parseInt(imgIndex, 10)+1);
+					restImages.push(img);
+					otherImagesRoot.append(img);
+				}
 
-             anime({
-                 targets:[main_img, ...restImages],
-                 width:'100%',
-                 opacity:100,
-             });
+				anime({
+					targets:main_img,
+					easing:'linear',
+					duration:500,
+					opacity:1,
+					width:mainImageSize.width,
+					height:mainImageSize.height
+				});
 
+				anime({
+					targets:restImages,
+					easing:'linear',
+					duration:500,
+					opacity:1,
+					width:otherImageSize.width,
+					height:otherImageSize.height
+				});
          },
      });
+
+     /*Change images in carousel*/
+
+	carouselInner = document.querySelector('.carousel-inner');
+	if(!carouselInner)
+	{
+		return;
+	}
+
+	while(carouselInner.firstChild)
+	{
+	    carouselInner.removeChild(carouselInner.firstChild);
+	}
+
+	images.forEach(function(value)
+	{
+		carouselInner.append(createCarouselImage(value));
+	})
+
+
+
+
 }
 
-function createImageTag(src)
+function createCarouselImage(src)
 {
+	let divCarouselItem = document.createElement('div');
+	divCarouselItem.classList.add('carousel-item');
+
+	let divRow = document.createElement('div');
+	divRow.classList.add('row', 'justify-content-center');
+
+	let divCol= document.createElement('div');
+	divCol.classList.add('col-auto');
+
+	let imageContainer = document.createElement('div');
+	imageContainer.classList.add('carousel-image-container');
+
 	let img = document.createElement('img');
 	img.setAttribute('src', src);
-	img.setAttribute('width', 0);
-	img.style.opacity=0;
 
+
+	imageContainer.append(img);
+	divCol.append(imageContainer);
+	divRow.append(divCol);
+	divCarouselItem.append(divRow);
+
+	return divCarouselItem;
+}
+
+
+function createMainImage(src)
+{
+	let img = createMyImage(src, 0);
+	img.style.opacity  = '0';
+	img.style.width = '0px';
+	img.style.height = '0px';
 	return img;
 }
 
-function createMyImage(src)
+function createOtherImages(src, index)
 {
+
 	let img = document.createElement('div');
 	img.setAttribute('class', 'col-3 mt-2');
 	img.setAttribute('width', '0');
 
+	let innerImage = createMyImage(src, index);
+
+	img.append(innerImage);
+	img.style.opacity = '0';
+	img.style.width = '0px';
+	img.style.height = '0px';
+	return img;
+}
+
+function createMyImage(src, index)
+{
 	let innerImage = document.createElement('div');
 	innerImage.setAttribute('class', 'img img-thumbnail');
-	innerImage.style.backgroundImage = `url(${src})`
-	img.append(innerImage);
-	return img;
+	innerImage.style.backgroundImage = `url(${src})`;
 
+	innerImage.onclick = function ()
+	{
+		onImageViewToggled(index);
+	};
+	return innerImage;
 }
 
 function onAlbumClicked(to)
@@ -114,3 +205,67 @@ function onAlbumClicked(to)
 
 }
 
+function onImageViewToggled(imageSelected)
+{
+	carousel = document.querySelector('.cover-all');
+
+	if(!carousel)
+	{
+		return;
+	}
+
+	if(imageSelected !== -1)
+	{
+		let images = document.querySelectorAll('.carousel-item');
+		if(!images)
+		{
+			return;
+		}
+
+		images[imageSelected].classList.add('active');
+	}
+	else
+	{
+
+		let images = document.querySelectorAll('.carousel-item');
+		if(!images)
+		{
+			return;
+		}
+
+		for(let img of images)
+		{
+			img.classList.remove('active');
+		}
+	}
+
+	if(carousel.style.display === 'none' || carousel.style.display === '')
+	{
+		carousel.style.display = 'block';
+		document.body.style.overflow = 'hidden';
+		 anime(
+			{
+				targets:carousel,
+				easing:'linear',
+				duration:400,
+				opacity:1
+			}
+		)
+	}
+	else
+	{
+		document.body.style.overflow = 'auto';
+		anime(
+			{
+				targets:carousel,
+				easing:'linear',
+				duration:400,
+				opacity:0,
+				complete: function ()
+				{
+					carousel.style.display = 'none';
+				}
+			}
+		)
+	}
+}
