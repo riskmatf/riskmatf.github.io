@@ -10,6 +10,4 @@ emailicon: fas fa-envelope
 social:
     - url: https://github.com/aleksandar-stefanovic
       icon: fab fa-github
-    - url: https://www.instagram.com/nemanja.micovic/
-      icon: fab fa-instagram
 ---
