@@ -13,6 +13,8 @@ scripts:
         <div class='col-5'>
             <div class='album'
                  onclick='onAlbumClicked(0)'
+                 onmouseenter='onMouseEnter(0)'
+                 onmouseleave='onMouseEnter(0)'
             >
                 Sve
             </div>
@@ -20,6 +22,8 @@ scripts:
             {% for it in (0..site.photos.size) %}
                 <div class='album'
                      onclick='onAlbumClicked({{it|plus:1}})'
+                     onmouseenter='onMouseEnter({{it|plus:1}})'
+                     onmouseleave='onMouseEnter({{it|plus:1}})'
                 >
                     {{site.photos[it].name}}
                 </div>

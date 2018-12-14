@@ -6,14 +6,22 @@ init();
 function init()
 {
 	document.querySelector('.album').style.color= '#00aeef';
-	let first_underline = document.querySelector('.album-underline');
-	anime(
-		{
-    		targets: first_underline,
-    		width: '100%'
-		});
+	let underlines = document.querySelectorAll('.album-underline');
+	for(let underiline of underlines)
+	{
+		underiline.hoverAnimation = anime(
+			{
+				targets: underiline,
+    			width: '80%',
+				autoplay:false
+			});
+		underiline.hoverAnimation.reverse();
+	}
 
-	first_underline.classList.add('underline-active');
+
+	underlines[0].classList.add('underline-active');
+	underlines[0].hoverAnimation.reverse();
+	underlines[0].hoverAnimation.play();
 	changeImages(0);
 }
 
@@ -202,22 +210,30 @@ function onAlbumClicked(to)
 	selected.previousElementSibling.style.color = '#00aeef';
 
 
+	prevSelected.hoverAnimation.reverse();
+	prevSelected.hoverAnimation.play();
 
-	anime(
-	{
-		targets: prevSelected,
-		width:0,
-	});
 
-	anime(
-	{
-		targets: selected,
-		width:'100%',
-	});
-
+	/*selected.hoverAnimation.reverse();
+	selected.hoverAnimation.play();*/
 
 
 }
+
+function onMouseEnter(index)
+{
+	let selected = document.querySelectorAll('.album-underline')[index];
+	if(selected.classList.contains('underline-active'))
+	{
+		return;
+	}
+
+	selected.hoverAnimation.pause();
+	selected.hoverAnimation.reverse();
+	selected.hoverAnimation.play();
+}
+
+
 
 function onImageViewToggled(imageSelected)
 {
