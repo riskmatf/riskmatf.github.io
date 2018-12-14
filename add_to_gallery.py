@@ -25,7 +25,6 @@ def main():
     if image_dir.endswith('/'):
         image_dir = image_dir[:-1]
 
-    print(image_dir)
 
     files = filter_directory(image_dir)
     resize_images(image_dir, files)
@@ -89,6 +88,7 @@ def generate_image_names(image: str)->ty.Dict[str,str]:
 
 def write_manifest(images: ty.List[str], name: str, date: str, output_dir: str) -> None:
 
+    file_name = os.path.basename(os.path.dirname(images[0]))
     images = list(map(generate_image_names, images))
 
     res = {}
@@ -100,7 +100,7 @@ def write_manifest(images: ty.List[str], name: str, date: str, output_dir: str) 
 
     cont = yaml.dump(res, default_flow_style=False)
 
-    with open(os.path.join(output_dir, f'{date}-{name}.md'), 'w') as f:
+    with open(os.path.join(output_dir, f'{date}-{file_name}.md'), 'w') as f:
         f.writelines(['---\n', cont, '---\n'])
         f.flush()
 
