@@ -16,6 +16,12 @@
   icon: <i class="fas fa-images"></i>
   iconclasses: fas fa-users
   visible: true
+- url: projekti.html
+  name: Projekti
+  active: projekti
+  icon: <i class="fas fa-project-diagram"></i>
+  iconclasses: fas fa-project-diagram
+  visible: true
 - url: blog.html
   name: Blog
   active: blog

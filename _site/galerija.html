@@ -1,6 +1,7 @@
 <html>
 
 <head>
+
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129543038-1"></script>
 <script>
@@ -26,7 +27,7 @@
 <link rel="stylesheet" href="/assets/css/bootstrap-social.css">
 <!--****************************************************************************************************-->
 
-Custom font for website
+<!--Custom font for website-->
 <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 
@@ -46,6 +47,14 @@ Custom font for website
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<meta charset="UTF-8">
+
+	
+		<link rel='stylesheet' type='text/css' href="/assets/css/galleryStyle.css"/>
+	
+
+	
+		<script type='text/javascript' src="/assets/js/anime.min.js"></script>
+	
 
 	<title>/risk/galerija</title>
 </head>
@@ -93,6 +102,15 @@ Custom font for website
             
                 
                 <li class=' nav-item'>
+                    <a class='nav-link' href="/projekti.html">
+                        <i class='fas fa-project-diagram'></i>
+                        Projekti
+                    </a>
+                </li>
+                
+            
+                
+                <li class=' nav-item'>
                     <a class='nav-link' href="/blog.html">
                         <i class='fas fa-edit'></i>
                         Blog
@@ -119,6 +137,7 @@ Custom font for website
                     Vaš doprinos
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a target="_blank" class="dropdown-item" href="https://docs.google.com/forms/d/e/1FAIpQLSfjQQyqCRD3vLWAvUbRi66CWBNzUb4-mszj5emJBO0tNcbevw/viewform?usp=sf_link">Prijava projekta (anketa)</a>
                     <a target="_blank" class="dropdown-item" href="https://docs.google.com/forms/d/e/1FAIpQLSfg1xM9EjhyOcUR9AIpQm6bhq6RflLOhWriCPTwl2TiNviAhA/viewform?usp=sf_link">Prijava predavanja (anketa)</a>
                     <a target="_blank" class="dropdown-item" href="https://docs.google.com/forms/d/e/1FAIpQLSfyLBaMQ2GZSKtlfYxcKnLtZiJLp-RCRBxji1bMAaFeuM16sw/viewform?usp=sf_link">Šta bi voleli da slušate (anketa)</a>
                     <a target="_blank" class="dropdown-item" href="https://docs.google.com/forms/d/e/1FAIpQLSc57izlfrwqUGsmXZdKCLwmopEgcn-4PkXtJghc65oQr_pb_Q/viewform?usp=sf_link">Predlozi sa veb stranicu (anketa)</a>
@@ -170,176 +189,147 @@ Custom font for website
 		</div>
 
 		<div class = "container">
-  <div class="row justify-content-center">
-    <!-- Carousel -->
-    <div id="carousel-gallery" class="carousel slide w-75" data-ride="carousel">
-      <div class="carousel-inner">
-        <!-- outer loop -->
-        
-          
-
-          
-             <!-- first image-->
-              <div class = "carousel-item active">
-                <img src="/assets/img/okupljanja/python/meetup12-py.jpg" alt=""
-                    class="d-block img-responsive img-fluid">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Uvod u Python, Jupyter notebook i korisne biblioteke</h5>
-                    <p>3.11.2018.</p>
+  <div class='desktop-layout d-none d-md-block'>
+    <div class="row">
+        <div class='col-5'>
+            
+                <div class='album'
+                     onclick='onAlbumClicked(0)'
+                >
+                    Bash
                 </div>
-              </div>
+                <div class='album-underline'></div>
             
-          
+                <div class='album'
+                     onclick='onAlbumClicked(1)'
+                >
+                    Decenter, uvod u decentralizaciju
+                </div>
+                <div class='album-underline'></div>
             
-              <div class = "carousel-item justify-content-center ">
-                <img src="/assets/img/okupljanja/python/meetup12-py02.jpg" alt=""
-                    class="d-block img-responsive img-fluid">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Uvod u Python, Jupyter notebook i korisne biblioteke</h5>
-                    <p>3.11.2018.</p>
-                  </div>
-              </div>
+                <div class='album'
+                     onclick='onAlbumClicked(2)'
+                >
+                    Unity
+                </div>
+                <div class='album-underline'></div>
             
-          
+                <div class='album'
+                     onclick='onAlbumClicked(3)'
+                >
+                    Uvod u Python, Jupyter notebook i korisne biblioteke
+                </div>
+                <div class='album-underline'></div>
+            
+                <div class='album'
+                     onclick='onAlbumClicked(4)'
+                >
+                    
+                </div>
+                <div class='album-underline'></div>
+            
 
+        </div>
+
+
+        <div class='col'>
+            <div class='row'>
+                <div class='col' id='main_image'>
+                    <img width='100%' src='/assets/img/okupljanja/bash/bash01.jpg'>
+                </div>
+            </div>
+
+            <div class='row justify-content-between' id='other_images'>
+                
+                <div class='col-3 mt-2'>
+                    <div class='img img-thumbnail' style='background-image: url("/assets/img/okupljanja/bash/bash01.jpg")'></div>
+                </div>
+                
+                <div class='col-3 mt-2'>
+                    <div class='img img-thumbnail' style='background-image: url("/assets/img/okupljanja/bash/bash02.jpg")'></div>
+                </div>
+                
+                <div class='col-3 mt-2'>
+                    <div class='img img-thumbnail' style='background-image: url("/assets/img/okupljanja/bash/bash03.jpg")'></div>
+                </div>
+                
+
+            </div>
+
+            </div>
+        </div>
+    </div>
+  </div>
+
+    <div class='mobile-layout d-md-none d-sm-block'>
+        <div class="row">
+            <div class='col'>
+                Hi this is mobile, watch your step constructions in progress!
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type='text/javascript'>
+    albums = [
+		
+        {
+        	name:'Bash',
+            images:[
+                
+                    '/assets/img/okupljanja/bash/bash01.jpg',
+                
+                    '/assets/img/okupljanja/bash/bash02.jpg',
+                
+                    '/assets/img/okupljanja/bash/bash03.jpg',
+                
+            ]
+        },
         
-          
-
-          
-            
-              <div class = "carousel-item justify-content-center ">
-                <img src="/assets/img/okupljanja/unity/unity01.jpg" alt=""
-                    class="d-block img-responsive img-fluid">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Unity</h5>
-                    <p>1.4.2018.</p>
-                  </div>
-              </div>
-            
-          
-            
-              <div class = "carousel-item justify-content-center ">
-                <img src="/assets/img/okupljanja/unity/unity02.jpg" alt=""
-                    class="d-block img-responsive img-fluid">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Unity</h5>
-                    <p>1.4.2018.</p>
-                  </div>
-              </div>
-            
-          
-            
-              <div class = "carousel-item justify-content-center ">
-                <img src="/assets/img/okupljanja/unity/unity03.jpg" alt=""
-                    class="d-block img-responsive img-fluid">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Unity</h5>
-                    <p>1.4.2018.</p>
-                  </div>
-              </div>
-            
-          
-
+        {
+        	name:'Decenter, uvod u decentralizaciju',
+            images:[
+                
+                    '/assets/img/okupljanja/decenter/decenter01.jpg',
+                
+                    '/assets/img/okupljanja/decenter/decenter02.jpg',
+                
+                    '/assets/img/okupljanja/decenter/decenter03.jpg',
+                
+                    '/assets/img/okupljanja/decenter/decenter04.jpg',
+                
+            ]
+        },
         
-          
-
-          
-            
-              <div class = "carousel-item justify-content-center ">
-                <img src="/assets/img/okupljanja/decenter/decenter01.jpg" alt=""
-                    class="d-block img-responsive img-fluid">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Decenter, uvod u decentralizaciju</h5>
-                    <p>24.12.2017.</p>
-                  </div>
-              </div>
-            
-          
-            
-              <div class = "carousel-item justify-content-center ">
-                <img src="/assets/img/okupljanja/decenter/decenter02.jpg" alt=""
-                    class="d-block img-responsive img-fluid">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Decenter, uvod u decentralizaciju</h5>
-                    <p>24.12.2017.</p>
-                  </div>
-              </div>
-            
-          
-            
-              <div class = "carousel-item justify-content-center ">
-                <img src="/assets/img/okupljanja/decenter/decenter03.jpg" alt=""
-                    class="d-block img-responsive img-fluid">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Decenter, uvod u decentralizaciju</h5>
-                    <p>24.12.2017.</p>
-                  </div>
-              </div>
-            
-          
-            
-              <div class = "carousel-item justify-content-center ">
-                <img src="/assets/img/okupljanja/decenter/decenter04.jpg" alt=""
-                    class="d-block img-responsive img-fluid">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Decenter, uvod u decentralizaciju</h5>
-                    <p>24.12.2017.</p>
-                  </div>
-              </div>
-            
-          
-
+        {
+        	name:'Unity',
+            images:[
+                
+                    '/assets/img/okupljanja/unity/unity01.jpg',
+                
+                    '/assets/img/okupljanja/unity/unity02.jpg',
+                
+                    '/assets/img/okupljanja/unity/unity03.jpg',
+                
+            ]
+        },
         
-          
-
-          
-            
-              <div class = "carousel-item justify-content-center ">
-                <img src="/assets/img/okupljanja/bash/bash01.jpg" alt=""
-                    class="d-block img-responsive img-fluid">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Bash</h5>
-                    <p>2.12.2017.</p>
-                  </div>
-              </div>
-            
-          
-            
-              <div class = "carousel-item justify-content-center ">
-                <img src="/assets/img/okupljanja/bash/bash02.jpg" alt=""
-                    class="d-block img-responsive img-fluid">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Bash</h5>
-                    <p>2.12.2017.</p>
-                  </div>
-              </div>
-            
-          
-            
-              <div class = "carousel-item justify-content-center ">
-                <img src="/assets/img/okupljanja/bash/bash03.jpg" alt=""
-                    class="d-block img-responsive img-fluid">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Bash</h5>
-                    <p>2.12.2017.</p>
-                  </div>
-              </div>
-            
-          
-
+        {
+        	name:'Uvod u Python, Jupyter notebook i korisne biblioteke',
+            images:[
+                
+                    '/assets/img/okupljanja/python/meetup12-py.jpg',
+                
+                    '/assets/img/okupljanja/python/meetup12-py02.jpg',
+                
+            ]
+        },
         
-      </div>
-      <a class="carousel-control-prev" href="#carousel-gallery" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#carousel-gallery" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div><!--carousel-->
-  </div><!--row-->
-</div><!--container-->
+    ];
+
+</script>
+
+<script type='text/javascript' src='/assets/js/galleryScript.js'></script>
 	</div>
 	<br>
 	<!-- Footer -->
@@ -370,67 +360,82 @@ Custom font for website
         <!-- Grid column -->
         <div class="col-md-2 col-lg-2 mx-auto my-md-4 my-0 mt-4 mb-1">
 
-          <!-- Links -->
-          <h5 class="font-weight-bold text-uppercase mb-4">Navigacija</h5>
+          <div class="d-inline-flex flex-column" style="text-align: left">
 
-          <ul class="list-unstyled">
-              
+              <!-- Links -->
+              <h5 class="font-weight-bold text-uppercase mb-4">Navigacija</h5>
+
+              <ul class="list-unstyled">
                 
-                  <li>
-                    <p>
-                        <a href="/index.html">
-                          <i class='fas fa-home mr-2'></i>
-                          POČETNA
-                        </a>
-                    </p>
-                  </li>
+                  
+                    <li>
+                      <p>
+                          <a href="/index.html">
+                            <i class='fas fa-home mr-2'></i>
+                            POČETNA
+                          </a>
+                      </p>
+                    </li>
+                  
                 
-              
+                  
+                    <li>
+                      <p>
+                          <a href="/okupljanja.html">
+                            <i class='fas fa-chalkboard-teacher mr-2'></i>
+                            OKUPLJANJA
+                          </a>
+                      </p>
+                    </li>
+                  
                 
-                  <li>
-                    <p>
-                        <a href="/okupljanja.html">
-                          <i class='fas fa-chalkboard-teacher mr-2'></i>
-                          OKUPLJANJA
-                        </a>
-                    </p>
-                  </li>
+                  
+                    <li>
+                      <p>
+                          <a href="/organizacija.html">
+                            <i class='fas fa-users mr-2'></i>
+                            ORGANIZACIJA
+                          </a>
+                      </p>
+                    </li>
+                  
                 
-              
+                  
+                    <li>
+                      <p>
+                          <a href="/projekti.html">
+                            <i class='fas fa-project-diagram mr-2'></i>
+                            PROJEKTI
+                          </a>
+                      </p>
+                    </li>
+                  
                 
-                  <li>
-                    <p>
-                        <a href="/organizacija.html">
-                          <i class='fas fa-users mr-2'></i>
-                          ORGANIZACIJA
-                        </a>
-                    </p>
-                  </li>
+                  
+                    <li>
+                      <p>
+                          <a href="/blog.html">
+                            <i class='fas fa-edit mr-2'></i>
+                            BLOG
+                          </a>
+                      </p>
+                    </li>
+                  
                 
-              
+                  
+                    <li>
+                      <p>
+                          <a href="/galerija.html">
+                            <i class='fas fa-images mr-2'></i>
+                            GALERIJA
+                          </a>
+                      </p>
+                    </li>
+                  
                 
-                  <li>
-                    <p>
-                        <a href="/blog.html">
-                          <i class='fas fa-edit mr-2'></i>
-                          BLOG
-                        </a>
-                    </p>
-                  </li>
-                
-              
-                
-                  <li>
-                    <p>
-                        <a href="/galerija.html">
-                          <i class='fas fa-images mr-2'></i>
-                          GALERIJA
-                        </a>
-                    </p>
-                  </li>
-                
-              
-          </ul>
+              </ul>
+
+          </div>
 
         </div>
         <!-- Grid column -->
