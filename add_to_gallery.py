@@ -17,20 +17,28 @@ sizes = \
 
 
 # TODO: image folder remove last / (separator)
-# add argument for name
 
 def main():
     arguments = parse_arguments(sys.argv[1:])
 
-    files = filter_directory(arguments.image_folder)
-    resize_images(arguments.image_folder, files)
+    image_dir:str = arguments.image_folder
+    if image_dir.endswith('/'):
+        image_dir = image_dir[:-1]
+
+    print(image_dir)
+
+    files = filter_directory(image_dir)
+    resize_images(image_dir, files)
 
     if arguments.date == '':
         date = dt.date.today().strftime('%Y-%m-%d')
     else:
         date = arguments.date
 
-    name = os.path.basename(arguments.image_folder)
+    if arguments.name == '':
+        name = os.path.basename(image_dir)
+    else:
+        name = arguments.name
 
     write_manifest(files, name, date, arguments.output)
 
@@ -40,7 +48,8 @@ def parse_arguments(args: ty.List[str]) -> argp.Namespace:
 
     parser.add_argument('image_folder', metavar='image-folder')
     parser.add_argument('-o', '--output', default='_photos', help='file name to put data in by default date-name.md')
-    parser.add_argument('-d', '--date', default='', help='Date of the gathering')
+    parser.add_argument('-d', '--date', default='', help='Date of gathering')
+    parser.add_argument('-n', '--name', default='', help='Name of gathering')
 
     return parser.parse_args(args)
 
