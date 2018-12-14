@@ -58,3 +58,8 @@
     width: auto;
     max-width: 100%;
 }
+
+#album_title
+{
+    text-align: center;
+}
