@@ -27,7 +27,7 @@
 .album-underline
 {
     width: 0px;
-    background-color: lightblue;
+    background-color: #00aeef;
     height: 2.5px;
 
 }
@@ -49,7 +49,7 @@
 #imageview
 {
     background-color: black;
-    height: 80vh;
+    height: 85vh;
 }
 
 .carousel-image-container

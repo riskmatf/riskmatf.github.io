@@ -30,6 +30,17 @@ scripts:
 
 
         <div class='col' style='height: 100%;overflow-x: hidden;overflow-y: auto'>
+            <div class='row justify-content-center'>
+                <div class='col-auto'>
+                    <h3 id='album_title'></h3>
+                </div>
+            </div>
+            <div class='row justify-content-end'>
+               <div class='col-auto'>
+                    <h5 id='album_date'></h5>
+               </div>
+            </div>
+
             <div class='row'>
                 <div class='col' id='main_image'>
 
@@ -90,11 +101,16 @@ scripts:
     albums = [
         {
             name:'Sve',
+            date:'',
             images:
             [
                 {% for album in site.photos %}
                     {% for img in album.images %}
-                        '{{img.path}}',
+                        {
+                            sm:'{{img.sm}}',
+                            md:'{{img.md}}',
+                            lg:'{{img.lg}}'
+                        },
                     {% endfor %}
                 {% endfor %}
             ]
@@ -102,9 +118,14 @@ scripts:
 		{% for album in site.photos %}
         {
         	name:'{{album.name}}',
+            date:'{{album.date | date: "%d.%m.%Y."}}',
             images:[
                 {%for img in album.images%}
-                    '{{img.path}}',
+                    {
+					    sm:'{{img.sm}}',
+			            md:'{{img.md}}',
+			            lg:'{{img.lg}}'
+                    },
                 {%endfor%}
             ]
         },

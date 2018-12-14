@@ -5,7 +5,7 @@ init();
 
 function init()
 {
-	document.querySelector('.album').style.color= 'lightblue';
+	document.querySelector('.album').style.color= '#00aeef';
 	let first_underline = document.querySelector('.album-underline');
 	anime(
 		{
@@ -20,6 +20,17 @@ function init()
 function changeImages(to)
 {
      let images =  window.albums[to].images;
+     let album_title_el = document.querySelector('#album_title');
+     if(album_title_el)
+	 {
+	 	album_title_el.textContent = window.albums[to].name;
+	 }
+
+     let album_date_el = document.querySelector('#album_date');
+     if(album_date_el)
+	 {
+	 	album_date_el.textContent = window.albums[to].date;
+	 }
 
      let first  = images[0];
      let rest = images.slice(1);
@@ -120,7 +131,10 @@ function createCarouselImage(src)
 	imageContainer.classList.add('carousel-image-container');
 
 	let img = document.createElement('img');
-	img.setAttribute('src', src);
+	img.setAttribute('src', src.sm);
+	img.setAttribute('srcset', `${src.sm} 480w, ${src.md} 640w, ${src.lg} 820w`);
+	img.setAttribute('sizes', '(max-width:768px) 480px, (max-width:992px) 640px,' +
+		'  820px');
 
 
 	imageContainer.append(img);
@@ -161,7 +175,7 @@ function createMyImage(src, index)
 {
 	let innerImage = document.createElement('div');
 	innerImage.setAttribute('class', 'img img-thumbnail');
-	innerImage.style.backgroundImage = `url(${src})`;
+	innerImage.style.backgroundImage = `url(${src.lg})`;
 
 	innerImage.onclick = function ()
 	{
@@ -185,7 +199,7 @@ function onAlbumClicked(to)
 	selected.classList.add('underline-active');
 
 	prevSelected.previousElementSibling.style.color = 'black';
-	selected.previousElementSibling.style.color = 'lightblue';
+	selected.previousElementSibling.style.color = '#00aeef';
 
 
 
