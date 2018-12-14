@@ -10,9 +10,9 @@ import yaml
 
 sizes = \
         {
-            'sm': 576,
-            'md': 768,
-            'lg': 992
+            'sm': 480,
+            'md': 640,
+            'lg': 820 
         }
 
 
@@ -68,12 +68,12 @@ def resize_images(root: str, images: ty.List[str]) -> None:
 
 
 def generate_image_names(image: str)->ty.Dict[str,str]:
+    dir_name = os.path.dirname(image)
     image = os.path.basename(image)
-
     res = {}
 
     for size in sizes.keys():
-        res[size] = f'{size}-{image}'
+        res[size] = os.path.join(dir_name, f'{size}-{image}')
 
     return res
 
