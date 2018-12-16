@@ -1,6 +1,7 @@
 ---
 layout: default-panel
 ---
+<script src="{{site.assets}}js/redirect.js"></script>
 <!--Dodati klasu 'mx-auto' za slucaj da je potrebno centrirati karticu horizontalno-->
 <div class="card col-md-6" style="padding-top: 1rem">
     {% include blog/header.html page=page %}
@@ -10,10 +11,10 @@ layout: default-panel
 {{ content }}
 
 <div class="row">
-    <div class="col-xs-1"></div>
-    <div class="col-xs-10">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
         <div id="commento"></div>
         <script src="https://cdn.commento.io/js/commento.js"></script>
     </div>
-    <div class="col-xs-1"></div>
+    <div class="col-md-1"></div>
 </div>
