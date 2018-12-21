@@ -10,6 +10,7 @@ import yaml
 
 sizes = \
         {
+            'xs': 340,
             'sm': 480,
             'md': 640,
             'lg': 820 
