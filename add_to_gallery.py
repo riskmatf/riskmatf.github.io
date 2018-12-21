@@ -17,7 +17,6 @@ sizes = \
         }
 
 
-# TODO: image folder remove last / (separator)
 
 def main():
     arguments = parse_arguments(sys.argv[1:])
@@ -59,7 +58,8 @@ def filter_directory(dir: str) -> ty.List[str]:
     root, _, files = next(dir_iter)
     base_name = os.path.basename(root)
 
-    files = list(filter(lambda file: re.fullmatch(f'{base_name}\\d+.jpg', file), files))
+    files = list(filter(lambda file: not re.search(f'^(xs|sm|md|lg)-', file), files))
+    print(files)
 
     files = list(map(lambda file: os.path.join(root, file), files))
 
