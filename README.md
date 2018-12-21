@@ -3,14 +3,12 @@ Koriste se sledece tehnolgije:
 - HTML, JS, CSS
 - [jekyll](http://jekyllrb.com) za generisanje i odrzavanje sajta
 - [bootstrap](http://getbootstrap.com/), css framework
-- [darkly](https://bootswatch.com/darkly/) bootstrap tema
 - [markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) za pisanje postova
-- [typed.js](https://github.com/mattboldt/typed.js/) za animaciju kucanja
 
 # Instalacija jekyll-a
 Za generisanje satja koristi se [jekyll](http://jekyllrb.com) tako da pre ikakvog rada morate njega instalirati.
 Prvo morate namestiti **ruby** i **rubygems**.
-- ubuntu pratite [ova uputstva](https://gorails.com/setup/ubuntu/16.04)
+- ubuntu pratite [ova uputstva](https://gorails.com/setup/ubuntu/16.04) i na kraju odradite `gem install jekyll`
 - arch vec ima instaliran ruby, ako ne najnovija verzija instalira sa `sudo pacman -S ruby`
 - instalirajte jekyll sa `gem install jekyll`
 - [dokumentacija](http://jekyllrb.com/)

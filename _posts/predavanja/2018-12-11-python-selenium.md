@@ -17,6 +17,5 @@ video: none
 date: 2018-12-16
 code: https://github.com/riskmatf/risk-meetup-13-python-selenium
 slides: none
-tags: git, github, komandna linija, saradnja, slobodan softver
 tags: python, git, github, selenium, test, testiranje
 ---
