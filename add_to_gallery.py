@@ -17,7 +17,6 @@ sizes = \
         }
 
 
-# TODO: image folder remove last / (separator)
 
 def main():
     arguments = parse_arguments(sys.argv[1:])
@@ -28,6 +27,7 @@ def main():
 
 
     files = filter_directory(image_dir)
+
     resize_images(image_dir, files)
 
     if arguments.date == '':
@@ -54,12 +54,20 @@ def parse_arguments(args: ty.List[str]) -> argp.Namespace:
     return parser.parse_args(args)
 
 
+def is_name_allowed(name: str) -> bool:
+    for key in sizes.keys():
+        if name.startswith(f'{key}-'):
+            return False
+
+    return True
+
+
 def filter_directory(dir: str) -> ty.List[str]:
     dir_iter = iter(os.walk(dir))
     root, _, files = next(dir_iter)
     base_name = os.path.basename(root)
 
-    files = list(filter(lambda file: re.fullmatch(f'{base_name}\\d+.jpg', file), files))
+    files = list(filter(is_name_allowed, files))
 
     files = list(map(lambda file: os.path.join(root, file), files))
 
