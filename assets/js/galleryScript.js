@@ -136,27 +136,29 @@ function createCarouselImage(src)
 	let divCarouselItem = document.createElement('div');
 	divCarouselItem.classList.add('carousel-item');
 
-	let divRow = document.createElement('div');
-	divRow.classList.add('row', 'justify-content-center');
+	//let divRow = document.createElement('div');
+	//divRow.classList.add('row', 'justify-content-center');
 
-	let divCol= document.createElement('div');
-	divCol.classList.add('col-auto');
+	//let divCol= document.createElement('div');
+	//divCol.classList.add('col-auto');
 
 	let imageContainer = document.createElement('div');
 	imageContainer.classList.add('carousel-image-container');
 
-	let img = document.createElement('img');
-	img.setAttribute('src', src.sm);
-	img.setAttribute('srcset', `${src.xs} 340w ,${src.sm} 480w, ${src.md} 640w, ${src.lg} 820w`);
-	img.setAttribute('sizes', '(max-width: 576px) 340px, (max-width:768px) 480px, (max-width:992px) 640px,' +
-		'  820px');
+	//let img = document.createElement('img');
+	//img.setAttribute('src', src.sm);
+	//img.setAttribute('srcset', `${src.xs} 340w ,${src.sm} 480w, ${src.md} 640w, ${src.lg} 820w`);
+	//img.setAttribute('sizes', '(max-width: 576px) 340px, (max-width:768px) 480px, (max-width:992px) 640px,' +
+	//	'  820px');
 
 
-	imageContainer.append(img);
-	divCol.append(imageContainer);
-	divRow.append(divCol);
-	divCarouselItem.append(divRow);
+	//imageContainer.append(img);
+	//divCol.append(imageContainer);
+	//divRow.append(divCol);
+	//divCarouselItem.append(divRow);
 
+	imageContainer.style.backgroundImage = `url('${src}')`;
+	divCarouselItem.append(imageContainer);
 	return divCarouselItem;
 }
 
@@ -190,7 +192,7 @@ function createMyImage(src, index)
 {
 	let innerImage = document.createElement('div');
 	innerImage.setAttribute('class', 'img img-thumbnail');
-	innerImage.style.backgroundImage = `url(${src.lg})`;
+	innerImage.style.backgroundImage = `url(${src})`;
 
 	innerImage.onclick = function ()
 	{

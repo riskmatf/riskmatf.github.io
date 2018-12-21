@@ -54,9 +54,11 @@
 
 .carousel-image-container
 {
-    max-height: 80vh;
-    width: auto;
-    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50% 50%;
 }
 
 #album_title

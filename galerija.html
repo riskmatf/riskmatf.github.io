@@ -9,7 +9,7 @@ scripts:
 ---
 <div class = "container">
   <div class='desktop-layout d-none d-md-block'>
-    <div class="row">
+    <div class="row mt-1">
         <div class='col-5'>
             <div class='album'
                  onclick='onAlbumClicked(0)'
@@ -76,11 +76,7 @@ scripts:
             <div class='offset-1 d-none d-md-block'></div>
             <div class='col-12 col-md-10'>
                 <div id='imageview' class='carousel slide' data-pause='true' >
-                    <div class='row align-items-center' style='height: 100%'>
-                        <div class='col'>
-                            <div class='carousel-inner'></div>
-                        </div>
-                    </div>
+                    <div class='carousel-inner'></div>
                     <a class="carousel-control-prev" href='#imageview'
                        role="button" data-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -126,12 +122,7 @@ scripts:
             [
                 {% for album in site.photos %}
                     {% for img in album.images %}
-                        {
-                            xs:'{{img.xs}}',
-                            sm:'{{img.sm}}',
-                            md:'{{img.md}}',
-                            lg:'{{img.lg}}'
-                        },
+                        '{{img}}',
                     {% endfor %}
                 {% endfor %}
             ]
@@ -142,12 +133,7 @@ scripts:
             date:'{{album.date | date: "%d.%m.%Y."}}',
             images:[
                 {%for img in album.images%}
-                    {
-                        xs:'{{img.xs}}',
-                        sm:'{{img.sm}}',
-			            md:'{{img.md}}',
-			            lg:'{{img.lg}}'
-                    },
+                    '{{img}}',
                 {%endfor%}
             ]
         },
