@@ -12,7 +12,9 @@ function init()
 		underiline.hoverAnimation = anime(
 			{
 				targets: underiline,
-    			width: '80%',
+    			width: '100%',
+				easing:'linear',
+				duration:250,
 				autoplay:false
 			});
 		underiline.hoverAnimation.reverse();
@@ -25,25 +27,28 @@ function init()
 	changeImages(0);
 }
 
-function changeImages(to)
+function changeImages(to, onMobile)
 {
      let images =  window.albums[to].images;
-     let album_title_el = document.querySelector('#album_title');
-     if(album_title_el)
+     if(!onMobile)
 	 {
-	 	album_title_el.textContent = window.albums[to].name;
-	 }
+	 	let album_title_el = document.querySelector('#album_title');
+	 	if(album_title_el)
+	 	{
+	 		album_title_el.textContent = window.albums[to].name;
+	 	}
 
-     let album_date_el = document.querySelector('#album_date');
-     if(album_date_el)
-	 {
-	 	album_date_el.textContent = window.albums[to].date;
-	 }
+	 	let album_date_el = document.querySelector('#album_date');
 
-     let first  = images[0];
-     let rest = images.slice(1);
+     	if(album_date_el)
+     	{
+     		album_date_el.textContent = window.albums[to].date;
+     	}
 
-     anime(
+     	let first  = images[0];
+     	let rest = images.slice(1);
+
+     	anime(
      	{
 			targets:['.img', '#main_image > img'],
 			width: 0,
@@ -98,8 +103,10 @@ function changeImages(to)
 					width:otherImageSize.width,
 					height:otherImageSize.height
 				});
-         },
-     });
+			},
+		});
+
+	 }
 
      /*Change images in carousel*/
 
@@ -140,8 +147,8 @@ function createCarouselImage(src)
 
 	let img = document.createElement('img');
 	img.setAttribute('src', src.sm);
-	img.setAttribute('srcset', `${src.sm} 480w, ${src.md} 640w, ${src.lg} 820w`);
-	img.setAttribute('sizes', '(max-width:768px) 480px, (max-width:992px) 640px,' +
+	img.setAttribute('srcset', `${src.xs} 340w ,${src.sm} 480w, ${src.md} 640w, ${src.lg} 820w`);
+	img.setAttribute('sizes', '(max-width: 576px) 340px, (max-width:768px) 480px, (max-width:992px) 640px,' +
 		'  820px');
 
 
@@ -201,7 +208,7 @@ function onAlbumClicked(to)
 		return;
 	}
 
-	changeImages(to);
+	changeImages(to, false);
 	prevSelected.classList.remove('underline-active');
 
 	selected.classList.add('underline-active');
@@ -220,6 +227,27 @@ function onAlbumClicked(to)
 
 }
 
+function onAlbumClickedMobile(to)
+{
+	let prevSelected  = document.querySelector('.list-group-item.album-active');
+	if(prevSelected)
+	{
+		prevSelected.classList.remove('album-active');
+		prevSelected.classList.remove('active');
+	}
+
+	let currentSelected = document.querySelectorAll('.list-group-item');
+
+	if(currentSelected && currentSelected[to])
+	{
+		currentSelected[to].classList.add('album-active');
+		currentSelected[to].classList.add('active');
+	}
+
+	changeImages(to, true);
+	setTimeout(onImageViewToggled.bind(this, 0), 150);
+}
+
 function onMouseEnter(index)
 {
 	let selected = document.querySelectorAll('.album-underline')[index];
@@ -232,7 +260,6 @@ function onMouseEnter(index)
 	selected.hoverAnimation.reverse();
 	selected.hoverAnimation.play();
 }
-
 
 
 function onImageViewToggled(imageSelected)
@@ -280,7 +307,7 @@ function onImageViewToggled(imageSelected)
 				duration:400,
 				opacity:1
 			}
-		)
+		);
 	}
 	else
 	{
@@ -299,3 +326,29 @@ function onImageViewToggled(imageSelected)
 		)
 	}
 }
+
+function onCoverAllClicked(event)
+{
+	let el = document.querySelector('.carousel');
+	if(!event|| !el)
+	{
+		return ;
+	}
+
+	let rect = el.getBoundingClientRect();
+
+	if(event.clientX < rect.left || rect.left + rect.width < event.clientX)
+	{
+		onImageViewToggled(-1);
+		return ;
+	}
+
+
+	if(event.clientY < rect.top || rect.top + rect.height < event.clientY)
+	{
+		onImageViewToggled(-1);
+		return ;
+	}
+
+}
+

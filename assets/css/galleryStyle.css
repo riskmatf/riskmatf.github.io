@@ -49,7 +49,7 @@
 #imageview
 {
     background-color: black;
-    height: 85vh;
+    height: 80vh;
 }
 
 .carousel-image-container
@@ -62,4 +62,11 @@
 #album_title
 {
     text-align: center;
+}
+
+.album-active
+{
+    background-color: #00aeef!important;
+    border-color: #00aeef!important;
+    color:white;
 }

@@ -19,7 +19,10 @@ scripts:
                 Sve
             </div>
             <div class='album-underline'></div>
-            {% for it in (0..site.photos.size) %}
+
+            {% assign len = site.photos.size %}
+            {% assign len = len | minus:1 %}
+            {% for it in (0..len) %}
                 <div class='album'
                      onclick='onAlbumClicked({{it|plus:1}})'
                      onmouseenter='onMouseEnter({{it|plus:1}})'
@@ -60,7 +63,8 @@ scripts:
 
   </div>
 
-    <div class='cover-all' style='overflow: auto'>
+    <div class='cover-all' style='overflow: auto' onclick='onCoverAllClicked(event)'
+         >
         <div class='row justify-content-end'>
             <div class='col-auto' style='color:white;font-weight: bold; cursor: pointer'
                  onclick='onImageViewToggled(-1)'
@@ -69,8 +73,8 @@ scripts:
             </div>
         </div>
         <div class='row'>
-            <div class='offset-1'></div>
-            <div class='col-10'>
+            <div class='offset-1 d-none d-md-block'></div>
+            <div class='col-12 col-md-10'>
                 <div id='imageview' class='carousel slide' data-pause='true' >
                     <div class='row align-items-center' style='height: 100%'>
                         <div class='col'>
@@ -93,11 +97,23 @@ scripts:
     </div>
 
     <div class='mobile-layout d-md-none d-sm-block'>
-        <div class="row">
-            <div class='col'>
-                Hi this is mobile, watch your step constructions in progress!
+
+        <div class='list-group'>
+            <div class='list-group-item list-group-item-action' style='text-align: center'
+                 onclick='onAlbumClickedMobile(0);'>
+                Sve
             </div>
+
+            {% assign len = site.photos.size %}
+            {% assign len = len | minus:1 %}
+            {% for it in (0..len)%}
+                <div class='list-group-item-action list-group-item ' style='text-align: center'
+                     onclick='onAlbumClickedMobile({{it|plus:1}});'>
+                    {{site.photos[it].name}}
+                </div>
+        {% endfor %}
         </div>
+
     </div>
 
 </div>
