@@ -3,8 +3,8 @@ import argparse as argp
 import sys
 import os
 import re
-import cv2
-import numpy as np
+#import cv2
+#import numpy as np
 import datetime as dt
 import yaml
 
@@ -28,7 +28,7 @@ def main():
 
     files = filter_directory(image_dir)
 
-    resize_images(image_dir, files)
+    #resize_images(image_dir, files)
 
     if arguments.date == '':
         date = dt.date.today().strftime('%Y-%m-%d')
@@ -67,7 +67,7 @@ def filter_directory(dir: str) -> ty.List[str]:
     root, _, files = next(dir_iter)
     base_name = os.path.basename(root)
 
-    files = list(filter(is_name_allowed, files))
+    #files = list(filter(is_name_allowed, files))
 
     files = list(map(lambda file: os.path.join(root, file), files))
 
@@ -92,13 +92,15 @@ def generate_image_names(image: str)->ty.Dict[str,str]:
     for size in sizes.keys():
         res[size] = os.path.join(dir_name, f'{size}-{image}')
 
+    
+
     return res
 
 
 def write_manifest(images: ty.List[str], name: str, date: str, output_dir: str) -> None:
 
     file_name = os.path.basename(os.path.dirname(images[0]))
-    images = list(map(generate_image_names, images))
+    #images = list(map(generate_image_names, images))
 
     res = {}
 
