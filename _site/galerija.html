@@ -189,7 +189,7 @@
 
 		<div class = "container">
   <div class='desktop-layout d-none d-md-block'>
-    <div class="row">
+    <div class="row mt-1">
         <div class='col-5'>
             <div class='album'
                  onclick='onAlbumClicked(0)'
@@ -199,6 +199,9 @@
                 Sve
             </div>
             <div class='album-underline'></div>
+
+            
+            
             
                 <div class='album'
                      onclick='onAlbumClicked(1)'
@@ -241,7 +244,7 @@
                      onmouseenter='onMouseEnter(5)'
                      onmouseleave='onMouseEnter(5)'
                 >
-                    
+                    Testiranje u jeziku Python, sistem Selenium i POM
                 </div>
                 <div class='album-underline'></div>
             
@@ -276,7 +279,8 @@
 
   </div>
 
-    <div class='cover-all' style='overflow: auto'>
+    <div class='cover-all' style='overflow: auto' onclick='onCoverAllClicked(event)'
+         >
         <div class='row justify-content-end'>
             <div class='col-auto' style='color:white;font-weight: bold; cursor: pointer'
                  onclick='onImageViewToggled(-1)'
@@ -285,14 +289,10 @@
             </div>
         </div>
         <div class='row'>
-            <div class='offset-1'></div>
-            <div class='col-10'>
+            <div class='offset-1 d-none d-md-block'></div>
+            <div class='col-12 col-md-10'>
                 <div id='imageview' class='carousel slide' data-pause='true' >
-                    <div class='row align-items-center' style='height: 100%'>
-                        <div class='col'>
-                            <div class='carousel-inner'></div>
-                        </div>
-                    </div>
+                    <div class='carousel-inner'></div>
                     <a class="carousel-control-prev" href='#imageview'
                        role="button" data-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -309,11 +309,43 @@
     </div>
 
     <div class='mobile-layout d-md-none d-sm-block'>
-        <div class="row">
-            <div class='col'>
-                Hi this is mobile, watch your step constructions in progress!
+
+        <div class='list-group'>
+            <div class='list-group-item list-group-item-action' style='text-align: center'
+                 onclick='onAlbumClickedMobile(0);'>
+                Sve
             </div>
+
+            
+            
+            
+                <div class='list-group-item-action list-group-item ' style='text-align: center'
+                     onclick='onAlbumClickedMobile(1);'>
+                    Bash
+                </div>
+        
+                <div class='list-group-item-action list-group-item ' style='text-align: center'
+                     onclick='onAlbumClickedMobile(2);'>
+                    Decenter, uvod u decentralizaciju
+                </div>
+        
+                <div class='list-group-item-action list-group-item ' style='text-align: center'
+                     onclick='onAlbumClickedMobile(3);'>
+                    Unity
+                </div>
+        
+                <div class='list-group-item-action list-group-item ' style='text-align: center'
+                     onclick='onAlbumClickedMobile(4);'>
+                    Uvod u Python, Jupyter notebook i korisne biblioteke
+                </div>
+        
+                <div class='list-group-item-action list-group-item ' style='text-align: center'
+                     onclick='onAlbumClickedMobile(5);'>
+                    Testiranje u jeziku Python, sistem Selenium i POM
+                </div>
+        
         </div>
+
     </div>
 
 </div>
@@ -326,83 +358,47 @@
             [
                 
                     
-                        {
-                            sm:'assets/img/okupljanja/bash/sm-bash02.jpg',
-                            md:'assets/img/okupljanja/bash/md-bash02.jpg',
-                            lg:'assets/img/okupljanja/bash/lg-bash02.jpg'
-                        },
+                        'assets/img/okupljanja/bash/bash02.jpg',
                     
-                        {
-                            sm:'assets/img/okupljanja/bash/sm-bash01.jpg',
-                            md:'assets/img/okupljanja/bash/md-bash01.jpg',
-                            lg:'assets/img/okupljanja/bash/lg-bash01.jpg'
-                        },
+                        'assets/img/okupljanja/bash/bash01.jpg',
                     
-                        {
-                            sm:'assets/img/okupljanja/bash/sm-bash03.jpg',
-                            md:'assets/img/okupljanja/bash/md-bash03.jpg',
-                            lg:'assets/img/okupljanja/bash/lg-bash03.jpg'
-                        },
+                        'assets/img/okupljanja/bash/bash03.jpg',
                     
                 
                     
-                        {
-                            sm:'assets/img/okupljanja/decenter/sm-decenter01.jpg',
-                            md:'assets/img/okupljanja/decenter/md-decenter01.jpg',
-                            lg:'assets/img/okupljanja/decenter/lg-decenter01.jpg'
-                        },
+                        'assets/img/okupljanja/decenter/decenter01.jpg',
                     
-                        {
-                            sm:'assets/img/okupljanja/decenter/sm-decenter02.jpg',
-                            md:'assets/img/okupljanja/decenter/md-decenter02.jpg',
-                            lg:'assets/img/okupljanja/decenter/lg-decenter02.jpg'
-                        },
+                        'assets/img/okupljanja/decenter/decenter02.jpg',
                     
-                        {
-                            sm:'assets/img/okupljanja/decenter/sm-decenter04.jpg',
-                            md:'assets/img/okupljanja/decenter/md-decenter04.jpg',
-                            lg:'assets/img/okupljanja/decenter/lg-decenter04.jpg'
-                        },
+                        'assets/img/okupljanja/decenter/decenter04.jpg',
                     
-                        {
-                            sm:'assets/img/okupljanja/decenter/sm-decenter03.jpg',
-                            md:'assets/img/okupljanja/decenter/md-decenter03.jpg',
-                            lg:'assets/img/okupljanja/decenter/lg-decenter03.jpg'
-                        },
+                        'assets/img/okupljanja/decenter/decenter03.jpg',
                     
                 
                     
-                        {
-                            sm:'assets/img/okupljanja/unity/sm-unity01.jpg',
-                            md:'assets/img/okupljanja/unity/md-unity01.jpg',
-                            lg:'assets/img/okupljanja/unity/lg-unity01.jpg'
-                        },
+                        'assets/img/okupljanja/unity/unity01.jpg',
                     
-                        {
-                            sm:'assets/img/okupljanja/unity/sm-unity03.jpg',
-                            md:'assets/img/okupljanja/unity/md-unity03.jpg',
-                            lg:'assets/img/okupljanja/unity/lg-unity03.jpg'
-                        },
+                        'assets/img/okupljanja/unity/unity03.jpg',
                     
-                        {
-                            sm:'assets/img/okupljanja/unity/sm-unity02.jpg',
-                            md:'assets/img/okupljanja/unity/md-unity02.jpg',
-                            lg:'assets/img/okupljanja/unity/lg-unity02.jpg'
-                        },
+                        'assets/img/okupljanja/unity/unity02.jpg',
                     
                 
                     
-                        {
-                            sm:'assets/img/okupljanja/python/sm-python02.jpg',
-                            md:'assets/img/okupljanja/python/md-python02.jpg',
-                            lg:'assets/img/okupljanja/python/lg-python02.jpg'
-                        },
+                        'assets/img/okupljanja/python/python02.jpg',
                     
-                        {
-                            sm:'assets/img/okupljanja/python/sm-python01.jpg',
-                            md:'assets/img/okupljanja/python/md-python01.jpg',
-                            lg:'assets/img/okupljanja/python/lg-python01.jpg'
-                        },
+                        'assets/img/okupljanja/python/python01.jpg',
+                    
+                
+                    
+                        'assets/img/okupljanja/selenium/selenium01.jpg',
+                    
+                        'assets/img/okupljanja/selenium/selenium05.jpg',
+                    
+                        'assets/img/okupljanja/selenium/selenium04.jpg',
+                    
+                        'assets/img/okupljanja/selenium/selenium02.jpg',
+                    
+                        'assets/img/okupljanja/selenium/selenium03.jpg',
                     
                 
             ]
@@ -413,23 +409,11 @@
             date:'02.12.2017.',
             images:[
                 
-                    {
-					    sm:'assets/img/okupljanja/bash/sm-bash02.jpg',
-			            md:'assets/img/okupljanja/bash/md-bash02.jpg',
-			            lg:'assets/img/okupljanja/bash/lg-bash02.jpg'
-                    },
+                    'assets/img/okupljanja/bash/bash02.jpg',
                 
-                    {
-					    sm:'assets/img/okupljanja/bash/sm-bash01.jpg',
-			            md:'assets/img/okupljanja/bash/md-bash01.jpg',
-			            lg:'assets/img/okupljanja/bash/lg-bash01.jpg'
-                    },
+                    'assets/img/okupljanja/bash/bash01.jpg',
                 
-                    {
-					    sm:'assets/img/okupljanja/bash/sm-bash03.jpg',
-			            md:'assets/img/okupljanja/bash/md-bash03.jpg',
-			            lg:'assets/img/okupljanja/bash/lg-bash03.jpg'
-                    },
+                    'assets/img/okupljanja/bash/bash03.jpg',
                 
             ]
         },
@@ -439,29 +423,13 @@
             date:'24.12.2017.',
             images:[
                 
-                    {
-					    sm:'assets/img/okupljanja/decenter/sm-decenter01.jpg',
-			            md:'assets/img/okupljanja/decenter/md-decenter01.jpg',
-			            lg:'assets/img/okupljanja/decenter/lg-decenter01.jpg'
-                    },
+                    'assets/img/okupljanja/decenter/decenter01.jpg',
                 
-                    {
-					    sm:'assets/img/okupljanja/decenter/sm-decenter02.jpg',
-			            md:'assets/img/okupljanja/decenter/md-decenter02.jpg',
-			            lg:'assets/img/okupljanja/decenter/lg-decenter02.jpg'
-                    },
+                    'assets/img/okupljanja/decenter/decenter02.jpg',
                 
-                    {
-					    sm:'assets/img/okupljanja/decenter/sm-decenter04.jpg',
-			            md:'assets/img/okupljanja/decenter/md-decenter04.jpg',
-			            lg:'assets/img/okupljanja/decenter/lg-decenter04.jpg'
-                    },
+                    'assets/img/okupljanja/decenter/decenter04.jpg',
                 
-                    {
-					    sm:'assets/img/okupljanja/decenter/sm-decenter03.jpg',
-			            md:'assets/img/okupljanja/decenter/md-decenter03.jpg',
-			            lg:'assets/img/okupljanja/decenter/lg-decenter03.jpg'
-                    },
+                    'assets/img/okupljanja/decenter/decenter03.jpg',
                 
             ]
         },
@@ -471,23 +439,11 @@
             date:'01.04.2018.',
             images:[
                 
-                    {
-					    sm:'assets/img/okupljanja/unity/sm-unity01.jpg',
-			            md:'assets/img/okupljanja/unity/md-unity01.jpg',
-			            lg:'assets/img/okupljanja/unity/lg-unity01.jpg'
-                    },
+                    'assets/img/okupljanja/unity/unity01.jpg',
                 
-                    {
-					    sm:'assets/img/okupljanja/unity/sm-unity03.jpg',
-			            md:'assets/img/okupljanja/unity/md-unity03.jpg',
-			            lg:'assets/img/okupljanja/unity/lg-unity03.jpg'
-                    },
+                    'assets/img/okupljanja/unity/unity03.jpg',
                 
-                    {
-					    sm:'assets/img/okupljanja/unity/sm-unity02.jpg',
-			            md:'assets/img/okupljanja/unity/md-unity02.jpg',
-			            lg:'assets/img/okupljanja/unity/lg-unity02.jpg'
-                    },
+                    'assets/img/okupljanja/unity/unity02.jpg',
                 
             ]
         },
@@ -497,17 +453,27 @@
             date:'03.11.2018.',
             images:[
                 
-                    {
-					    sm:'assets/img/okupljanja/python/sm-python02.jpg',
-			            md:'assets/img/okupljanja/python/md-python02.jpg',
-			            lg:'assets/img/okupljanja/python/lg-python02.jpg'
-                    },
+                    'assets/img/okupljanja/python/python02.jpg',
                 
-                    {
-					    sm:'assets/img/okupljanja/python/sm-python01.jpg',
-			            md:'assets/img/okupljanja/python/md-python01.jpg',
-			            lg:'assets/img/okupljanja/python/lg-python01.jpg'
-                    },
+                    'assets/img/okupljanja/python/python01.jpg',
+                
+            ]
+        },
+        
+        {
+        	name:'Testiranje u jeziku Python, sistem Selenium i POM',
+            date:'16.12.2018.',
+            images:[
+                
+                    'assets/img/okupljanja/selenium/selenium01.jpg',
+                
+                    'assets/img/okupljanja/selenium/selenium05.jpg',
+                
+                    'assets/img/okupljanja/selenium/selenium04.jpg',
+                
+                    'assets/img/okupljanja/selenium/selenium02.jpg',
+                
+                    'assets/img/okupljanja/selenium/selenium03.jpg',
                 
             ]
         },

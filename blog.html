@@ -7,7 +7,7 @@ active: blog
 {% for p in site.categories.blog %}
 <div class='row'>
     <div class="card">
-        <h5 class="card-header">{{ p.title }}</h5>
+	<a href="{{ p.url }}"<h5 class="card-header text-dark">{{ p.title }}</h5></a>
         <div class="card-body">
             <div class='col-md-12'>
                 <!--<p class="card-title text-primary">{{ p.author }}</p>-->
