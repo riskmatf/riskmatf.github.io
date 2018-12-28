@@ -31,7 +31,7 @@ active: organizacija
                 <br><br>
                 <div class='text-center'>
                     {% for socialitem in member.social %}
-                    <a href="{{socialitem.url}}">
+                    <a target="_blank" href="{{socialitem.url}}">
                         <i class='fa-lg {{socialitem.icon}}'></i>
                     </a>
                     {% endfor %}
