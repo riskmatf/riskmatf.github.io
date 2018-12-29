@@ -57,11 +57,11 @@ active: pocetna
             <div class="card">
                 <h5 class="card-header">Najskorije predavanje</h5>
                 <div class="card-body">
-                    <h3>{{ p.title }}</h3>
+                    <a href="{{p.url}}"><h3 class="text-dark">{{ p.title }}</h3></a>
                     <p><span class="text-primary"><i class="fas fa-chalkboard-teacher"></i></span> {{p.author}}</p>
                     <p><span class="text-primary"><i class="fas fa-calendar-alt"></i></span> {{p.date | date: "%-d/%-m/%Y"}}</p>
 
-                    <p>{{p.description | truncatewords:75}}</p>
+                    <p>{{p.description | truncatewords:40}}</p>
                     {% if p.video != 'none' %}<a href="{{p.video}}" class="btn btn-primary btn-xs">Video</a> {% endif %}
                     {% if p.slides != 'none' %}<a href="{{site.assets}}data/{{p.slides}}" class="btn btn-primary btn-xs">Slajdovi</a> {% endif %}
                     {% if p.code != 'none' %}<a href="{{p.code}}" class="btn btn-info btn-xs">GitHub repozitorijum</a> {% endif %}
@@ -74,11 +74,11 @@ active: pocetna
                 <h5 class="card-header">Najskorija blog objava</h5>
                 <div class="card-body">
                     <div class='col-md-12'>
-                        <h3>{{ p.title }}</h3>
+                        <a href="{{p.url}}"><h3 class="text-dark">{{ p.title }}</h3></a>
                         {% include blog/header.html page=p %}
                         <!--div wrapper zato što no-img klasa ne može da se primeni na <p>-->
                         <div  class="no-img">
-                            <p>{{ p.content | remove_first:p.excerpt | truncatewords:75 }}</p>
+                            <p>{{ p.content | remove_first:p.excerpt | truncatewords:40 }}</p>
                         </div>
                         <a href='{{p.url}}.html'><button class='btn btn-primary'><i class="fas fa-glasses"></i> Pročitaj</button></a>
                     </div>
