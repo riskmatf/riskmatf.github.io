@@ -13,7 +13,7 @@ description: |
 
     Kroz malu radionicu i demonstraciju koda, proći ćemo kroz ove osnove i napisati par automatizovanih testova komercijalnih sajtova.
 
-video: none
+video: https://www.youtube.com/watch?v=bd8dU8UURxo
 date: 2018-12-16
 code: https://github.com/riskmatf/risk-meetup-13-python-selenium
 slides: none
