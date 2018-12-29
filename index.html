@@ -55,13 +55,13 @@ active: pocetna
         {% assign p = site.categories.predavanja[0] %}
         <div class="row mb-3">
             <div class="card">
-                <h5 class="card-header">{{ p.title }}</h5>
+                <h5 class="card-header">Najskorije predavanje</h5>
                 <div class="card-body">
+                    <h3>{{ p.title }}</h3>
                     <p><span class="text-primary"><i class="fas fa-chalkboard-teacher"></i></span> {{p.author}}</p>
                     <p><span class="text-primary"><i class="fas fa-calendar-alt"></i></span> {{p.date | date: "%-d/%-m/%Y"}}</p>
 
-
-                    <p>{{p.description}}</p>
+                    <p>{{p.description | truncatewords:75}}</p>
                     {% if p.video != 'none' %}<a href="{{p.video}}" class="btn btn-primary btn-xs">Video</a> {% endif %}
                     {% if p.slides != 'none' %}<a href="{{site.assets}}data/{{p.slides}}" class="btn btn-primary btn-xs">Slajdovi</a> {% endif %}
                     {% if p.code != 'none' %}<a href="{{p.code}}" class="btn btn-info btn-xs">GitHub repozitorijum</a> {% endif %}
@@ -71,10 +71,10 @@ active: pocetna
         {% assign p = site.categories.blog[0] %}
         <div class='row'>
             <div class="card">
-                <h5 class="card-header">{{ p.title }}</h5>
+                <h5 class="card-header">Najskorija blog objava</h5>
                 <div class="card-body">
                     <div class='col-md-12'>
-                        <!--<p class="card-title text-primary">{{ p.author }}</p>-->
+                        <h3>{{ p.title }}</h3>
                         {% include blog/header.html page=p %}
                         <!--div wrapper zato što no-img klasa ne može da se primeni na <p>-->
                         <div  class="no-img">
