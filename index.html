@@ -62,9 +62,9 @@ active: pocetna
                     <p><span class="text-primary"><i class="fas fa-calendar-alt"></i></span> {{p.date | date: "%-d/%-m/%Y"}}</p>
 
                     <p>{{p.description | truncatewords:40}}</p>
-                    {% if p.video != 'none' %}<a href="{{p.video}}" class="btn btn-primary btn-xs">Video</a> {% endif %}
-                    {% if p.slides != 'none' %}<a href="{{site.assets}}data/{{p.slides}}" class="btn btn-primary btn-xs">Slajdovi</a> {% endif %}
-                    {% if p.code != 'none' %}<a href="{{p.code}}" class="btn btn-info btn-xs">GitHub repozitorijum</a> {% endif %}
+                    {% if p.video != 'none' %}<a href="{{p.video}}" class="btn btn-danger btn-xs"><i class="fab fa-lg fa-youtube"></i> Video</a> {% endif %}
+                    {% if p.slides != 'none' %}<a href="{{site.assets}}data/{{p.slides}}" class="btn btn-primary btn-xs"><i class="fas fa-lg fa-clone"></i> Slajdovi</a> {% endif %}
+                    {% if p.code != 'none' %}<a href="{{p.code}}" class="btn btn-dark btn-xs"><i class="fab fa-lg fa-github"></i> Kod</a> {% endif %}
                 </div>
             </div>
         </div>
