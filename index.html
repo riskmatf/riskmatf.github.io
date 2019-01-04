@@ -4,8 +4,7 @@ title: /risk
 active: pocetna
 ---
 <div class="row">
-    <div class='col-xs-1'></div>
-    <div class='col-xs-10'>
+    <div class='col-xs-12 col-md-8'>
         <div class="card">
             <h5 class="card-header">RISK</h5>
             <div class="card-body">
@@ -50,7 +49,43 @@ active: pocetna
                     <strong><a href='mailto: nemanja_micovic@matf.bg.ac.rs'>nemanja_micovic@matf.bg.ac.rs</a></strong>.
                 </p>
             </div>
-    <div class='col-xs-1'></div>
-</div>
-</div>
+        </div>
+    </div>
+    <div class="col-xs-12 m-3 col-md-4 m-md-0">
+        {% assign p = site.categories.predavanja[0] %}
+        <div class="row mb-3">
+            <div class="card">
+                <h5 class="card-header">Najskorije predavanje</h5>
+                <div class="card-body">
+                    <a href="{{p.url}}"><h3 class="text-dark">{{ p.title }}</h3></a>
+                    <p><span class="text-primary"><i class="fas fa-chalkboard-teacher"></i></span> {{p.author}}</p>
+                    <p><span class="text-primary"><i class="fas fa-calendar-alt"></i></span> {{p.date | date: "%-d/%-m/%Y"}}</p>
+
+                    <p>{{p.description | truncatewords:40}}</p>
+                    {% if p.video != 'none' %}<a href="{{p.video}}" class="btn btn-danger btn-xs"><i class="fab fa-lg fa-youtube"></i> Video</a> {% endif %}
+                    {% if p.slides != 'none' %}<a href="{{site.assets}}data/{{p.slides}}" class="btn btn-primary btn-xs"><i class="fas fa-lg fa-clone"></i> Slajdovi</a> {% endif %}
+                    {% if p.code != 'none' %}<a href="{{p.code}}" class="btn btn-dark btn-xs"><i class="fab fa-lg fa-github"></i> Kod</a> {% endif %}
+                </div>
+            </div>
+        </div>
+        {% assign p = site.categories.blog[0] %}
+        <div class='row'>
+            <div class="card">
+                <h5 class="card-header">Najskorija blog objava</h5>
+                <div class="card-body">
+                    <div class='col-md-12'>
+                        <a href="{{p.url}}"><h3 class="text-dark">{{ p.title }}</h3></a>
+                        {% include blog/header.html page=p %}
+                        <!--div wrapper zato što no-img klasa ne može da se primeni na <p>-->
+                        <div  class="no-img">
+                            <p>{{ p.content | remove_first:p.excerpt | truncatewords:40 }}</p>
+                        </div>
+                        <a href='{{p.url}}.html'><button class='btn btn-primary'><i class="fas fa-glasses"></i> Pročitaj</button></a>
+                    </div>
+                    <!--<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>-->
+                    <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
