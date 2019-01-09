@@ -7,8 +7,8 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<meta charset="UTF-8">
 
-	{% comment %} meta[0] is the key, meta[1] is the value{% endcomment %}
-	{% for meta in page.meta %}
+	{% comment %} og-metadata[0] is the key, og-metadata[1] is the value{% endcomment %}
+	{% for meta in page.og-metadata %}
 	<meta property="{{ meta[0] }}" content="{{ meta[1] }}" />
 	{% endfor %}
 
