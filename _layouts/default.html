@@ -11,6 +11,7 @@
 	{% for meta in page.og-metadata %}
 	<meta property="{{ meta[0] }}" content="{{ meta[1] }}" />
 	{% endfor %}
+	<meta property="og:type" content="website" />
 
 	{% for style in page.styles %}
 		<link rel='stylesheet' type='text/css' href="{{style}}"/>
