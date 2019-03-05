@@ -8,6 +8,8 @@ comments: true
 ---
 ### {{ page.title }}
 
+<img alt='synthwave img' class='img-fluid' src="{{site.baseurl}}/assets/img/blog/2019-02-24-chromebook-nemanja-micovic/splash.jpg">
+
 Chromebook is the result of love between a Notebook and  Google Chrome. It's a simple laptop with ChromeOS system with workflow based mostly around the web browser which is of course ~~Internet Explorer~~ Google Chrome. 
 
 So is it a toy? It's down to you really - what you do, how often you do, which software you use...and do you like `synthwave`? I do.
@@ -16,7 +18,7 @@ So is it a toy? It's down to you really - what you do, how often you do, which s
 
 And you know, even if it's a toy in the end, why not? It's cool to play with toys and feel like a kid again, we should not forget that feeling! But read on if you really wish to find out...
 
-`Disclaimer`: This article is best read with <a href="https://www.dotkomsite.com/predstavljamo/povratak-u-buducnost-isidor-bobinec-intervju/" target="_blank">Isidor Bobinec</a>'s album <a href="https://www.youtube.com/watch?v=Td7g1Oj7bgA" target="_blank">Lord of the Synth"</a> album in background.
+`Disclaimer`: This article is best read with <a href="https://www.dotkomsite.com/predstavljamo/povratak-u-buducnost-isidor-bobinec-intervju/" target="_blank">Isidor Bobinec</a>'s album <a href="https://www.youtube.com/watch?v=Td7g1Oj7bgA" target="_blank">Lord of the Synth</a> album in background.
 
 
 ## Hello Chromebook
