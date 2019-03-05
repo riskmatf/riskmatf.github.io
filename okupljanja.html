@@ -14,16 +14,28 @@ active: okupljanja
                 <p><span class="text-primary"><i class="fas fa-calendar-alt"></i></span> 10/04/2019</p>
                 <p><span class='text-primary'><i class="fas fa-clock"></i></span> 12h-15h učionica 718
                 <p>
-                    Kako popularnost i hardverska moc mobilnih uredjaja raste, razvijanje mobilnih aplikacija dobija na sve vecem znacaju,
-                    a u industriji je potreban veliki broj Android programera.
+                Kako popularnost i hardverska moc mobilnih uredjaja raste, razvijanje mobilnih aplikacija dobija na sve vecem znacaju,
+                a u industriji je potreban veliki broj Android programera.
                 </p>
                 <p>
-                    Prikazaćemo moderne prakse pri razvijanju Android aplikacija, koristeći Kotlin,
-                    treći zvanični jezik za Android, i Android Architecture Components,
-                    deo Android Jetpack-a, skup biblioteka koje pruža Google u svrhu olakšavanja razvijanja Android aplikacija.
+                Prikazaćemo moderne prakse pri razvijanju Android aplikacija, koristeći Kotlin,
+                treći zvanični jezik za Android, i Android Architecture Components,
+                deo Android Jetpack-a, skup biblioteka koje pruža Google u svrhu olakšavanja razvijanja Android aplikacija.
                 </p>
-                <a class='btn btn-info btn-xs' href="https://docs.google.com/forms/d/e/1FAIpQLSeMMx3V7vcfa0OitrvKicetUoSUKaN4UurzWdrboMM8PdX0AQ/viewform?usp=sf_link&fbclid=IwAR3vit7_pNC8vqV4WDx9T1ARwpQYDWVsIef4APzYg8ZVQfg9XOxyrBV9pq0" class="btn btn-info btn-xs">Prijava ako dolazite</a>
-                <a href="https://github.com/riskmatf/risk-meetup-14-modern-android" class="btn btn-info btn-xs"><i class='fab fa-lg fa-github'></i> GitHub repozitorijum</a>
+
+                <p>
+                <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                    Poster
+                </button>
+                </p>
+                <div class="collapse" id="collapseExample">
+                    <div class="card card-body">
+                        <img style='width: 400px' class='center-block img-fluid' src='assets/img/okupljanja/meetup14_modern_android/poster.png'>
+                    </div>
+                </div>
+
+                <a class='btn btn-success btn-xs' href="https://docs.google.com/forms/d/e/1FAIpQLSeMMx3V7vcfa0OitrvKicetUoSUKaN4UurzWdrboMM8PdX0AQ/viewform?usp=sf_link&fbclid=IwAR3vit7_pNC8vqV4WDx9T1ARwpQYDWVsIef4APzYg8ZVQfg9XOxyrBV9pq0" class="btn btn-info btn-xs">Prijava ako dolazite</a>
+                <a href="https://github.com/riskmatf/risk-meetup-14-modern-android" class="btn btn-dark btn-xs"><i class='fab fa-lg fa-github'></i> GitHub repozitorijum</a>
             </div>
         </div>
     </div>
@@ -40,9 +52,9 @@ active: okupljanja
 
 
                 <p>{{p.description}}</p>
-		{% if p.video != 'none' %}<a href="{{p.video}}" class="btn btn-danger btn-xs"><i class="fab fa-lg fa-youtube"></i> Video</a> {% endif %}
-	        {% if p.slides != 'none' %}<a href="{{site.assets}}data/{{p.slides}}" class="btn btn-primary btn-xs"><i class="fas fa-lg fa-clone"></i> Slajdovi</a> {% endif %}
-		{% if p.code != 'none' %}<a href="{{p.code}}" class="btn btn-dark btn-xs"><i class="fab fa-lg fa-github"></i> Kod</a> {% endif %}
+                {% if p.video != 'none' %}<a href="{{p.video}}" class="btn btn-danger btn-xs"><i class="fab fa-lg fa-youtube"></i> Video</a> {% endif %}
+                {% if p.slides != 'none' %}<a href="{{site.assets}}data/{{p.slides}}" class="btn btn-primary btn-xs"><i class="fas fa-lg fa-clone"></i> Slajdovi</a> {% endif %}
+                {% if p.code != 'none' %}<a href="{{p.code}}" class="btn btn-dark btn-xs"><i class="fab fa-lg fa-github"></i> Kod</a> {% endif %}
             </div>
         </div>
         <br>
