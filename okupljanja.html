@@ -7,6 +7,7 @@ active: okupljanja
     <!--<div class="col-md-1"></div>-->
     <div class="col-xs-12">
         <!--Najava sledeceg okupljanja-->
+        <!--
         <div class="card border-primary">
             <h5 class="card-header">SLEDEĆE OKUPLJANJE: Moderno Android Programiranje</h5>
             <div class="card-body">
@@ -38,6 +39,7 @@ active: okupljanja
                 <a href="https://github.com/riskmatf/risk-meetup-14-modern-android" class="btn btn-dark btn-xs"><i class='fab fa-lg fa-github'></i> GitHub repozitorijum</a>
             </div>
         </div>
+        -->
     </div>
 
     <div class="col-xs-12">
@@ -55,6 +57,23 @@ active: okupljanja
                 {% if p.video != 'none' %}<a href="{{p.video}}" class="btn btn-danger btn-xs"><i class="fab fa-lg fa-youtube"></i> Video</a> {% endif %}
                 {% if p.slides != 'none' %}<a href="{{site.assets}}data/{{p.slides}}" class="btn btn-primary btn-xs"><i class="fas fa-lg fa-clone"></i> Slajdovi</a> {% endif %}
                 {% if p.code != 'none' %}<a href="{{p.code}}" class="btn btn-dark btn-xs"><i class="fab fa-lg fa-github"></i> Kod</a> {% endif %}
+                {% if p.form %}<a target="_blank" href="{{p.form}}" class="btn btn-secondary btn-xs"><i class="fas fa-comments"></i> Utisci</a> {% endif %}
+                {% if p.poster %}
+                    <button class="btn btn-info" type="button" data-toggle="collapse" data-target="#collapse{{p.pid}}" aria-expanded="false" aria-controls="collapse{{p.pid}}">
+                        <i class="fas fa-receipt"></i> Poster
+                    </button>
+                {% endif %}
+
+                <!--Prikazivanje postera koriscenog za najavu predavanja-->
+                {% if p.poster %}
+                <div class="collapse" id="collapse{{p.pid}}">
+                    <div class="card card-body">
+                        <br>
+                        <br>
+                        <img style='width: 400px' class='center-block img-fluid' src='{{p.poster}}'>
+                    </div>
+                </div>
+                {% endif %}
             </div>
         </div>
         <br>
