@@ -7,6 +7,7 @@ active: okupljanja
     <!--<div class="col-md-1"></div>-->
 
     <div class="col-xs-12">
+		<!--
         <div class="card border-primary">
             <h5 class="card-header">SLEDEĆE OKUPLJANJE: Uvod u veb radne okvire kroz Laravel i Django</h5>
             <div class="card-body">
@@ -42,6 +43,7 @@ active: okupljanja
                 <a target="_blank" href="https://github.com/riskmatf/risk-meetup-16-veb-radni-okviri" class="btn btn-dark btn-xs"><i class='fab fa-lg fa-github'></i> GitHub repozitorijum</a>
             </div>
         </div>
+		-->
     </div>
 
 
@@ -56,7 +58,7 @@ active: okupljanja
                 <p><span class="text-primary"><i class="fas fa-calendar-alt"></i></span> {{p.date | date: "%-d/%-m/%Y"}}</p>
 
 
-                <p>{{p.description}}</p>
+				{{p.content}}
                 {% if p.video != 'none' %}<a target="_blank" href="{{p.video}}" class="btn btn-danger btn-xs"><i class="fab fa-lg fa-youtube"></i> Video</a> {% endif %}
                 {% if p.slides != 'none' %}<a target="_blank" href="{{site.assets}}data/{{p.slides}}" class="btn btn-primary btn-xs"><i class="fas fa-lg fa-clone"></i> Slajdovi</a> {% endif %}
                 {% if p.code != 'none' %}<a target="_blank" href="{{p.code}}" class="btn btn-dark btn-xs"><i class="fab fa-lg fa-github"></i> Kod</a> {% endif %}
