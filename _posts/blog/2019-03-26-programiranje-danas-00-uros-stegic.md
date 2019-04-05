@@ -1,5 +1,5 @@
 ---
-title: Programiranje danas - Postanak
+title: Programiranje danas 00 - Postanak
 author: Uroš Stegić
 authorimg: uros-stegic.jpg
 layout: post
