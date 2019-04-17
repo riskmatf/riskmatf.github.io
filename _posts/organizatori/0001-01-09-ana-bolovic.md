@@ -1,6 +1,6 @@
 ---
 ime: Ana
-prezime: Bolovic
+prezime: Bolović
 slika: abolovic.jpeg
 category: org
 visible: true
@@ -10,4 +10,6 @@ emailicon: fas fa-envelope
 social:
     - url: https://www.linkedin.com/in/ana-bolovic-50b699168/
       icon: fab fa-linkedin
+    - url: https://www.instagram.com/anabolovic/
+      icon: fab fa-instagram
 ---
