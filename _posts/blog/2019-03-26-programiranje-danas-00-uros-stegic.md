@@ -8,6 +8,8 @@ comments: true
 ---
 ### {{ page.title }}
 
+<img style='width: 300px' class='img-fluid' alt='poster' src="{{site.baseurl}}/assets/img/blog/2019-03-26-programiranje-danas-00-uros-stegic/poster.jpg">
+
 **Danas**, programiranje predstavlja jedan od unosnijih vidova privređivanja. Iz tog razloga, sasvim opravdano, mnogi naši sugrađani žele ući u taj magični svet. S toga vam svima želim dobrodošlicu u novu kolumnu: **Programiranje danas**. Kolumnu koja će se baviti novim pogledima na svet programiranja, sa akcentom na sam proces razvoja softvera, na stvarima koje se retko sreću u knjigama.
 
 Mnogi developeri danas dolaze bez formalnog obrazovanja. Do sada sam u svojoj karijeri sarađivao sa raznim ljudima koji su iz filologije, antropologije, čak i DIF-a, završili u IT svetu i bila mi je prava čast raditi u njihovom okruženju jer su vremenom i posvećenošću postali vrsni stručnjaci. Privatne škole programiranja kreativnim marketinškim kampanjama (npr. "Život je previše kratak za loše plaćen posao") adekvatno eksploatišu stanje u državi regrutujuići narod koji u programiranju vidi *isključivo* finansijsku stabilnost.
