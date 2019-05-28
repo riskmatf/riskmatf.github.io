@@ -9,7 +9,7 @@ code: https://github.com/riskmatf/risk-meetup-18-aws
 pid: meetup18
 form: https://docs.google.com/forms/d/e/1FAIpQLSeufnRU-fswDd3KReBtPOvhzK-GMN1i04_4gR6U0_MkYVvErg/viewform
 poster: assets/img/okupljanja/meetup18_aws/poster.png
-slides: none
+slides: aws_intro_matf.pdf
 tags: aws, cloud computing, amazon, vm, cloud, servers, services
 ---
 Amazon Web Services (AWS) je jedan od vodećih pružalaca Cloud computing usluga (računarstvo u oblaku) sa učešćem od 62 odsto na svetskom tržištu po nekim od dostupnih statistika. AWS pruža veliki broj usluga kao što su mašinsko učenje, skladištenje i održavanje baza podataka, pružanje računarske infrastrukture za kompleksna izračunavanja, skladištenje i čuvanje poslovnih podataka, ekstrakcija teksta iz dokumenata, autentifikacija i autorizacija korisnika, kontinualna integracija i mnoge druge.
