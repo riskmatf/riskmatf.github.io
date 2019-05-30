@@ -3,7 +3,7 @@ category: predavanja
 layout: post
 title: Uvod u Amazon veb servise (AWS)
 author: Miljenko Rebernišak (GoDaddy)
-video: none
+video: https://www.youtube.com/watch?v=23PXDSjQZnA
 date: 2019-05-19
 code: https://github.com/riskmatf/risk-meetup-18-aws
 pid: meetup18
