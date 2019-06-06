@@ -18,7 +18,7 @@ cd _site
 
 echo 'Publishing...'
 #read -p 'Enter your alas username: ' USER
-rsync -azP --exclude=.git --exclude=DONT_UPLOAD . risk@alas.matf.bg.ac.rs:/home/risk/public_html
+rsync -azP --exclude=.git --exclude=DONT_UPLOAD . risk@risk.matf.bg.ac.rs:/home/risk/bin/turing/public/root
 if [[ $? -ne 0  ]]; then
     echo "${red}Failed publishing!${reset}"
     exit
