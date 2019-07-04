@@ -1,3 +1,5 @@
+/*@import url(monokai.css);*/
+
 /* Used to set font awesome icons into white color */
 .white-icon {
     color: #ffffff;
@@ -7,10 +9,17 @@
   color: #212121;
 }
 
+/*
 pre.highlight {
     padding: 5px;
     background: rgba(60,63,65,1);
     color: #fafafa
+}
+*/
+
+pre.highlight {
+    border: 1px solid #21212121;
+    padding: 0.5%;
 }
 
 .blog-header-img {
