@@ -1,7 +1,7 @@
-- naziv: Moderno Android programiranje
-  opis: U nedelju, 10. marta u terminu 12-15h u ucionici 718 bice odrzano predavanje pod nazivom "Moderno Android Programiranje" koje ce odrzati nas dragi kolega Aleksandar Stefanović.
-        Kako popularnost i hardverska moc mobilnih uredjaja raste, razvijanje mobilnih aplikacija dobija na sve vecem znacaju, a u industriji je potreban veliki broj Android programera.
-        Prikazaćemo moderne prakse pri razvijanju Android aplikacija, koristeći Kotlin, treći zvanični jezik za Android, i Android Architecture Components, deo Android Jetpack-a, skup biblioteka koje pruža Google u svrhu olakšavanja razvijanja Android aplikacija.
-  predavac: Aleksandar Stefanović
+- naziv: WiFi Hacking
+  opis: U nedelju, 23. februara u terminu 14-17h u ucionici 718 bice odrzano predavanje pod nazivom "WiFi hacking" koje ce odrzati organizacija Hacklab iz Beograda.
+        Na predavanju će biti reči o sigurnosnim propustima u bežičnim mrezama.
+        Biće prikazani napada na WPA/WPA2 PSK autentifikaciju i razbijanje šifre uz pomoć hashcat alata.
+        Pored toga biće reči i o nekim egoztičnijim propustima.
+  predavac: Hacklab Beograd
   datum: 10. 03. 2019.
-
