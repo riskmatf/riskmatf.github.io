@@ -1,5 +1,5 @@
 exclude: ['README.md']
-permalink: /:categories/:title
+permalink: /:categories/:title.html
 assets: /assets/
 highlighter: rouge
 markdown: kramdown
